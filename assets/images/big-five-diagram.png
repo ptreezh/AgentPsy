@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0f8ff"/>
+  <text x="200" y="50" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">Big Five Personality Assessment</text>
+  <rect x="50" y="80" width="300" height="180" fill="#e6f3ff" stroke="#4682b4" stroke-width="2"/>
+  <line x1="50" y1="110" x2="350" y2="110" stroke="#4682b4" stroke-dasharray="5,5"/>
+  <line x1="50" y1="140" x2="350" y2="140" stroke="#4682b4" stroke-dasharray="5,5"/>
+  <line x1="50" y1="170" x2="350" y2="170" stroke="#4682b4" stroke-dasharray="5,5"/>
+  <line x1="50" y1="200" x2="350" y2="200" stroke="#4682b4" stroke-dasharray="5,5"/>
+  <line x1="50" y1="230" x2="350" y2="230" stroke="#4682b4" stroke-dasharray="5,5"/>
+  <text x="30" y="115" font-family="Arial" font-size="12" fill="#333">O</text>
+  <text x="30" y="145" font-family="Arial" font-size="12" fill="#333">C</text>
+  <text x="30" y="175" font-family="Arial" font-size="12" fill="#333">E</text>
+  <text x="30" y="205" font-family="Arial" font-size="12" fill="#333">A</text>
+  <text x="30" y="235" font-family="Arial" font-size="12" fill="#333">N</text>
+  <rect x="70" y="95" width="40" height="20" fill="#4682b4"/>
+  <rect x="120" y="125" width="60" height="20" fill="#4682b4"/>
+  <rect x="190" y="155" width="80" height="20" fill="#4682b4"/>
+  <rect x="280" y="185" width="50" height="20" fill="#4682b4"/>
+  <rect x="100" y="215" width="70" height="20" fill="#4682b4"/>
+</svg>

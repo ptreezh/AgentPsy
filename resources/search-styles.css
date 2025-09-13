@@ -1,0 +1,122 @@
+/* Search Results Styles */
+
+.search-results {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    min-height: 200px;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.search-result-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.search-result-item:hover {
+    transform: translateY(-2px);
+}
+
+.result-category {
+    background: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.result-title {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.result-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.result-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.keyword {
+    background: #e9ecef;
+    color: #495057;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.no-results {
+    text-align: center;
+    color: #6c757d;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* Search Box Enhancement */
+.search-box {
+    margin-bottom: 30px;
+}
+
+#resourceSearch {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #dee2e6;
+    border-radius: 25px 0 0 25px;
+    width: 70%;
+    transition: border-color 0.3s ease;
+}
+
+#resourceSearch:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button[onclick="searchResources()"] {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[onclick="searchResources()"]:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #resourceSearch {
+        width: 60%;
+    }
+    
+    .search-result-item {
+        padding: 15px;
+    }
+}

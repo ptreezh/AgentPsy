@@ -93,9 +93,11 @@
                     <p>Search our comprehensive library of resources by category, keyword, or date.</p>
                     
                     <div class="search-box">
-                        <input type="text" placeholder="Search resources...">
-                        <button type="submit">Search</button>
+                        <input type="text" id="resourceSearch" placeholder="Search resources..." onkeyup="searchResources()">
+                        <button type="button" onclick="searchResources()">Search</button>
                     </div>
+                    
+                    <div id="searchResults" class="search-results"></div>
                     
                     <div class="featured-resources">
                         <h3>Featured Resources</h3>
@@ -235,5 +237,115 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Basic resource search functionality
+        function searchResources() {
+            const searchInput = document.getElementById('resourceSearch');
+            const searchResults = document.getElementById('searchResults');
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            if (searchTerm.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+            
+            // Mock resource data for demonstration
+            const resources = [
+                {
+                    title: "Big Five Personality Assessment Guide",
+                    description: "Complete guide to understanding and using the Big Five personality assessment",
+                    category: "Documentation",
+                    type: "PDF"
+                },
+                {
+                    title: "Cognitive Stability Research Papers",
+                    description: "Collection of research papers on cognitive stability in AI systems",
+                    category: "Academic Papers",
+                    type: "Papers"
+                },
+                {
+                    title: "API Documentation",
+                    description: "Complete API reference for integrating AgentPsy assessments",
+                    category: "API & Developer Tools",
+                    type: "Documentation"
+                },
+                {
+                    title: "Assessment Best Practices",
+                    description: "Guidelines for optimal assessment implementation",
+                    category: "Training & Tutorials",
+                    type: "Guide"
+                }
+            ];
+            
+            const filteredResources = resources.filter(resource => 
+                resource.title.toLowerCase().includes(searchTerm) ||
+                resource.description.toLowerCase().includes(searchTerm) ||
+                resource.category.toLowerCase().includes(searchTerm)
+            );
+            
+            if (filteredResources.length === 0) {
+                searchResults.innerHTML = '<p>No resources found matching your search.</p>';
+                return;
+            }
+            
+            let resultsHTML = '<div class="search-results-container">';
+            filteredResources.forEach(resource => {
+                resultsHTML += `
+                    <div class="search-result-item">
+                        <h4>${resource.title}</h4>
+                        <p>${resource.description}</p>
+                        <div class="resource-meta">
+                            <span class="category">${resource.category}</span>
+                            <span class="type">${resource.type}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            resultsHTML += '</div>';
+            
+            searchResults.innerHTML = resultsHTML;
+        }
+        
+        // Initialize search on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some basic styling for search results
+            const style = document.createElement('style');
+            style.textContent = `
+                .search-results-container {
+                    margin-top: 20px;
+                    padding: 20px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                }
+                
+                .search-result-item {
+                    background: white;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                
+                .search-result-item h4 {
+                    color: #667eea;
+                    margin-bottom: 8px;
+                }
+                
+                .resource-meta {
+                    margin-top: 10px;
+                }
+                
+                .category, .type {
+                    display: inline-block;
+                    background: #e9ecef;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    font-size: 0.8rem;
+                    margin-right: 5px;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>

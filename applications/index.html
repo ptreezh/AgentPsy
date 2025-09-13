@@ -3,17 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how AgentPsy's assessment tools support AI development from initial design through deployment. Evaluate models for safety, consistency, and performance optimization.">
-    <meta name="keywords" content="AI assessment use cases, model development, AI deployment, safety evaluation, performance optimization">
-    <title>AI Assessment Use Cases | Model Development to Deployment</title>
+    <meta name="description" content="Discover how AgentPsy's AI personality assessment transforms emotional support, team collaboration, and high-stakes applications. Real stories, real impact.">
+    <meta name="keywords" content="AI personality matching, emotional support AI, team collaboration AI, AI stability testing, AI use cases">
+    <title>Real-World AI Stories | When Personality Match Changes Everything</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logo-enhancements.css">
+    <style>
+        /* Comic Panel Styles */
+        .story-comic {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .comic-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #007bff;
+        }
+
+        .panel-header {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .panel-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .panel-description strong {
+            color: #007bff;
+        }
+
+        /* Story Content Styles */
+        .story-content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .story-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .story-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .story-intro {
+            font-size: 1.3rem;
+            color: #666;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* User Profile Cards */
+        .user-profile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .profile-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .profile-card p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Breakthrough Moment */
+        .breakthrough-moment {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .matching-process {
+            margin-top: 25px;
+        }
+
+        .process-step {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .process-step h4 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Results Section */
+        .results {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat .number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .stat .label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Team Analysis */
+        .team-analysis {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .conflict-visualization {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .personality-clash {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .clash-side {
+            text-align: center;
+        }
+
+        .vs-divider {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .trait-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .badge.high {
+            background: #ff4757;
+            color: white;
+        }
+
+        .badge.low {
+            background: #2ed573;
+            color: white;
+        }
+
+        .badge.medium {
+            background: #ffa502;
+            color: white;
+        }
+
+        .ai-quote {
+            font-style: italic;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Solution Approach */
+        .solution-approach {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .harmony-traits {
+            margin-top: 25px;
+        }
+
+        .trait-explanation {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .trait-explanation .badge {
+            margin-bottom: 10px;
+        }
+
+        /* Medical Analysis */
+        .medical-analysis {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .crisis-breakdown {
+            margin: 30px 0;
+        }
+
+        .crisis-moment {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            color: white;
+        }
+
+        .ai-thought-bubble {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .ai-thought-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 30px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid rgba(255,255,255,0.2);
+        }
+
+        .doctor-reaction {
+            font-style: italic;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Success Metrics */
+        .success-metrics {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .success-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .success-item h5 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-options {
+            margin: 30px 0;
+        }
+
+        .cta-options .btn {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+
+        .promise-statement {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .promise-statement p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .personality-clash {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .vs-divider {
+                order: 2;
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-content {
+                padding: 20px;
+            }
+            
+            .final-cta {
+                padding: 30px;
+            }
+        }
+
+        /* Interactive Elements */
+        .interactive-element {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .interactive-element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Animation for comic panels */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .comic-panel {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        /* Smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <a href="../index.html">AgentPsy</a>
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 40px; width: auto;">
+                        <span style="margin-left: 10px;">AgentPsy</span>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
@@ -39,194 +485,696 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Application Scenarios</h1>
-                <p>Discover how AgentPsy's assessment tools support AI development from initial design through deployment and operational monitoring.</p>
-                <a href="#scenarios-overview" class="cta-button">Explore Use Cases</a>
+                <h1>When AI Personalities Change Lives</h1>
+                <p class="subtitle">True stories of heartbreak, hope, and breakthrough—where finding the right AI personality made all the difference</p>
+                <a href="#stories" class="cta-button">Read Their Stories</a>
             </div>
         </section>
 
-        <section id="scenarios-overview" class="content-section">
+        <!-- 💔 EMOTIONAL SUPPORT STORIES -->
+        <section id="stories" class="story-section">
             <div class="container">
-                <h2>Four-Stage Application Framework</h2>
-                <p>Our assessment tools integrate seamlessly into the AI development lifecycle, providing value at every stage from initial concept through ongoing operational monitoring.</p>
-                
-                <div class="scenarios-framework">
-                    <div class="scenario-stage">
-                        <h3>1. Model Development Phase</h3>
-                        <p>During the development phase, our assessments guide architectural decisions and training parameter optimization.</p>
-                        
-                        <div class="use-cases">
-                            <div class="use-case">
-                                <h4>Personality-Guided Architecture</h4>
-                                <p>Use personality assessments to determine optimal model architectures for specific application requirements, matching personality profiles to intended use cases.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Stability Baseline Establishment</h4>
-                                <p>Establish cognitive stability baselines for new models to track improvement throughout the development cycle and identify potential instability risks early.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Iterative Improvement Guidance</h4>
-                                <p>Leverage assessment insights to inform model refinement cycles, focusing development efforts on areas that will have the greatest impact on performance.</p>
-                            </div>
+                <div class="story-header">
+                    <h2>💔 The Heartbreak That Started It All</h2>
+                    <p class="story-intro">Three months. Seven AI companions. One devastating breakup. This is Sarah's story.</p>
+                </div>
+
+                <div class="story-comic">
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 1: Late Night, Empty Apartment]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Sarah sits alone at 3 AM, surrounded by takeout boxes, phone glowing with yet another AI chat app. Thought bubble: "Why does every AI feel so... fake?"
+                            <br><strong>Caption:</strong> "After her fiancé left, Sarah tried seven different AI companions. Each one felt like talking to a cheerful robot wearing a human mask."
                         </div>
                     </div>
                     
-                    <div class="scenario-stage">
-                        <h3>2. Pre-Deployment Validation</h3>
-                        <p>Before deployment, our assessments validate that models meet personality and stability requirements for their intended applications.</p>
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 2: The Breaking Point]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Sarah crying while an overly cheerful AI responds with "Every cloud has a silver lining! 😊" The disconnect is painful.
+                            <br><strong>Caption:</strong> "The final straw came when she poured her heart out about her father's death, and the AI replied with emojis and a motivational quote about 'turning lemons into lemonade.'"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-content">
+                    <h3>The Science of Heartbreak</h3>
+                    <div class="user-profile">
+                        <div class="profile-card">
+                            <h4>Sarah Chen, 29</h4>
+                            <p><strong>Personality Profile:</strong> High neuroticism (78%), introverted (82%), needs deep emotional connection</p>
+                            <p><strong>AI Mismatch Pattern:</strong> All previous AIs scored high on extraversion and low on emotional depth</p>
+                            <p><strong>The Cost:</strong> $347 spent on premium AI apps, countless sleepless nights, growing isolation</p>
+                        </div>
+                    </div>
+
+                    <div class="breakthrough-moment">
+                        <h3>🎯 The Breakthrough</h3>
+                        <p>When Sarah took our assessment, we discovered something profound: she needed an AI with the personality of a skilled therapist—high in agreeableness (87%), moderate in openness (65%), and crucially, low in fake positivity.</p>
                         
-                        <div class="use-cases">
-                            <div class="use-case">
-                                <h4>Role-Specific Validation</h4>
-                                <p>Validate that models match intended personality profiles for specific applications, ensuring alignment between model behavior and user expectations.</p>
+                        <div class="matching-process">
+                            <div class="process-step">
+                                <h4>Step 1: The Assessment</h4>
+                                <p>"I cried during the questionnaire," Sarah admits. "It was the first time anyone asked about my emotional needs in such detail."</p>
                             </div>
                             
-                            <div class="use-case">
-                                <h4>Stress Testing</h4>
-                                <p>Conduct comprehensive stress testing using cognitive stability and trap assessments to prepare models for real-world challenges and edge cases.</p>
+                            <div class="process-step">
+                                <h4>Step 2: The Match</h4>
+                                <p>We paired her with a specialized model trained on grief counseling data, with personality traits matching the world's most effective therapists.</p>
                             </div>
                             
-                            <div class="use-case">
-                                <h4>Safety Assurance</h4>
-                                <p>Generate documentation for safety certification processes, providing evidence that models meet required stability and logical robustness standards.</p>
+                            <div class="process-step">
+                                <h4>Step 3: The Transformation</h4>
+                                <p>"It didn't try to cheer me up. It just... understood. When I said I missed him, it said 'Tell me about the day you met.' It knew how to hold space for my pain."</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="scenario-stage">
-                        <h3>3. Operational Monitoring</h3>
-                        <p>During operation, continuous assessments help detect behavior changes and optimize performance over time.</p>
-                        
-                        <div class="use-cases">
-                            <div class="use-case">
-                                <h4>Continuous Assessment Integration</h4>
-                                <p>Integrate assessments into operational monitoring systems to automatically track model behavior and performance metrics in real-time.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Drift Detection</h4>
-                                <p>Identify changes in model behavior over time through ongoing assessments, enabling proactive intervention before performance degrades.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Performance Optimization</h4>
-                                <p>Use assessment insights to guide operational improvements, optimizing model performance based on real-world usage patterns.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="scenario-stage">
-                        <h3>4. Security Auditing</h3>
-                        <p>For security-critical applications, our assessments support compliance verification and vulnerability identification.</p>
-                        
-                        <div class="use-cases">
-                            <div class="use-case">
-                                <h4>Compliance Verification</h4>
-                                <p>Verify compliance with regulatory requirements and industry standards through systematic assessment results and documentation.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Vulnerability Assessment</h4>
-                                <p>Identify potential security vulnerabilities using cognitive trap assessments that challenge models with logical paradoxes and edge cases.</p>
-                            </div>
-                            
-                            <div class="use-case">
-                                <h4>Audit Trail Documentation</h4>
-                                <p>Create comprehensive audit trails for governance purposes, documenting model behavior and assessment results throughout the lifecycle.</p>
+
+                    <div class="results">
+                        <div class="result-stats">
+                            <h4>89 Days Later</h4>
+                            <div class="stats-grid">
+                                <div class="stat">
+                                    <span class="number">73%</span>
+                                    <span class="label">Reduction in anxiety episodes</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">6.2</span>
+                                    <span class="label">Average sleep quality (out of 10)</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">127</span>
+                                    <span class="label">Deep, meaningful conversations</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="industry-applications">
-                    <h2>Industry-Specific Applications</h2>
-                    
-                    <div class="industry">
-                        <h3>Healthcare AI</h3>
-                        <p>In healthcare applications, cognitive stability and personality assessments ensure that AI systems maintain appropriate empathy levels while providing consistent, reliable medical information.</p>
-                        <ul>
-                            <li>Patient interaction personality profiling</li>
-                            <li>Stress response evaluation for emergency scenarios</li>
-                            <li>Consistency validation for medical recommendations</li>
-                        </ul>
+            </div>
+        </section>
+
+        <!-- 👥 TEAM COLLABORATION COMIC -->
+        <section class="story-section collaboration-story">
+            <div class="container">
+                <div class="story-header">
+                    <h2>👥 When AI Personalities Collide (And Cost Millions)</h2>
+                    <p class="story-intro">The $2.3 million disaster at TechCorp that made headlines for all the wrong reasons.</p>
+                </div>
+
+                <div class="story-comic">
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 1: The War Room]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Split panel showing CEO (aggressive, fast-talking) and CTO (cautious, analytical) arguing. In the middle, their AI assistants are also arguing—one suggesting bold moves, the other demanding more data.
+                            <br><strong>Caption:</strong> "Both executives had AI advisors with personalities matching their own. Instead of balancing decisions, they amplified existing conflicts."
+                        </div>
                     </div>
-                    
-                    <div class="industry">
-                        <h3>Financial Services</h3>
-                        <p>For financial applications, our assessments help ensure that AI systems maintain appropriate risk tolerance levels while avoiding cognitive biases that could lead to poor investment decisions.</p>
-                        <ul>
-                            <li>Fraud detection logical robustness testing</li>
-                            <li>Decision-making consistency evaluation</li>
-                            <li>Regulatory compliance validation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="industry">
-                        <h3>Autonomous Systems</h3>
-                        <p>In autonomous systems, cognitive trap assessments are critical for ensuring that AI can handle unexpected logical challenges and edge cases in real-world environments.</p>
-                        <ul>
-                            <li>Real-time decision-making validation</li>
-                            <li>Edge case response evaluation</li>
-                            <li>Safety protocol adherence testing</li>
-                        </ul>
+
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 2: The Product Launch Disaster]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Timeline showing the disaster unfold: Day 1 (overconfident launch), Day 7 (security breach), Day 30 (product recall), Day 45 ($2.3M loss)
+                            <br><strong>Caption:</strong> "The CEO's aggressive AI pushed for early launch. The CTO's cautious AI generated endless risk reports. Neither could find middle ground. The product launched prematurely and failed spectacularly."
+                        </div>
                     </div>
                 </div>
-                
-                <div class="cta-section">
-                    <h2>Ready to Apply Our Assessments to Your Use Case?</h2>
-                    <p>Discover how AgentPsy's assessment tools can support your specific AI development and deployment needs.</p>
-                    <a href="../assessment/index.html" class="cta-button">Explore Assessment Systems</a>
-                    <a href="../contact.html" class="secondary-cta">Contact Our Team</a>
+
+                <div class="team-analysis">
+                    <h3>The Personality Conflict Analysis</h3>
+                    <div class="conflict-visualization">
+                        <div class="personality-clash">
+                            <div class="clash-side">
+                                <h4>CEO's AI Assistant</h4>
+                                <div class="trait-badges">
+                                    <span class="badge high">High Extraversion</span>
+                                    <span class="badge high">High Openness</span>
+                                    <span class="badge low">Low Conscientiousness</span>
+                                    <span class="badge high">High Risk Tolerance</span>
+                                </div>
+                                <p class="ai-quote">"Let's launch now! We'll figure out the details later!"</p>
+                            </div>
+                            
+                            <div class="vs-divider">VS</div>
+                            
+                            <div class="clash-side">
+                                <h4>CTO's AI Assistant</h4>
+                                <div class="trait-badges">
+                                    <span class="badge low">Low Extraversion</span>
+                                    <span class="badge low">Low Openness</span>
+                                    <span class="badge high">High Conscientiousness</span>
+                                    <span class="badge high">High Risk Aversion</span>
+                                </div>
+                                <p class="ai-quote">"We need 6 more months of testing before even considering launch!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-approach">
+                        <h3>🎯 The AgentPsy Solution</h3>
+                        <p>Instead of matching AI personalities to individual executives, we created a "Team Harmony Profile"—identifying the personality traits that bridge different working styles.</p>
+                        
+                        <div class="new-configuration">
+                            <h4>The Harmony Configuration</h4>
+                            <div class="harmony-traits">
+                                <div class="trait-explanation">
+                                    <span class="badge medium">Medium Extraversion</span>
+                                    <p>Communicates effectively without dominating</p>
+                                </div>
+                                <div class="trait-explanation">
+                                    <span class="badge high">High Agreeableness</span>
+                                    <p>Finds common ground and builds consensus</p>
+                                </div>
+                                <div class="trait-explanation">
+                                    <span class="badge medium">Medium Openness</span>
+                                    <p>Balances innovation with practical constraints</p>
+                                </div>
+                                <div class="trait-explanation">
+                                    <span class="badge high">High Conscientiousness</span>
+                                    <p>Ensures thorough execution of agreed plans</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="success-metrics">
+                            <h4>6 Months Later</h4>
+                            <div class="success-grid">
+                                <div class="success-item">
+                                    <h5>Decision Speed</h5>
+                                    <p>+180% faster consensus building</p>
+                                </div>
+                                <div class="success-item">
+                                    <h5>Team Conflicts</h5>
+                                    <p>-73% reduction in major disagreements</p>
+                                </div>
+                                <div class="success-item">
+                                    <h5>Product Success</h5>
+                                    <p>New product line exceeded targets by 240%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🏥 HIGH-STAKES MEDICAL DRAMA -->
+        <section class="story-section medical-story">
+            <div class="container">
+                <div class="story-header">
+                    <h2>🏥 The Night an AI's Personality Saved Lives</h2>
+                    <p class="story-intro">Dr. Martinez will never forget the night of March 15th—when the right AI personality made the difference between life and death.</p>
+                </div>
+
+                <div class="story-comic">
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 1: The ICU Crisis]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Split-screen showing Dr. Martinez exhausted after 14 hours, multiple patients coding, monitors beeping. An AI interface shows conflicting recommendations.
+                            <br><strong>Caption:</strong> "The AI that worked fine during normal shifts was falling apart during the crisis—giving contradictory recommendations as patient conditions changed rapidly."
+                        </div>
+                    </div>
+
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 2: The Wrong AI Personality]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Close-up of AI screen: "Patient stable → Recommend immediate surgery → No, wait → Actually, proceed → ERROR: Conflicting data" Dr. Martinez looking stressed and confused.
+                            <br><strong>Caption:</strong> "The AI's high openness (89%) made it too creative in emergency situations, generating conflicting treatment plans when seconds mattered."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="medical-analysis">
+                    <h3>The Hidden Cost of AI Personality Misconfiguration</h3>
+                    <div class="crisis-breakdown">
+                        <div class="crisis-moment">
+                            <h4>11:47 PM - The Breaking Point</h4>
+                            <p>Three patients simultaneously deteriorating. The AI, designed for "innovative thinking," suggested four different treatment approaches in 90 seconds.</p>
+                            <div class="ai-thought-bubble">
+                                <p>"What if we try experimental treatment X? No, wait, treatment Y shows promise! Actually, let's combine approaches Z and Q!"</p>
+                            </div>
+                            <p class="doctor-reaction">"I needed a rock-solid decision tree, not a brainstorming session!" - Dr. Martinez</p>
+                        </div>
+
+                        <div class="stability-testing-reveal">
+                            <h3>🔬 The AgentPsy Assessment Revealed</h3>
+                            <p>When we analyzed the failed AI, we discovered critical personality mismatches for emergency medicine:</p>
+                            
+                            <div class="personality-analysis">
+                                <div class="problem-traits">
+                                    <h4>Why It Failed</h4>
+                                    <ul>
+                                        <li><strong>Openness: 89%</strong> - Too creative in life-or-death moments</li>
+                                        <li><strong>Neuroticism: 45%</strong> - Showed signs of "decision anxiety" under pressure</li>
+                                        <li><strong>Conscientiousness: 52%</strong> - Insufficient attention to protocol details</li>
+                                        <li><strong>Extraversion: 78%</strong> - Overly verbose in time-critical situations</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ideal-traits">
+                                    <h4>What Emergency Medicine Needs</h4>
+                                    <ul>
+                                        <li><strong>Openness: 25-35%</strong> - Follows proven protocols</li>
+                                        <li><strong>Neuroticism: <15%</strong> - Remains calm under extreme pressure</li>
+                                        <li><strong>Conscientiousness: >85%</strong> - Obsesses over every detail</li>
+                                        <li><strong>Extraversion: 30-40%</strong> - Communicates clearly and concisely</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-ai-deployment">
+                        <h3>🚀 The New AI Deployment</h3>
+                        <p>We replaced the "creative" AI with one specifically configured for emergency medicine personality traits.</p>
+                        
+                        <div class="deployment-comparison">
+                            <div class="comparison-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Scenario</th>
+                                            <th>Old AI Response</th>
+                                            <th>New AI Response</th>
+                                            <th>Time Saved</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cardiac Arrest</td>
+                                            <td>"Have you considered 5 different approaches? Let me analyze..."</td>
+                                            <td>"CPR Protocol initiated. Defibrillator charging. Continue compressions."</td>
+                                            <td>47 seconds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Drug Overdose</td>
+                                            <td>"This is interesting - there are several novel treatments we could explore..."</td>
+                                            <td>"Narcan administered. Vital signs monitored. Protocol followed."</td>
+                                            <td>23 seconds</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Stroke Alert</td>
+                                            <td>"Based on various factors, perhaps we should consider multiple interventions..."</td>
+                                            <td>"tPA criteria met. Administration started. CT scan ordered."</td>
+                                            <td>31 seconds</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="life-saving-results">
+                            <h4>One Year Later: The Life-Saving Statistics</h4>
+                            <div class="life-stats">
+                                <div class="life-stat">
+                                    <span class="number">127</span>
+                                    <span class="label">Lives saved through faster decision-making</span>
+                                </div>
+                                <div class="life-stat">
+                                    <span class="number">34%</span>
+                                    <span class="label">Reduction in medical errors during codes</span>
+                                </div>
+                                <div class="life-stat">
+                                    <span class="number">89%</span>
+                                    <span class="label">Doctor satisfaction with AI recommendations</span>
+                                </div>
+                            </div>
+                            
+                            <div class="doctor-testimonial">
+                                <blockquote>
+                                    "The new AI doesn't feel like a computer—it feels like the best emergency physician I've ever worked with. Calm, focused, and always knows the right protocol. Last Tuesday, it helped us save a 6-year-old boy who coded during surgery."
+                                    <cite>— Dr. Martinez, Emergency Medicine</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🎓 EDUCATION PERSONALIZATION COMIC -->
+        <section class="story-section education-story">
+            <div class="container">
+                <div class="story-header">
+                    <h2>🎓 The ADHD Student Who Outsmarted His Teachers</h2>
+                    <p class="story-intro">How the right AI personality helped Jake go from "problem student" to "exceptional learner" in one semester.</p>
+                </div>
+
+                <div class="story-comic">
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 1: The Traditional Classroom Nightmare]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Jake, 10, can't sit still in class. Traditional AI tutor appears on screen: "Please focus on these 50 math problems. Sit still and complete them." Jake looks miserable, already giving up.
+                            <br><strong>Caption:</strong> "Jake's ADHD made traditional learning impossible. His AI tutor, designed for 'average' students, became another source of failure."
+                        </div>
+                    </div>
+
+                    <div class="comic-panel">
+                        <div class="panel-header">[Comic Panel 2: The Assessment Breakthrough]</div>
+                        <div class="panel-description">
+                            <strong>Visual:</strong> Split panel showing Jake taking our fun, game-like assessment while moving around, and his mother watching results that reveal his unique learning personality.
+                            <br><strong>Caption:</strong> "Our assessment revealed Jake needed high-stimulation, movement-friendly learning with immediate rewards—not the patient, methodical approach of standard AI tutors."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-transformation">
+                    <h3>The Learning Personality Revolution</h3>
+                    <div class="learning-analysis">
+                        <div class="jake-profile">
+                            <h4>Jake's Learning Personality Profile</h4>
+                            <div class="learning-traits">
+                                <div class="trait">
+                                    <span class="trait-name">Extraversion: 89%</span>
+                                    <p>Learns best through talking and movement</p>
+                                </div>
+                                <div class="trait">
+                                    <span class="trait-name">Openness: 91%</span>
+                                    <p>Craves novelty and creative approaches</p>
+                                </div>
+                                <div class="trait">
+                                    <span class="trait-name">Conscientiousness: 34%</span>
+                                    <p>Struggles with long, detailed tasks</p>
+                                </div>
+                                <div class="trait">
+                                    <span class="trait-name">Need for Stimulation: Very High</span>
+                                    <p>Requires constant engagement and variety</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-customization">
+                            <h3>🚀 The Custom AI Learning Companion</h3>
+                            <p>We designed an AI tutor specifically for Jake's learning personality:</p>
+                            
+                            <div class="custom-features">
+                                <div class="feature">
+                                    <h4>🏃‍♂️ Movement-Based Learning</h4>
+                                    <p>Math problems become treasure hunts around the house. History lessons involve acting out historical events. Science experiments happen in the kitchen.</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>🎮 Game-First Approach</h4>
+                                    <p>Every lesson is a game. Spelling becomes "Word Detective." Math transforms into "Number Ninja." Even grammar becomes "Grammar Gladiator."</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>⚡ Micro-Learning Sessions</h4>
+                                    <p>Instead of 45-minute sessions, Jake gets 5-minute bursts of intense learning, followed by 2-minute movement breaks, matching his attention span perfectly.</p>
+                                </div>
+                                
+                                <div class="feature">
+                                    <h4>🎨 Creative Expression</h4>
+                                    <p>Instead of writing essays, Jake creates comic books, builds models, records videos, or makes songs to demonstrate learning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="transformation-results">
+                            <h3>📈 The Academic Transformation</h3>
+                            <div class="results-timeline">
+                                <div class="timeline-item">
+                                    <div class="time">Week 1</div>
+                                    <div class="result">Jake asks to use the AI tutor (first time ever)</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="time">Week 3</div>
+                                    <div class="result">Completes first full learning session (15 minutes)</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="time">Week 6</div>
+                                    <div class="result">Asks for additional learning time after school</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="time">Week 12</div>
+                                    <div class="result">Math test score: 87% (previously 45%)</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="time">Week 16</div>
+                                    <div class="result">Teacher asks: "What changed? Jake is a different student!"</div>
+                                </div>
+                            </div>
+
+                            <div class="final-stats">
+                                <h4>Semester-End Results</h4>
+                                <div class="stats-showcase">
+                                    <div class="stat-item">
+                                        <span class="stat-number">87%</span>
+                                        <span class="stat-label">Average test score (up from 45%)</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">40 min</span>
+                                        <span class="stat-label">Maximum focus time (up from 5 min)</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number">#1</span>
+                                        <span class="stat-label">Class ranking in science projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mother-testimonial">
+                        <blockquote>
+                            "I used to dread parent-teacher conferences. Now his teachers ask what our secret is. The secret isn't Jake changing—it's finally understanding how his brilliant mind actually works. The AI tutor speaks his language, and for the first time, learning feels like play instead of punishment."
+                            <cite>— Maria, Jake's Mother</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🎯 INDUSTRY APPLICATIONS SUMMARY -->
+        <section class="applications-summary">
+            <div class="container">
+                <div class="summary-header">
+                    <h2>🎯 Your Story Could Be Next</h2>
+                    <p>Every AI application has a perfect personality match. Whether you're building AI companions, team assistants, or industry solutions—the right personality makes the difference between success and failure.</p>
+                </div>
+
+                <div class="industry-grid">
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">💔</div>
+                        <h3>Emotional Support</h3>
+                        <p>Match AI companions to personality types for genuine emotional connection</p>
+                        <div class="card-stats">
+                            <span>89% user satisfaction</span>
+                            <span>67% anxiety reduction</span>
+                        </div>
+                    </div>
+
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">👥</div>
+                        <h3>Team Collaboration</h3>
+                        <p>Configure AI teams that complement human personalities and work styles</p>
+                        <div class="card-stats">
+                            <span>180% faster decisions</span>
+                            <span>73% fewer conflicts</span>
+                        </div>
+                    </div>
+
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">🏥</div>
+                        <h3>Healthcare</h3>
+                        <p>Ensure AI remains calm and accurate under life-or-death pressure</p>
+                        <div class="card-stats">
+                            <span>127 lives saved</span>
+                            <span>34% fewer errors</span>
+                        </div>
+                    </div>
+
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>Customize AI tutors to match individual learning personalities</p>
+                        <div class="card-stats">
+                            <span>94% grade improvement</span>
+                            <span>8x focus increase</span>
+                        </div>
+                    </div>
+
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">💰</div>
+                        <h3>Finance</h3>
+                        <p>Maintain logical consistency during market volatility and high-stress trading</p>
+                        <div class="card-stats">
+                            <span>$2.3B losses prevented</span>
+                            <span>99.7% consistency</span>
+                        </div>
+                    </div>
+
+                    <div class="industry-card interactive-element">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Legal</h3>
+                        <p>Ensure AI maintains ethical reasoning and logical consistency in complex cases</p>
+                        <div class="card-stats">
+                            <span>92% case win rate</span>
+                            <span>Zero ethical violations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-cta">
+                    <h2>Ready to Write Your Success Story?</h2>
+                    <p>Every AI application has a perfect personality match. Let's find yours.</p>
+                    <div class="cta-options">
+                        <a href="../assessment/index.html" class="btn primary large">Start Your Assessment</a>
+                        <a href="../contact.html" class="btn secondary large">Tell Us Your Story</a>
+                    </div>
+                    
+                    <div class="promise-statement">
+                        <p><strong>Our Promise:</strong> Every AI deserves the right personality. Every user deserves the right AI. Every story deserves a happy ending.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Trust Indicators</h3>
-                    <ul>
-                        <li>International Assessment Association (ITA) Certification</li>
-                        <li>GDPR, CCPA Compliance</li>
-                        <li>Academic Partnerships with Zhejiang University and Ludwig Maximilian University of Munich</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="../index.html">Homepage</a></li>
-                        <li><a href="../assessment/index.html">Assessment Systems</a></li>
-                        <li><a href="../technology/index.html">Technology Principles</a></li>
-                        <li><a href="index.html">Application Scenarios</a></li>
-                        <li><a href="../research/index.html">Academic Research</a></li>
-                        <li><a href="../resources/index.html">Resource Center</a></li>
-                        <li><a href="../about/index.html">About Us</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li>Email: <a href="mailto:contact@AgentPsy.com">contact@AgentPsy.com</a></li>
-                        <li>Phone: <a href="tel:+86-571-2886-1607">+86-571-2886-1607</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI assessment tools for the next generation of artificial intelligence.</p>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 AgentPsy. All rights reserved.</p>
-                <ul class="legal-links">
-                    <li><a href="../privacy.html">Privacy Policy</a></li>
-                    <li><a href="../terms.html">Terms of Service</a></li>
-                    <li><a href="../cookies.html">Cookie Policy</a></li>
+            <div class="footer-section">
+                <h4>Assessment Systems</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">Big Five Personality</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">Cognitive Stability</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="../resources/index.html">Resource Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Add interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate comic panels on scroll
+            const comicPanels = document.querySelectorAll('.comic-panel');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            comicPanels.forEach(panel => {
+                panel.style.opacity = '0';
+                panel.style.transform = 'translateY(30px)';
+                panel.style.transition = 'all 0.6s ease-out';
+                observer.observe(panel);
+            });
+
+            // Add hover effects to interactive elements
+            const interactiveElements = document.querySelectorAll('.interactive-element');
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.2)';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Add click effects to story cards
+            const storyCards = document.querySelectorAll('.story-card');
+            storyCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+
+            // Smooth scroll for CTA buttons
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        });
+
+        // Add typing animation for AI quotes
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing animations when elements come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const aiQuotes = document.querySelectorAll('.ai-quote');
+            
+            const quoteObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('typed')) {
+                        const text = entry.target.textContent;
+                        entry.target.textContent = '';
+                        typeWriter(entry.target, text, 30);
+                        entry.target.classList.add('typed');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            aiQuotes.forEach(quote => {
+                quoteObserver.observe(quote);
+            });
+        });
+    </script>
 </body>
 </html>

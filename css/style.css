@@ -50,6 +50,20 @@ header {
     font-size: 1.8rem;
     font-weight: 700;
     color: #2c3e50;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 .nav-menu {
@@ -508,44 +522,419 @@ footer {
     margin-top: 2rem;
     border-top: 1px solid #34495e;
     color: #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon {
+    margin-right: 15px;
+}
+
+.footer-icon img {
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced Story and Comic Styles for Applications Page */
+
+/* Story Sections */
+.story-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+    margin: 40px 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.story-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.story-intro {
+    font-size: 1.3rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Comic Panel Styles */
+.story-comic {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 3px solid #667eea;
+}
+
+.comic-panel {
+    margin-bottom: 40px;
+    background: #fefefe;
+    border-radius: 10px;
+    padding: 25px;
+    border: 2px solid #dee2e6;
+    position: relative;
+}
+
+.comic-panel::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.panel-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.panel-description {
+    line-height: 1.7;
+    color: #495057;
+}
+
+.panel-description strong {
+    color: #667eea;
+}
+
+/* Character Illustrations */
+.character-illustration {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* AI Personality Cards */
+.ai-personality-card {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #333;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.ai-personality-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Emotion Meter */
+.emotion-meter {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.emotion-bar {
+    width: 60px;
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.emotion-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 30px;
+    transition: height 2s ease;
+}
+
+/* Stress Test */
+.stress-test {
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.stress-test h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.stress-test p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.stress-test strong {
+    color: #fff;
+}
+
+/* Timeline Styles */
+.scenario-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.scenario-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    background: #667eea;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.timeline-item .time {
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Quote Bubbles */
+.quote-bubble {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin: 20px 0;
+    font-style: italic;
+    border-left: 4px solid #667eea;
+}
+
+.quote-bubble::before {
+    content: '"';
+    font-size: 3em;
+    color: #667eea;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+/* Interactive Elements */
+.interactive-element {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll animations */
+.story-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.story-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Animation */
+.loading-animation {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    border-radius: 50%;
+    border-top-color: #667eea;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-container {
+    .story-section {
+        padding: 60px 0;
+        margin: 30px 0;
+    }
+    
+    .story-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .comic-panel {
+        padding: 25px;
+        margin: 25px 0;
+    }
+    
+    .character-illustration {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+    }
+    
+    .emotion-meter {
         flex-direction: column;
-        padding: 1rem;
+        align-items: center;
     }
     
-    .nav-menu {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+    .personality-clash {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .nav-menu li {
-        margin: 0.5rem 1rem;
+    .vs-divider {
+        order: -1;
+        margin: 20px auto;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    .personality-analysis {
+        grid-template-columns: 1fr;
     }
     
-    .hero p {
-        font-size: 1rem;
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
     
-    .content-section {
-        padding: 2rem 0;
+    .success-grid {
+        grid-template-columns: 1fr;
     }
     
-    .cta-section {
-        padding: 2rem 1rem;
+    .life-stats {
+        grid-template-columns: 1fr;
     }
     
-    .secondary-cta {
-        margin-top: 1rem;
-        margin-left: 0;
-        display: block;
+    .results-timeline::before {
+        left: 10px;
     }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+    
+    .timeline-item::before {
+        left: -32px;
+    }
+    
+    .stats-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .story-section {
+        background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    }
+    
+    .comic-panel {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .panel-description {
+        color: #e2e8f0;
+    }
+    
+    .profile-card {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .timeline-item {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+}
 }

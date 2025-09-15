@@ -1,125 +1,33 @@
-/* Clean Footer Icon Styles - No Animations */
-
-/* Clean Footer Icon Styles */
-.footer-icon {
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 确保没有动画效果 */
-    animation: none !important;
-    transition: none !important;
-}
-
-.footer-icon img {
-    height: 30px;
-    width: auto;
-    /* 确保没有动画效果 */
-    animation: none !important;
-    transition: none !important;
-    /* 确保图片正常显示 */
-    display: block;
-    object-fit: contain;
-}
-
-/* Clean Footer Bottom Styles */
-.footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    border-top: 1px solid #34495e;
-    color: #bdc3c7;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    /* 确保没有动画效果 */
-    animation: none !important;
-    transition: none !important;
-}
-
-/* Clean Footer Content Styles */
-.footer-content {
-    background: #2c3e50;
-    /* 确保没有动画效果 */
-    animation: none !important;
-    transition: none !important;
-}
-
-/* 确保所有页脚元素都没有动画 */
-.footer-bottom *, 
-.footer-icon *, 
-.footer-content * {
-    animation: none !important;
-    transition: none !important;
-}
-
-/* 修复图片显示问题 */
-.footer-icon img {
-    /* 确保图片正常显示 */
-    object-fit: contain;
-    max-width: 100%;
-    height: auto;
-    /* 确保没有奇怪的CSS效果 */
-    filter: none !important;
-    transform: none !important;
-}
-
-/* 确保页脚图标容器没有问题 */
-.footer-icon {
-    position: static;
-    /* 确保没有绝对定位或其他问题 */
-    transform: none !important;
-    filter: none !important;
-}
-
-/* 确保页脚整体没有问题 */
-footer {
-    /* 确保没有奇怪的CSS效果 */
-    transform: none !important;
-    filter: none !important;
-    animation: none !important;
-}
-
-/* 确保所有页脚相关元素都没有动画 */
-footer *, 
-.footer-section *, 
-.footer-section ul *, 
-.footer-section li *, 
-.footer-section a * {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    filter: none !important;
-}
-
-/* 确保图片正常显示 */
-img {
-    /* 确保页脚图片正常显示 */
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* 确保没有继承的动画效果 */
-.footer-bottom,
-.footer-icon,
-.footer-icon img,
-.footer-content {
-    /* 确保没有继承的动画效果 */
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    animation: none !important;
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    -o-transform: none !important;
-    transform: none !important;
-    -webkit-filter: none !important;
-    -moz-filter: none !important;
-    -o-filter: none !important;
-    filter: none !important;
-}
+/* Clean Footer Icon Styles - No Animations */  
+  
+/* Clean Footer Icon Styles */  
+.footer-icon {  
+    margin-right: 15px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}  
+  
+.footer-icon img {  
+    height: 30px;  
+    width: auto;  
+    display: block;  
+    object-fit: contain;  
+}  
+  
+/* Clean Footer Bottom Styles */  
+.footer-bottom {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    padding: 2rem 0;  
+    margin-top: 2rem;  
+    border-top: 1px solid #34495e;  
+    color: #bdc3c7;  
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);  
+}  
+  
+/* Clean Footer Content Styles */  
+.footer-content {  
+    background: #2c3e50;  
+} 

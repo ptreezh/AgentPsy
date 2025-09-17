@@ -1,0 +1,624 @@
+/* Industries Page Specific Styles - Fear-Driven Design */
+
+/* Hero Section - Fear-Driven Design */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero .container {
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero .value-proposition {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fear Indicators */
+.fear-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.fear-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.fear-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.fear-label {
+    font-size: 1rem;
+    color: #ecf0f1;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #667eea;
+}
+
+.btn.primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn.secondary:hover {
+    background: #fff;
+    color: #667eea;
+}
+
+.btn.outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn.outline:hover {
+    background: #667eea;
+    color: #fff;
+}
+
+/* Industry Grid Section */
+.industry-grid-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.section-intro {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.industry-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.industry-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.industry-description {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.industry-metrics {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.metric {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pain-points {
+    margin-bottom: 25px;
+}
+
+.pain-point {
+    background: #f8f9fa;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin: 5px 5px 5px 0;
+    display: inline-block;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.case-study {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.case-study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.client-info h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.industry-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.results-summary {
+    display: flex;
+    gap: 30px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.case-study-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.challenge h4, .solution h4, .outcome h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.challenge p, .solution p, .outcome p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.solution ul {
+    color: #666;
+    padding-left: 20px;
+}
+
+.solution li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ROI Calculator Section */
+.roi-calculator-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.calculator-container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.calculator-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.input-group input, .input-group select {
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.input-group input[type="range"] {
+    padding: 5px;
+}
+
+#risk-value {
+    text-align: center;
+    font-weight: 600;
+    color: #667eea;
+    margin-top: 10px;
+}
+
+#calculate-roi {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.calculator-results {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 2px solid #e9ecef;
+}
+
+.results-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.result-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+}
+
+.result-card h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.result-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.recommendation {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.recommendation h4 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.recommendation p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    margin-bottom: 30px;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonial-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: #667eea;
+    position: absolute;
+    left: -10px;
+    top: -15px;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.author-info h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.author-title {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats {
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .industry-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .industry-card {
+        padding: 30px;
+    }
+    
+    .case-study-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .results-summary {
+        justify-content: center;
+    }
+    
+    .case-study {
+        padding: 30px;
+    }
+    
+    .calculator-inputs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .industry-card {
+        padding: 25px;
+    }
+    
+    .case-study {
+        padding: 25px;
+    }
+    
+    .calculator-container {
+        padding: 30px;
+    }
+    
+    .results-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Industry-specific color themes */
+.industry-card[data-industry="financial"] .industry-icon {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.industry-card[data-industry="healthcare"] .industry-icon {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.industry-card[data-industry="enterprise"] .industry-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.industry-card[data-industry="education"] .industry-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.industry-card[data-industry="cybersecurity"] .industry-icon {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.industry-card[data-industry="government"] .industry-icon {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}

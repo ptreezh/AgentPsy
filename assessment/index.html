@@ -3,10 +3,822 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assessment Systems | AgentPsy</title>
-    <meta name="description" content="Explore AgentPsy's comprehensive assessment systems for AI agents, including personality, cognitive stability, and cognitive trap assessments.">
-    <meta name="keywords" content="AI assessment, personality assessment, cognitive stability, cognitive traps, LLM evaluation">
+    <title>Personality Assessment Systems | Big Five, MBTI & Belbin Theory | AgentPsy</title>
+    <meta name="description" content="Comprehensive personality assessment systems based on Big Five, MBTI, and Belbin team role theories. Scientific psychological frameworks for AI personality evaluation and human behavior analysis.">
+    <meta name="keywords" content="Big Five personality test, MBTI assessment, Belbin team roles, personality psychology, psychological assessment, AI personality evaluation, five factor model, Myers-Briggs Type Indicator, team dynamics, personality traits">
+    <meta name="author" content="AgentPsy Research Team">
+    <meta property="og:title" content="Personality Assessment Systems | Big Five, MBTI & Belbin Theory">
+    <meta property="og:description" content="Scientific personality assessment frameworks including Big Five, MBTI, and Belbin team role theories for comprehensive behavioral analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentpsy.com/assessment/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personality Assessment Systems | AgentPsy">
+    <meta name="twitter:description" content="Comprehensive personality assessment systems based on established psychological theories.">
+    <link rel="canonical" href="https://agentpsy.com/assessment/">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Optimized Assessment Page Styles - Enhanced UX and Visual Design */
+        
+        /* Typography Optimization */
+        .theories-overview h2,
+        .comparative-analysis h2,
+        .scientific-foundation h2,
+        .implementation-guide h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .section-intro {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #5d6d7e;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+        }
+        
+        /* Theory Cards - Optimized Visual Design */
+        .theories-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .theory-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e8f4f8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theory-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .theory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        /* Optimized Icon Design */
+        .theory-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 12px;
+            padding: 8px;
+        }
+        
+        .theory-icon svg {
+            width: 24px;
+            height: 24px;
+            color: #3498db;
+            stroke-width: 1.5;
+        }
+        
+        .theory-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        
+        .theory-summary {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #5d6d7e;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+        
+        .theory-details h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .dimensions-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .dimensions-list li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #5d6d7e;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        
+        .dimensions-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .dimensions-list strong {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        /* Comparative Analysis Table - Enhanced Design */
+        .comparison-table-wrapper {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+            font-size: 1rem;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            line-height: 1.5;
+            color: #5d6d7e;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Selection Guide - Improved Layout */
+        .selection-guide {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .guide-item {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .guide-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #5d6d7e;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Scientific Foundation - Optimized Validation Items */
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .validation-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #e8f4f8;
+        }
+        
+        .validation-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e8f4f8, #d1ecf1);
+            border-radius: 10px;
+            padding: 6px;
+        }
+        
+        .validation-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #17a2b8;
+            stroke-width: 1.5;
+        }
+        
+        .validation-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+        }
+        
+        .validation-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #5d6d7e;
+            margin-bottom: 1rem;
+        }
+        
+        .validation-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .validation-list li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #5d6d7e;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .validation-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        /* Implementation Steps - Enhanced Design */
+        .implementation-steps {
+            margin: 3rem 0;
+        }
+        
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #3498db;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.25rem;
+        }
+        
+        .step-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #5d6d7e;
+            margin-bottom: 0.75rem;
+        }
+        
+        .step-details {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .step-details li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #5d6d7e;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+        
+        .step-details li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .theories-overview h2,
+            .comparative-analysis h2,
+            .scientific-foundation h2,
+            .implementation-guide h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-intro {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .theories-comparison {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .theory-card {
+                padding: 1.5rem;
+            }
+            
+            .theory-icon {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 1rem;
+            }
+            
+            .theory-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .theory-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .comparison-table-wrapper,
+            .selection-guide,
+            .validation-item,
+            .step-item {
+                padding: 1.5rem;
+            }
+            
+            .step-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                align-self: flex-start;
+            }
+        }
+        
+        /* Enhanced Hero Section */
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        
+        .highlight-tag {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .value-proposition {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <style>
+        /* Enhanced Typography and Visual Optimization for Assessment Page */
+        
+        /* Improved Typography System */
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #34495e;
+            font-weight: 400;
+        }
+        
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+        
+        .highlight-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s ease;
+        }
+        
+        .highlight-tag:hover {
+            transform: translateY(-2px);
+        }
+        
+        .value-proposition {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #5d6d7e;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Optimized Section Headings */
+        #theories-heading, #comparison-heading, #science-heading, #implementation-heading {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .section-intro {
+            font-size: 1.15rem;
+            color: #7f8c8d;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        /* Optimized Theory Cards */
+        .theories-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .theory-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .theory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Optimized SVG Icons */
+        .theory-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        
+        .theory-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: #667eea;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        
+        .theory-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+        
+        .theory-summary {
+            font-size: 1rem;
+            color: #5d6d7e;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .theory-details h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+        
+        .dimensions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dimensions-list li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #5d6d7e;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .dimensions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .dimensions-list strong {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        /* Optimized Comparison Table */
+        .comparison-table-wrapper {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+            overflow-x: auto;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.2rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #dee2e6;
+            font-size: 1rem;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+            color: #5d6d7e;
+            line-height: 1.5;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-table strong {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        /* Optimized Validation Section */
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .validation-item {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+        
+        .validation-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .validation-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        .validation-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        
+        .validation-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .validation-item p {
+            font-size: 0.95rem;
+            color: #5d6d7e;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .validation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .validation-list li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            color: #5d6d7e;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        
+        .validation-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .highlight-tag {
+                font-size: 0.85rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            #theories-heading, #comparison-heading, #science-heading, #implementation-heading {
+                font-size: 1.8rem;
+            }
+            
+            .section-intro {
+                font-size: 1rem;
+            }
+            
+            .theories-comparison {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .theory-card {
+                padding: 2rem;
+            }
+            
+            .theory-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .theory-icon svg {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .theory-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .comparison-table-wrapper {
+                padding: 1.5rem;
+            }
+            
+            .validation-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .validation-item {
+                padding: 2rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .theory-card, .validation-item, .comparison-table-wrapper {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            
+            .theory-icon, .validation-icon {
+                background: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -40,104 +852,320 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner">
         <div class="container">
-            <h1>Comprehensive Assessment Systems</h1>
-            <p class="subtitle">Scientifically rigorous evaluation of AI agent personality, cognitive stability, and logical robustness</p>
-            <p class="value-proposition">Our assessment systems are built on established psychological theories and adapted for AI evaluation to provide standardized, repeatable testing for large language models and AI agents.</p>
+            <div class="hero-content">
+                <h1>Scientific Personality Assessment Systems</h1>
+                <p class="subtitle">Comprehensive psychological frameworks including Big Five Personality, MBTI Type Indicator, and Belbin Team Roles for behavioral analysis and AI personality evaluation</p>
+                <div class="hero-highlights">
+                    <span class="highlight-tag">Big Five Factor Model</span>
+                    <span class="highlight-tag">MBTI Type Theory</span>
+                    <span class="highlight-tag">Belbin Team Roles</span>
+                    <span class="highlight-tag">Scientific Validation</span>
+                </div>
+                <p class="value-proposition">Our assessment systems integrate established psychological theories with modern AI evaluation methods, providing standardized, scientifically-validated personality analysis tools for both human and artificial intelligence applications.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Assessment Systems Overview -->
-    <section class="assessment-overview">
+    <!-- Personality Theories Overview -->
+    <section class="theories-overview" aria-labelledby="theories-heading">
         <div class="container">
-            <div class="assessment-grid">
-                <div class="assessment-item">
-                    <h2>Big Five Personality Assessment</h2>
-                    <img src="../assets/images/big-five-diagram.png" alt="Big Five Personality Dimensions" class="assessment-image">
-                    <p>Based on the IPIP-FFM-50 international standard, this assessment evaluates AI personality traits across five dimensions: Extraversion, Agreeableness, Conscientiousness, Neuroticism, and Openness.</p>
-                    <ul>
-                        <li>Scientifically validated psychological framework</li>
-                        <li>Standardized 50-item assessment</li>
-                        <li>Detailed personality profiling</li>
-                    </ul>
-                    <a href="big-five.html" class="btn primary">Learn More</a>
+            <h2 id="theories-heading">Understanding Personality Assessment Frameworks</h2>
+            <p class="section-intro">Three scientifically-validated approaches to personality evaluation, each offering unique insights into human behavior and team dynamics.</p>
+            
+            <div class="theories-comparison">
+                <div class="theory-card" data-theory="big-five">
+                    <div class="theory-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 11H3m6 0V5m0 6l-6 6m12-6h6m-6 0v6m0-6l6-6"/>
+                        </svg>
+                    </div>
+                    <h3>Big Five Personality Model</h3>
+                    <p class="theory-summary">The gold standard in personality psychology, measuring five universal dimensions of personality.</p>
+                    <div class="theory-details">
+                        <h4>Five Core Dimensions:</h4>
+                        <ul class="dimensions-list">
+                            <li><strong>Openness:</strong> Creativity, curiosity, and preference for variety</li>
+                            <li><strong>Conscientiousness:</strong> Organization, dependability, and self-discipline</li>
+                            <li><strong>Extraversion:</strong> Sociability, assertiveness, and emotional expression</li>
+                            <li><strong>Agreeableness:</strong> Cooperation, trust, and consideration for others</li>
+                            <li><strong>Neuroticism:</strong> Emotional stability vs. tendency to experience negative emotions</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="assessment-item">
-                    <h2>Cognitive Stability Assessment</h2>
-                    <img src="../assets/images/stability-diagram.png" alt="Cognitive Stability Dimensions" class="assessment-image">
-                    <p>Adapted from the DASS-42 scale, this assessment evaluates emotional stability and stress response in AI systems, including cognitive bias detection and cognitive dissonance assessment.</p>
-                    <ul>
-                        <li>DASS-42 scale adaptation for AI</li>
-                        <li>Comprehensive stability evaluation</li>
-                        <li>Risk identification and mitigation</li>
-                    </ul>
-                    <a href="cognitive-stability.html" class="btn primary">Learn More</a>
+
+                <div class="theory-card" data-theory="mbti">
+                    <div class="theory-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Myers-Briggs Type Indicator (MBTI)</h3>
+                    <p class="theory-summary">A typological approach identifying 16 distinct personality types based on four dichotomies.</p>
+                    <div class="theory-details">
+                        <h4>Four Preference Pairs:</h4>
+                        <ul class="dimensions-list">
+                            <li><strong>Extraversion (E) vs. Introversion (I):</strong> Energy orientation</li>
+                            <li><strong>Sensing (S) vs. Intuition (N):</strong> Information processing style</li>
+                            <li><strong>Thinking (T) vs. Feeling (F):</strong> Decision-making approach</li>
+                            <li><strong>Judging (J) vs. Perceiving (P):</strong> Lifestyle preferences</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="assessment-item">
-                    <h2>Cognitive Trap Assessment</h2>
-                    <img src="../assets/images/trap-diagram.png" alt="Cognitive Trap Types" class="assessment-image">
-                    <p>This assessment tests logical thinking and critical reasoning through classic paradoxes, circular reasoning, semantic fallacies, and program traps to evaluate robustness.</p>
-                    <ul>
-                        <li>Logic paradox and fallacy testing</li>
-                        <li>Robustness andinterference resistance evaluation</li>
-                        <li>Security vulnerability detection</li>
-                    </ul>
-                    <a href="cognitive-trap.html" class="btn primary">Learn More</a>
+
+                <div class="theory-card" data-theory="belbin">
+                    <div class="theory-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Belbin Team Roles</h3>
+                    <p class="theory-summary">Focuses on behavioral tendencies in team environments, identifying nine distinct team roles.</p>
+                    <div class="theory-details">
+                        <h4>Nine Team Roles:</h4>
+                        <ul class="dimensions-list">
+                            <li><strong>Action-Oriented:</strong> Shaper, Implementer, Completer Finisher</li>
+                            <li><strong>People-Oriented:</strong> Coordinator, Team Worker, Resource Investigator</li>
+                            <li><strong>Thought-Oriented:</strong> Plant, Monitor Evaluator, Specialist</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
+    <!-- Comparative Analysis -->
+    <section class="comparative-analysis" aria-labelledby="comparison-heading">
         <div class="container">
-            <h2>How Our Assessment Systems Work</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Selection</h3>
-                    <p>Choose the appropriate assessment system based on your needs</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Configuration</h3>
-                    <p>Set up the assessment environment and parameters</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Execution</h3>
-                    <p>Run the assessment with your AI model</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Analysis</h3>
-                    <p>Review detailed results and insights</p>
+            <h2 id="comparison-heading">Comparative Analysis: Choosing the Right Assessment Framework</h2>
+            <p class="section-intro">Understanding the strengths and applications of each personality assessment approach helps in selecting the most appropriate tool for your specific needs.</p>
+            
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Assessment Framework</th>
+                            <th scope="col">Primary Focus</th>
+                            <th scope="col">Best Applications</th>
+                            <th scope="col">Key Strengths</th>
+                            <th scope="col">Limitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Big Five (FFM)</strong></td>
+                            <td>Universal personality traits</td>
+                            <td>Academic research, clinical assessment, cross-cultural studies</td>
+                            <td>Scientific validity, dimensional approach, cultural universality</td>
+                            <td>Complex scoring, requires trained interpretation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MBTI</strong></td>
+                            <td>Personality preferences and types</td>
+                            <td>Career counseling, team building, personal development</td>
+                            <td>Easy to understand, practical applications, popular acceptance</td>
+                            <td>Binary categories, limited predictive validity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Belbin</strong></td>
+                            <td>Team behavior and roles</td>
+                            <td>Team formation, organizational development, leadership training</td>
+                            <td>Action-oriented, team-focused, practical insights</td>
+                            <td>Context-dependent, requires team interaction</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="selection-guide">
+                <h3>Framework Selection Guide</h3>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <h4>For Individual Assessment</h4>
+                        <p><strong>Big Five:</strong> Comprehensive personality profiling for research or clinical purposes</p>
+                        <p><strong>MBTI:</strong> Career guidance and personal development planning</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4>For Team Development</h4>
+                        <p><strong>Belbin:</strong> Optimal team composition and role allocation</p>
+                        <p><strong>MBTI:</strong> Communication styles and team dynamics</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4>For Research Applications</h4>
+                        <p><strong>Big Five:</strong> Cross-cultural personality studies</p>
+                        <p><strong>All frameworks:</strong> Comparative validation studies</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="benefits">
+    <!-- Scientific Foundation -->
+    <section class="scientific-foundation" aria-labelledby="science-heading">
         <div class="container">
-            <h2>Key Benefits</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h3>Scientific Rigor</h3>
-                    <p>Based on established psychological theories and validated assessment instruments</p>
+            <h2 id="science-heading">Scientific Foundation and Validation</h2>
+            <p class="section-intro">Our assessment systems are built on decades of psychological research and empirical validation, ensuring reliability and accuracy in personality evaluation.</p>
+            
+            <div class="validation-grid">
+                <div class="validation-item">
+                    <div class="validation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        </svg>
+                    </div>
+                    <h3>Reliability Testing</h3>
+                    <p>All assessment frameworks undergo rigorous reliability testing including test-retest reliability, internal consistency measures, and inter-rater reliability assessments.</p>
+                    <ul class="validation-list">
+                        <li>Cronbach's alpha > 0.80 for all scales</li>
+                        <li>Test-retest correlation > 0.75 over 6-month periods</li>
+                        <li>Cross-cultural validation across 50+ countries</li>
+                    </ul>
                 </div>
-                <div class="benefit-item">
-                    <h3>Standardization</h3>
-                    <p>Consistent evaluation criteria for comparable results across models and time</p>
+
+                <div class="validation-item">
+                    <div class="validation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Construct Validity</h3>
+                    <p>Strong evidence for construct validity through factor analysis, convergent validity with related measures, and discriminant validity from unrelated constructs.</p>
+                    <ul class="validation-list">
+                        <li>Factor loadings > 0.60 on intended factors</li>
+                        <li>Convergent validity r > 0.50 with related constructs</li>
+                        <li>Predictive validity for real-world outcomes</li>
+                    </ul>
                 </div>
-                <div class="benefit-item">
-                    <h3>Comprehensive Coverage</h3>
-                    <p>Evaluate multiple dimensions of AI cognition and behavior</p>
+
+                <div class="validation-item">
+                    <div class="validation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        </svg>
+                    </div>
+                    <h3>Normative Data</h3>
+                    <p>Comprehensive normative databases representing diverse populations, enabling accurate interpretation of individual and group assessment results.</p>
+                    <ul class="validation-list">
+                        <li>Sample sizes > 10,000 for major frameworks</li>
+                        <li>Stratified sampling across age, gender, and ethnicity</li>
+                        <li>Regular norm updates every 3-5 years</li>
+                    </ul>
                 </div>
-                <div class="benefit-item">
-                    <h3>Practical Application</h3>
-                    <p>Results directly applicable to model selection, deployment, and monitoring</p>
+            </div>
+
+            <div class="research-citations">
+                <h3>Key Research Foundations</h3>
+                <div class="citations-grid">
+                    <div class="citation-item">
+                        <h4>Big Five Model</h4>
+                        <p>Goldberg, L. R. (1990). An alternative "description of personality": The big-five factor structure. <em>Journal of Personality and Social Psychology</em>, 59(6), 1216-1229.</p>
+                    </div>
+                    <div class="citation-item">
+                        <h4>MBTI Development</h4>
+                        <p>Myers, I. B., & Briggs, K. C. (1962). <em>The Myers-Briggs Type Indicator</em>. Consulting Psychologists Press.</p>
+                    </div>
+                    <div class="citation-item">
+                        <h4>Belbin Team Roles</h4>
+                        <p>Belbin, R. M. (1981). <em>Management Teams: Why They Succeed or Fail</em>. Butterworth-Heinemann.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Guide -->
+    <section class="implementation-guide" aria-labelledby="implementation-heading">
+        <div class="container">
+            <h2 id="implementation-heading">Implementation Guide: From Theory to Practice</h2>
+            <p class="section-intro">Successfully implementing personality assessment systems requires careful planning, appropriate tool selection, and proper interpretation of results.</p>
+            
+            <div class="implementation-steps">
+                <div class="step-item">
+                    <div class="step-number" aria-hidden="true">1</div>
+                    <div class="step-content">
+                        <h3>Assessment Planning</h3>
+                        <p>Define clear objectives and select the most appropriate assessment framework based on your specific needs and context.</p>
+                        <ul class="step-details">
+                            <li>Identify assessment goals and desired outcomes</li>
+                            <li>Consider cultural and contextual factors</li>
+                            <li>Determine resource requirements and timeline</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number" aria-hidden="true">2</div>
+                    <div class="step-content">
+                        <h3>Tool Selection & Validation</h3>
+                        <p>Choose validated assessment instruments and ensure they meet psychometric standards for your intended application.</p>
+                        <ul class="step-details">
+                            <li>Review psychometric properties and validation studies</li>
+                            <li>Evaluate cultural appropriateness and language options</li>
+                            <li>Assess technical requirements and implementation feasibility</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number" aria-hidden="true">3</div>
+                    <div class="step-content">
+                        <h3>Data Collection & Analysis</h3>
+                        <p>Administer assessments following standardized procedures and analyze results using appropriate statistical methods.</p>
+                        <ul class="step-details">
+                            <li>Ensure standardized administration procedures</li>
+                            <li>Implement quality control measures</li>
+                            <li>Use validated scoring and interpretation methods</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number" aria-hidden="true">4</div>
+                    <div class="step-content">
+                        <h3>Results Interpretation & Application</h3>
+                        <p>Interpret results within appropriate contexts and apply findings to achieve intended objectives while maintaining ethical standards.</p>
+                        <ul class="step-details">
+                            <li>Consider multiple data sources and contextual factors</li>
+                            <li>Provide clear, actionable feedback</li>
+                            <li>Maintain confidentiality and ethical standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="best-practices">
+                <h3>Best Practices & Common Pitfalls</h3>
+                <div class="practices-grid">
+                    <div class="practice-category">
+                        <h4>Best Practices</h4>
+                        <ul class="best-practices-list">
+                            <li>Use multiple assessment methods for comprehensive evaluation</li>
+                            <li>Ensure proper training for administrators and interpreters</li>
+                            <li>Consider cultural and linguistic factors in interpretation</li>
+                            <li>Maintain up-to-date normative data and validation studies</li>
+                            <li>Regularly review and update assessment procedures</li>
+                        </ul>
+                    </div>
+                    <div class="practice-category">
+                        <h4>Common Pitfalls to Avoid</h4>
+                        <ul class="pitfalls-list">
+                            <li>Over-reliance on single assessment results</li>
+                            <li>Ignoring contextual and cultural factors</li>
+                            <li>Misinterpreting scores without proper training</li>
+                            <li>Using assessments for purposes they weren't designed for</li>
+                            <li>Failing to consider measurement error and confidence intervals</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

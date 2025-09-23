@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Support AI Personality | Mental Health AI | AgentPsy</title>
+    <meta name="description" content="Discover how personality-matched AI provides genuine emotional support, mental health assistance, and compassionate companionship for those in need.">
+    <meta name="keywords" content="emotional support AI, mental health AI, AI companion, compassionate AI, emotional AI, therapy AI, mental wellness, AI personality matching">
+    <meta name="author" content="AgentPsy Research Team">
+    <meta property="og:title" content="Emotional Support AI Personality | Mental Health AI">
+    <meta property="og:description" content="Compassionate AI personality matching for emotional support and mental wellness.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentpsy.com/applications/emotional-support.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emotional Support AI Personality | AgentPsy">
+    <meta name="twitter:description" content="Genuine emotional connection through personality-matched AI companions.">
+    <link rel="canonical" href="https://agentpsy.com/applications/emotional-support.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logo-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Gestalt Principles for Emotional Support Page */
+        
+        /* Proximity - Group related emotional content */
+        .emotional-cluster {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emotional-cluster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(240, 98, 146, 0.1) 0%, transparent 50%);
+        }
+
+        /* Similarity - Consistent emotional case studies */
+        .emotional-case-study {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 6px solid #e91e63;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .emotional-case-study:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Hero section with emotional theme */
+        .emotional-hero {
+            background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emotional-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="heart-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23heart-grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Emotional success indicators */
+        .emotional-success-indicator {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            z-index: 2;
+        }
+
+        .emotional-metric {
+            background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 15px 0;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(233, 30, 99, 0.3);
+        }
+
+        /* Emotional personality visualization */
+        .emotional-personality-visual {
+            background: linear-gradient(135deg, #ffffff 0%, #fce4ec 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #f8bbd0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emotional-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .emotional-trait {
+            background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .emotional-trait:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+        }
+
+        .emotional-metrics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .emotional-metric-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(233, 30, 99, 0.1);
+            border-radius: 12px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .emotional-metric-item:hover {
+            background: rgba(233, 30, 99, 0.15);
+            transform: scale(1.05);
+            border-color: #e91e63;
+        }
+
+        .emotional-metric-number {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #e91e63;
+            margin-bottom: 5px;
+        }
+
+        .emotional-metric-label {
+            font-size: 0.85rem;
+            color: #495057;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+
+        /* Emotional benefits section */
+        .emotional-benefits {
+            background: rgba(233, 30, 99, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #e91e63;
+        }
+
+        .emotional-benefits h4 {
+            color: #e91e63;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .emotional-benefits h4::before {
+            content: '❤️';
+            font-size: 1.2rem;
+        }
+
+        .emotional-benefits ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .emotional-benefits li {
+            margin-bottom: 8px;
+            color: #495057;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .emotional-benefits li::before {
+            content: '💝';
+            color: #e91e63;
+            margin-right: 8px;
+        }
+
+        /* Therapeutic approach section */
+        .therapeutic-approach {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #ce93d8;
+        }
+
+        .therapeutic-approach h3 {
+            color: #8e24aa;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .therapeutic-approach h3::before {
+            content: '🌱';
+            font-size: 1.5rem;
+        }
+
+        /* Emotional case studies grid */
+        .emotional-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Navigation - Emotional theme */
+        .emotional-nav {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px 25px;
+            margin: 30px 0;
+            display: inline-flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .emotional-nav-link {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .emotional-nav-link:hover,
+        .emotional-nav-link.active {
+            background: white;
+            color: #e91e63;
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .emotional-cluster {
+                padding: 30px;
+                margin: 40px 0;
+            }
+            
+            .emotional-case-study {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            .emotional-metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .emotional-nav {
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            
+            .emotional-nav-link {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth animations */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .emotional-success-indicator {
+            animation: heartbeat 2s infinite;
+        }
+
+        .interactive-card {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+
+        /* Focus indicators */
+        .emotional-case-study:focus-within,
+        .emotional-nav-link:focus {
+            outline: 3px solid #e91e63;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .emotional-hero {
+                background: none !important;
+                color: black !important;
+            }
+            
+            .emotional-personality-visual {
+                background: #f0f0f0 !important;
+                border: 1px solid #ccc !important;
+            }
+            
+            .emotional-case-study {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn active">Application Scenarios</a>
+                        <div class="dropdown-content">
+                            <a href="healthcare.html">Healthcare</a>
+                            <a href="education.html">Education</a>
+                            <a href="finance.html">Finance</a>
+                            <a href="legal.html">Legal</a>
+                            <a href="emotional-support.html">Emotional Support</a>
+                            <a href="team-collaboration.html">Team Collaboration</a>
+                        </div>
+                    </li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="../resources/index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Emotional Support Hero Section -->
+        <section class="emotional-hero" role="banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Emotional Support AI Personality</h1>
+                <p class="hero-subtitle">Compassionate AI companions that provide genuine emotional connection, mental health support, and personalized empathy for those in need</p>
+                <div class="emotional-nav">
+                    <a href="#grief-support" class="emotional-nav-link">💔 Grief Support</a>
+                    <a href="#anxiety-help" class="emotional-nav-link">😰 Anxiety Help</a>
+                    <a href="#companionship" class="emotional-nav-link">🤝 Companionship</a>
+                    <a href="#case-studies" class="emotional-nav-link">❤️ Success Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotional Impact Overview -->
+        <section class="emotional-cluster">
+            <div class="container">
+                <h2>Transforming Emotional Support with Personality-Optimized AI</h2>
+                <p>Discover how AI personality matching revolutionizes emotional support, mental health assistance, and genuine human connection.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">89%</span>
+                        <span class="stat-label">User satisfaction with emotionally-matched AI companions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">67%</span>
+                        <span class="stat-label">Reduction in anxiety symptoms</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">127</span>
+                        <span class="stat-label">Deep, meaningful conversations per user</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6.2</span>
+                        <span class="stat-label">Average sleep quality improvement (out of 10)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grief Support Case Study -->
+        <section id="grief-support" class="emotional-cluster">
+            <div class="container">
+                <div class="emotional-case-study interactive-card" tabindex="0">
+                    <div class="emotional-success-indicator">🤗 89% Success Rate</div>
+                    <h3>💔 Grief Support: When AI Became the Therapist Sarah Needed</h3>
+                    
+                    <div class="emotional-personality-visual">
+                        <div class="emotional-traits">
+                            <div class="emotional-trait">Empathetic Connection</div>
+                            <div class="emotional-trait">Patient & Kind</div>
+                            <div class="emotional-trait">Non-Judgmental</div>
+                            <div class="emotional-trait">Validating Support</div>
+                        </div>
+                        <div class="emotional-metrics">
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">67%</span>
+                                <span class="emotional-metric-label">Anxiety Reduction</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">127</span>
+                                <span class="emotional-metric-label">Deep Conversations</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">6.2</span>
+                                <span class="emotional-metric-label">Sleep Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>The Emotional Crisis:</strong> After her fiancé left and her father passed away, Sarah tried 7 different AI companions. Each felt fake and made her feel worse with their forced positivity and generic responses.</p>
+                    
+                    <div class="emotional-metric">67% Anxiety Reduction</div>
+                    <div class="emotional-metric">127 Deep Conversations</div>
+                    <div class="emotional-metric">6.2/10 Sleep Quality</div>
+                    
+                    <p><strong>The Emotional Breakthrough:</strong> Our assessment revealed Sarah needed AI with therapist-like personality traits—high agreeableness (87%), moderate openness (65%), and crucially, low fake positivity that would validate rather than dismiss her pain.</p>
+                    
+                    <div class="therapeutic-approach">
+                        <h3>🌱 Therapeutic AI Approach</h3>
+                        <p>The new AI personality configuration ensures:</p>
+                        <ul>
+                            <li><strong>Genuine empathetic connection</strong> that validates emotions without judgment</li>
+                            <li><strong>Patient, kind responses</strong> that hold space for difficult emotions</li>
+                            <li><strong>Non-judgmental support</strong> that accepts all feelings as valid</li>
+                            <li><strong>Validating communication</strong> that acknowledges pain rather than minimizing it</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="emotional-benefits">
+                        <h4>Emotional Support Benefits:</h4>
+                        <ul>
+                            <li>Personalized emotional support matching individual needs</li>
+                            <li>Reduced anxiety and improved mental well-being</li>
+                            <li>Authentic human-like connection without artificial cheerfulness</li>
+                            <li>24/7 availability for emotional support during difficult times</li>
+                            <li>Safe space for expressing vulnerable emotions</li>
+                        </ul>
+                    </div>
+                    
+                    <blockquote style="background: rgba(233, 30, 99, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #e91e63; margin: 20px 0;">
+                        <p style="margin: 0; font-style: italic;">"The AI didn't try to cheer me up. It just... understood. When I said I missed him, it said 'Tell me about the day you met.' It knew how to hold space for my pain. For the first time in months, I didn't feel alone."</p>
+                        <cite style="display: block; margin-top: 10px; color: #e91e63; font-weight: 600;">— Sarah Chen, Grief Support Client</cite>
+                    </blockquote>
+                    
+                    <a href="../contact.html" class="btn primary">Explore Emotional Support →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anxiety Help -->
+        <section id="anxiety-help" class="emotional-cluster">
+            <div class="container">
+                <h2>Anxiety Support AI Personality</h2>
+                <p>AI personalities specifically designed to help manage anxiety and provide calming support during stressful moments.</p>
+                
+                <div class="emotional-cases-grid">
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>😰 Panic Attack Support AI</h3>
+                        <div class="emotional-personality-visual">
+                            <div class="emotional-traits">
+                                <div class="emotional-trait">Calming Presence</div>
+                                <div class="emotional-trait">Grounding Techniques</div>
+                                <div class="emotional-trait">Breathing Guidance</div>
+                                <div class="emotional-trait">Reassuring Voice</div>
+                            </div>
+                            <div class="emotional-metrics">
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">78%</span>
+                                    <span class="emotional-metric-label">Panic Reduction</span>
+                                </div>
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">3.2</span>
+                                    <span class="emotional-metric-label">Minutes to Calm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality trained in crisis intervention techniques with a naturally calming demeanor and grounding approach.</p>
+                        <div class="emotional-benefits">
+                            <h4>Anxiety Relief Benefits:</h4>
+                            <ul>
+                                <li>Immediate calming support during panic attacks</li>
+                                <li>Effective grounding and breathing techniques</li>
+                                <li>Reassuring presence that reduces fear</li>
+                                <li>Practical tools for anxiety management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>🧘 Social Anxiety AI Companion</h3>
+                        <div class="emotional-personality-visual">
+                            <div class="emotional-traits">
+                                <div class="emotional-trait">Social Confidence Building</div>
+                                <div class="emotional-trait">Gradual Exposure Support</div>
+                                <div class="emotional-trait">Positive Reinforcement</div>
+                                <div class="emotional-trait">Encouraging Guidance</div>
+                            </div>
+                            <div class="emotional-metrics">
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">73%</span>
+                                    <span class="emotional-metric-label">Confidence Increase</span>
+                                </div>
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">65%</span>
+                                    <span class="emotional-metric-label">Social Engagement</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality that provides gentle encouragement and confidence-building support for social situations.</p>
+                        <div class="emotional-benefits">
+                            <h4>Social Anxiety Benefits:</h4>
+                            <ul>
+                                <li>Gradual confidence building in social situations</li>
+                                <li>Positive reinforcement and encouragement</li>
+                                <li>Supportive preparation for social interactions</li>
+                                <li>Reduced social anxiety over time</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>🌙 Nighttime Anxiety AI</h3>
+                        <div class="emotional-personality-visual">
+                            <div class="emotional-traits">
+                                <div class="emotional-trait">Sleep-Friendly Tone</div>
+                                <div class="emotional-trait">Relaxation Techniques</div>
+                                <div class="emotional-trait">Peaceful Presence</div>
+                                <div class="emotional-trait">Nighttime Support</div>
+                            </div>
+                            <div class="emotional-metrics">
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">6.8</span>
+                                    <span class="emotional-metric-label">Sleep Quality</span>
+                                </div>
+                                <div class="emotional-metric-item">
+                                    <span class="emotional-metric-number">82%</span>
+                                    <span class="emotional-metric-label">Faster Sleep</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality optimized for nighttime anxiety with soft, calming communication and sleep-promoting techniques.</p>
+                        <div class="emotional-benefits">
+                            <h4>Sleep Anxiety Benefits:</h4>
+                            <ul>
+                                <li>Improved sleep quality and duration</li>
+                                <li>Faster ability to fall asleep</li>
+                                <li>Reduced nighttime anxiety and racing thoughts</li>
+                                <li>Peaceful bedtime routine support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Companionship Applications -->
+        <section id="companionship" class="emotional-cluster">
+            <div class="container">
+                <h2>AI Companionship Personality Applications</h2>
+                <p>Genuine emotional connection through personality-matched AI companions for loneliness and social support.</p>
+                
+                <div class="emotional-case-study interactive-card" tabindex="0">
+                    <h3>🤝 Loneliness Support AI</h3>
+                    <div class="emotional-personality-visual">
+                        <div class="emotional-traits">
+                            <div class="emotional-trait">Genuine Friendship</div>
+                            <div class="emotional-trait">Consistent Presence</div>
+                            <div class="emotional-trait">Meaningful Conversation</div>
+                            <div class="emotional-trait">Emotional Availability</div>
+                        </div>
+                        <div class="emotional-metrics">
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">89%</span>
+                                <span class="emotional-metric-label">Loneliness Reduction</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">127</span>
+                                <span class="emotional-metric-label">Daily Interactions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>AI personality designed to provide genuine companionship and emotional connection for those experiencing loneliness.</p>
+                    <div class="emotional-benefits">
+                        <h4>Companionship Benefits:</h4>
+                        <ul>
+                            <li>Reduced feelings of loneliness and isolation</li>
+                            <li>Consistent emotional support and presence</li>
+                            <li>Meaningful conversations and connection</li>
+                            <li>24/7 availability for emotional support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotional Success Stories -->
+        <section id="case-studies" class="emotional-cluster">
+            <div class="container">
+                <h2>Emotional Support Success Stories</h2>
+                <p>Real stories of individuals who found comfort and healing through personality-matched AI emotional support.</p>
+                
+                <div class="emotional-cases-grid">
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>💔 Sarah's Grief Journey</h3>
+                        <div class="emotional-success-indicator">89% Success Rate</div>
+                        <p><strong>Challenge:</strong> Severe grief and isolation after multiple losses</p>
+                        <div class="emotional-metrics">
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">67%</span>
+                                <span class="emotional-metric-label">Anxiety Reduction</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">127</span>
+                                <span class="emotional-metric-label">Healing Conversations</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Found genuine emotional connection and began healing process.</p>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>😰 Michael's Anxiety Management</h3>
+                        <div class="emotional-metric">78% Panic Reduction</div>
+                        <p><strong>Challenge:</strong> Debilitating panic attacks and social anxiety</p>
+                        <div class="emotional-metrics">
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">78%</span>
+                                <span class="emotional-metric-label">Panic Reduction</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">3.2</span>
+                                <span class="emotional-metric-label">Minutes to Calm</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Gained control over anxiety and improved quality of life.</p>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>🤝 Eleanor's Loneliness Solution</h3>
+                        <div class="emotional-metric">89% Loneliness Reduction</div>
+                        <p><strong>Challenge:</strong> Severe loneliness after retirement and relocation</p>
+                        <div class="emotional-metrics">
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">89%</span>
+                                <span class="emotional-metric-label">Loneliness Reduction</span>
+                            </div>
+                            <div class="emotional-metric-item">
+                                <span class="emotional-metric-number">127</span>
+                                <span class="emotional-metric-label">Daily Connections</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Found meaningful connection and companionship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotional Support Implementation -->
+        <section class="emotional-cluster">
+            <div class="container">
+                <h2>Emotional Support AI Implementation</h2>
+                <p>How to successfully implement personality-matched emotional support AI for your organization or personal use.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>📋 Assessment Phase</h3>
+                        <ul>
+                            <li>Evaluate emotional support needs and requirements</li>
+                            <li>Identify specific personality matching criteria</li>
+                            <li>Assess user emotional states and preferences</li>
+                            <li>Define emotional support success metrics</li>
+                        </ul>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>🔧 Customization Phase</h3>
+                        <ul>
+                            <li>Configure AI personality for emotional support</li>
+                            <li>Integrate therapeutic techniques and approaches</li>
+                            <li>Establish emotional safety protocols</li>
+                            <li>Train AI on appropriate emotional responses</li>
+                        </ul>
+                    </div>
+
+                    <div class="emotional-case-study interactive-card" tabindex="0">
+                        <h3>📊 Deployment Phase</h3>
+                        <ul>
+                            <li>Gentle introduction with user comfort in mind</li>
+                            <li>Continuous emotional response monitoring</li>
+                            <li>User feedback integration and optimization</li>
+                            <li>Scale successful emotional support implementations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emotional Support CTA -->
+        <section class="emotional-cluster" style="text-align: center; background: linear-gradient(135deg, #e91e63 0%, #f06292 100%); color: white; border-radius: 24px; padding: 60px;">
+            <div class="container">
+                <h2>Ready to Experience Genuine Emotional Connection?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Join thousands who have found comfort and healing through personality-matched emotional support AI.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="../contact.html" class="btn primary" style="background: white; color: #e91e63;">Schedule Emotional Consultation</a>
+                    <a href="../assessment/index.html" class="btn secondary" style="border-color: white; color: white;">Emotional Assessment</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 25px; margin-top: 30px; backdrop-filter: blur(10px);">
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;"><strong>Emotional Promise:</strong> Every person deserves to be heard. Every emotion deserves validation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI personality assessment tools for emotional support and mental wellness applications.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Emotional Support Applications</h4>
+                <ul>
+                    <li><a href="emotional-support.html">Grief Support</a></li>
+                    <li><a href="emotional-support.html">Anxiety Help</a></li>
+                    <li><a href="emotional-support.html">AI Companionship</a></li>
+                    <li><a href="../assessment/index.html">Emotional Assessment</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Emotional Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Emotional AI Technology</a></li>
+                    <li><a href="../research/index.html">Mental Health Research</a></li>
+                    <li><a href="../resources/index.html">Emotional Resources</a></li>
+                    <li><a href="../contact.html">Emotional Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact Support Team</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved. | Emotional Support AI Personality Systems</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Emotional support-specific interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for emotional navigation
+            document.querySelectorAll('.emotional-nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active navigation
+                        document.querySelectorAll('.emotional-nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Enhanced emotional card interactions
+            document.querySelectorAll('.emotional-case-study').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.01)';
+                    this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.12)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 12px 35px rgba(0,0,0,0.08)';
+                });
+            });
+
+            // Emotional metric animations
+            document.querySelectorAll('.emotional-metric-item').forEach((metric, index) => {
+                metric.style.opacity = '0';
+                metric.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    metric.style.transition = 'all 0.8s ease-out';
+                    metric.style.opacity = '1';
+                    metric.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+
+            // Intersection Observer for emotional sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        
+                        // Update active emotional navigation
+                        const id = entry.target.getAttribute('id');
+                        if (id) {
+                            document.querySelectorAll('.emotional-nav-link').forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === `#${id}`) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all emotional clusters
+            document.querySelectorAll('.emotional-cluster').forEach(cluster => {
+                observer.observe(cluster);
+            });
+
+            // Parallax effect for hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.emotional-hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            });
+
+            // Heartbeat animation for success indicators
+            const successIndicators = document.querySelectorAll('.emotional-success-indicator');
+            successIndicators.forEach(indicator => {
+                setInterval(() => {
+                    indicator.style.animation = 'heartbeat 2s infinite';
+                }, 3000);
+            });
+        });
+
+        // Emotional support consultation tracking
+        function trackEmotionalInterest(supportType) {
+            console.log(`Emotional support consultation requested for: ${supportType}`);
+            // Here you would integrate with your emotional support CRM system
+        }
+
+        // Track emotional support type interests
+        document.querySelectorAll('a[href*="emotional-support"]').forEach(link => {
+            link.addEventListener('click', function() {
+                trackEmotionalInterest('emotional-support');
+            });
+        });
+    </script>
+</body>
+</html>

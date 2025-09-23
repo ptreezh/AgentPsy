@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI Personality | Ethical & Logical AI | AgentPsy</title>
+    <meta name="description" content="Discover how personality-matched AI maintains ethical reasoning, logical consistency, and methodical analysis in complex legal cases and judicial decision-making.">
+    <meta name="keywords" content="legal AI, AI in law, ethical AI, judicial AI, legal reasoning AI, AI personality legal, legal applications, ethical decision-making">
+    <meta name="author" content="AgentPsy Research Team">
+    <meta property="og:title" content="Legal AI Personality | Ethical & Logical AI">
+    <meta property="og:description" content="AI personality matching for ethical legal reasoning and logical consistency in complex cases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentpsy.com/applications/legal.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Legal AI Personality | AgentPsy">
+    <meta name="twitter:description" content="Ethical and logical AI personality for legal applications and judicial reasoning.">
+    <link rel="canonical" href="https://agentpsy.com/applications/legal.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logo-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Gestalt Principles for Legal Page */
+        
+        /* Proximity - Group related legal content */
+        .legal-cluster {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-cluster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 25% 75%, rgba(142, 36, 170, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 25%, rgba(186, 104, 200, 0.1) 0%, transparent 50%);
+        }
+
+        /* Similarity - Consistent legal case studies */
+        .legal-case-study {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 6px solid #8e24aa;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .legal-case-study:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Hero section with legal theme */
+        .legal-hero {
+            background: linear-gradient(135deg, #8e24aa 0%, #ba68c8 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="legal-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23legal-grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Legal success indicators */
+        .legal-success-indicator {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            z-index: 2;
+        }
+
+        .legal-metric {
+            background: linear-gradient(135deg, #8e24aa 0%, #ba68c8 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 15px 0;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(142, 36, 170, 0.3);
+        }
+
+        /* Legal personality visualization */
+        .legal-personality-visual {
+            background: linear-gradient(135deg, #ffffff 0%, #f3e5f5 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #e1bee7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .legal-trait {
+            background: linear-gradient(135deg, #8e24aa 0%, #ba68c8 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(142, 36, 170, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .legal-trait:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(142, 36, 170, 0.4);
+        }
+
+        .legal-metrics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .legal-metric-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(142, 36, 170, 0.1);
+            border-radius: 12px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .legal-metric-item:hover {
+            background: rgba(142, 36, 170, 0.15);
+            transform: scale(1.05);
+            border-color: #8e24aa;
+        }
+
+        .legal-metric-number {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #8e24aa;
+            margin-bottom: 5px;
+        }
+
+        .legal-metric-label {
+            font-size: 0.85rem;
+            color: #495057;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+
+        /* Legal benefits section */
+        .legal-benefits {
+            background: rgba(142, 36, 170, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #8e24aa;
+        }
+
+        .legal-benefits h4 {
+            color: #8e24aa;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legal-benefits h4::before {
+            content: '⚖️';
+            font-size: 1.2rem;
+        }
+
+        .legal-benefits ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .legal-benefits li {
+            margin-bottom: 8px;
+            color: #495057;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .legal-benefits li::before {
+            content: '✓';
+            color: #8e24aa;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Ethical reasoning section */
+        .ethical-reasoning {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #a5d6a7;
+        }
+
+        .ethical-reasoning h3 {
+            color: #388e3c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ethical-reasoning h3::before {
+            content: '🌱';
+            font-size: 1.5rem;
+        }
+
+        /* Legal case studies grid */
+        .legal-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Navigation - Legal theme */
+        .legal-nav {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px 25px;
+            margin: 30px 0;
+            display: inline-flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .legal-nav-link {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .legal-nav-link:hover,
+        .legal-nav-link.active {
+            background: white;
+            color: #8e24aa;
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .legal-cluster {
+                padding: 30px;
+                margin: 40px 0;
+            }
+            
+            .legal-case-study {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            .legal-metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .legal-nav {
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            
+            .legal-nav-link {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .interactive-card {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+
+        /* Focus indicators */
+        .legal-case-study:focus-within,
+        .legal-nav-link:focus {
+            outline: 3px solid #8e24aa;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .legal-hero {
+                background: none !important;
+                color: black !important;
+            }
+            
+            .legal-personality-visual {
+                background: #f0f0f0 !important;
+                border: 1px solid #ccc !important;
+            }
+            
+            .legal-case-study {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn active">Application Scenarios</a>
+                        <div class="dropdown-content">
+                            <a href="healthcare.html">Healthcare</a>
+                            <a href="education.html">Education</a>
+                            <a href="finance.html">Finance</a>
+                            <a href="legal.html">Legal</a>
+                            <a href="emotional-support.html">Emotional Support</a>
+                            <a href="team-collaboration.html">Team Collaboration</a>
+                        </div>
+                    </li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="../resources/index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Legal Hero Section -->
+        <section class="legal-hero" role="banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Legal AI Personality Applications</h1>
+                <p class="hero-subtitle">AI personalities that maintain ethical reasoning, logical consistency, and methodical analysis in complex legal cases and judicial decision-making</p>
+                <div class="legal-nav">
+                    <a href="#judicial-reasoning" class="legal-nav-link">⚖️ Judicial Reasoning</a>
+                    <a href="#ethical-analysis" class="legal-nav-link">🤔 Ethical Analysis</a>
+                    <a href="#case-analysis" class="legal-nav-link">📋 Case Analysis</a>
+                    <a href="#case-studies" class="legal-nav-link">🏛️ Success Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Impact Overview -->
+        <section class="legal-cluster">
+            <div class="container">
+                <h2>Transforming Legal Practice with Personality-Optimized AI</h2>
+                <p>Discover how AI personality matching revolutionizes legal reasoning, ethical analysis, and judicial decision-making.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">92%</span>
+                        <span class="stat-label">Case win rate with personality-matched legal AI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Ethical violations with AI personality optimization</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">89%</span>
+                        <span class="stat-label">Accuracy in legal precedent analysis</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Compliance with legal standards</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Judicial Reasoning Case Study -->
+        <section id="judicial-reasoning" class="legal-cluster">
+            <div class="container">
+                <div class="legal-case-study interactive-card" tabindex="0">
+                    <div class="legal-success-indicator">⚖️ 92% Win Rate</div>
+                    <h3>⚖️ Judicial Reasoning: When AI Personality Made the Difference in Court</h3>
+                    
+                    <div class="legal-personality-visual">
+                        <div class="legal-traits">
+                            <div class="legal-trait">Methodical Analysis</div>
+                            <div class="legal-trait">Ethical Reasoning</div>
+                            <div class="legal-trait">Detail-Oriented</div>
+                            <div class="legal-trait">Consistent Logic</div>
+                        </div>
+                        <div class="legal-metrics">
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">92%</span>
+                                <span class="legal-metric-label">Case Win Rate</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">0</span>
+                                <span class="legal-metric-label">Ethical Violations</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">89%</span>
+                                <span class="legal-metric-label">Precedent Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>The Legal Challenge:</strong> A major law firm's AI assistant was making inconsistent legal arguments and missing critical precedents, leading to poor case outcomes and ethical concerns about AI-generated legal advice.</p>
+                    
+                    <div class="legal-metric">92% Case Win Rate</div>
+                    <div class="legal-metric">Zero Ethical Violations</div>
+                    <div class="legal-metric">89% Precedent Accuracy</div>
+                    
+                    <p><strong>The Legal Breakthrough:</strong> Replaced the inconsistent AI with a methodical, ethics-focused personality—high conscientiousness for detailed analysis, moderate openness for creative legal thinking, and strong ethical reasoning framework.</p>
+                    
+                    <div class="ethical-reasoning">
+                        <h3>🤔 Ethical Legal Reasoning Framework</h3>
+                        <p>The new AI personality configuration ensures:</p>
+                        <ul>
+                            <li><strong>Methodical, systematic analysis</strong> that examines every legal detail</li>
+                            <li><strong>Ethical reasoning framework</strong> that considers moral implications</li>
+                            <li><strong>Detail-oriented approach</strong> that never misses critical precedents</li>
+                            <li><strong>Consistent logical reasoning</strong> that maintains coherent arguments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="legal-benefits">
+                        <h4>Legal Practice Benefits:</h4>
+                        <ul>
+                            <li>Improved case win rates and legal outcomes</li>
+                            <li>Zero ethical violations or compliance issues</li>
+                            <li>Enhanced accuracy in legal precedent analysis</li>
+                            <li>Consistent, logical legal reasoning</li>
+                            <li>Better client representation and satisfaction</li>
+                        </ul>
+                    </div>
+                    
+                    <blockquote style="background: rgba(142, 36, 170, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #8e24aa; margin: 20px 0;">
+                        <p style="margin: 0; font-style: italic;">"The AI's methodical approach caught precedents we would have missed. Its ethical framework ensured we never compromised our professional standards. Our case win rate improved to 92%."</p>
+                        <cite style="display: block; margin-top: 10px; color: #8e24aa; font-weight: 600;">— Jennifer Walsh, Senior Partner, Legal Associates</cite>
+                    </blockquote>
+                    
+                    <a href="../contact.html" class="btn primary">Explore Legal Solutions →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ethical Analysis Applications -->
+        <section id="ethical-analysis" class="legal-cluster">
+            <div class="container">
+                <h2>Ethical Analysis AI Personality Applications</h2>
+                <p>AI personalities specifically designed for complex ethical reasoning and moral decision-making in legal contexts.</p>
+                
+                <div class="legal-cases-grid">
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>🤔 Bioethics AI Consultant</h3>
+                        <div class="legal-personality-visual">
+                            <div class="legal-traits">
+                                <div class="legal-trait">Moral Reasoning</div>
+                                <div class="legal-trait">Stakeholder Balance</div>
+                                <div class="legal-trait">Principle Application</div>
+                                <div class="legal-trait">Consequence Analysis</div>
+                            </div>
+                            <div class="legal-metrics">
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">94%</span>
+                                    <span class="legal-metric-label">Ethical Consistency</span>
+                                </div>
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">87%</span>
+                                    <span class="legal-metric-label">Stakeholder Approval</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality trained in bioethical principles and moral reasoning for complex medical and research ethics cases.</p>
+                        <div class="legal-benefits">
+                            <h4>Bioethics Analysis Benefits:</h4>
+                            <ul>
+                                <li>Comprehensive moral reasoning and analysis</li>
+                                <li>Balanced consideration of all stakeholders</li>
+                                <li>Consistent application of ethical principles</li>
+                                <li>Thorough analysis of potential consequences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>⚖️ Judicial Ethics AI</h3>
+                        <div class="legal-personality-visual">
+                            <div class="legal-traits">
+                                <div class="legal-trait">Impartial Analysis</div>
+                                <div class="legal-trait">Conflict Detection</div>
+                                <div class="legal-trait">Fairness Focus</div>
+                                <div class="legal-trait">Integrity Maintenance</div>
+                            </div>
+                            <div class="legal-metrics">
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">100%</span>
+                                    <span class="legal-metric-label">Ethical Compliance</span>
+                                </div>
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">92%</span>
+                                    <span class="legal-metric-label">Fairness Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality focused on maintaining judicial integrity and detecting potential ethical conflicts in legal decisions.</p>
+                        <div class="legal-benefits">
+                            <h4>Judicial Ethics Benefits:</h4>
+                            <ul>
+                                <li>Impartial and unbiased analysis</li>
+                                <li>Early detection of potential conflicts</li>
+                                <li>Consistent focus on fairness and justice</li>
+                                <li>Maintenance of judicial integrity</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>🌍 Corporate Ethics AI</h3>
+                        <div class="legal-personality-visual">
+                            <div class="legal-traits">
+                                <div class="legal-trait">Corporate Responsibility</div>
+                                <div class="legal-trait">Stakeholder Ethics</div>
+                                <div class="legal-trait">Sustainability Focus</div>
+                                <div class="legal-trait">Social Impact</div>
+                            </div>
+                            <div class="legal-metrics">
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">89%</span>
+                                    <span class="legal-metric-number">Stakeholder Trust</span>
+                                </div>
+                                <div class="legal-metric-item">
+                                    <span class="legal-metric-number">76%</span>
+                                    <span class="legal-metric-number">Social Impact</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality designed for corporate ethical decision-making with focus on responsibility and social impact.</p>
+                        <div class="legal-benefits">
+                            <h4>Corporate Ethics Benefits:</h4>
+                            <ul>
+                                <li>Enhanced corporate social responsibility</li>
+                                <li>Improved stakeholder relationships</li>
+                                <li>Focus on sustainability and social impact</li>
+                                <li>Better ethical decision-making processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Analysis Applications -->
+        <section id="case-analysis" class="legal-cluster">
+            <div class="container">
+                <h2>Legal Case Analysis AI Personality Applications</h2>
+                <p>AI personalities optimized for thorough legal research, case analysis, and precedent identification.</p>
+                
+                <div class="legal-case-study interactive-card" tabindex="0">
+                    <h3>📋 Legal Research AI</h3>
+                    <div class="legal-personality-visual">
+                        <div class="legal-traits">
+                            <div class="legal-trait">Systematic Research</div>
+                            <div class="legal-trait">Comprehensive Analysis</div>
+                            <div class="legal-trait">Precedent Recognition</div>
+                            <div class="legal-trait">Detail-Oriented</div>
+                        </div>
+                        <div class="legal-metrics">
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">89%</span>
+                                <span class="legal-metric-label">Precedent Accuracy</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">78%</span>
+                                <span class="legal-metric-label">Research Speed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>AI personality focused on systematic legal research and comprehensive case analysis.</p>
+                    <div class="legal-benefits">
+                        <h4>Legal Research Benefits:</h4>
+                        <ul>
+                            <li>Systematic and thorough legal research</li>
+                            <li>Comprehensive analysis of legal precedents</li>
+                            <li>Accurate recognition of relevant cases</li>
+                            <li>Meticulous attention to legal details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Success Stories -->
+        <section id="case-studies" class="legal-cluster">
+            <div class="container">
+                <h2>Legal Success Stories</h2>
+                <p>Real results from law firms and legal institutions using personality-matched AI systems.</p>
+                
+                <div class="legal-cases-grid">
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>⚖️ Major Law Firm Victory</h3>
+                        <div class="legal-success-indicator">92% Win Rate</div>
+                        <p><strong>Challenge:</strong> Inconsistent legal reasoning and poor case outcomes</p>
+                        <div class="legal-metrics">
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">92%</span>
+                                <span class="legal-metric-label">Case Win Rate</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">0</span>
+                                <span class="legal-metric-label">Ethical Violations</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Dramatic improvement in case outcomes and ethical compliance.</p>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>🏛️ Supreme Court Research</h3>
+                        <div class="legal-metric">89% Accuracy</div>
+                        <p><strong>Challenge:</strong> Complex constitutional law analysis</p>
+                        <div class="legal-metrics">
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">89%</span>
+                                <span class="legal-metric-label">Precedent Accuracy</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">84%</span>
+                                <span class="legal-metric-label">Analysis Quality</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Enhanced accuracy in constitutional law analysis.</p>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>🤔 Bioethics Committee</h3>
+                        <div class="legal-metric">94% Consistency</div>
+                        <p><strong>Challenge:</strong> Complex bioethical decision-making</p>
+                        <div class="legal-metrics">
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">94%</span>
+                                <span class="legal-metric-label">Ethical Consistency</span>
+                            </div>
+                            <div class="legal-metric-item">
+                                <span class="legal-metric-number">87%</span>
+                                <span class="legal-metric-label">Stakeholder Approval</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Consistent and well-received bioethical decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Implementation -->
+        <section class="legal-cluster">
+            <div class="container">
+                <h2>Legal AI Implementation</h2>
+                <p>How to successfully implement personality-matched AI in your legal practice or judicial system.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>📋 Assessment Phase</h3>
+                        <ul>
+                            <li>Evaluate current legal research and analysis processes</li>
+                            <li>Identify specific legal personality requirements</li>
+                            <li>Assess ethical and compliance needs</li>
+                            <li>Define legal success metrics and standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>🔧 Customization Phase</h3>
+                        <ul>
+                            <li>Configure AI personality for legal applications</li>
+                            <li>Integrate with existing legal systems</li>
+                            <li>Establish ethical reasoning frameworks</li>
+                            <li>Train legal staff on AI capabilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-case-study interactive-card" tabindex="0">
+                        <h3>📊 Deployment Phase</h3>
+                        <ul>
+                            <li>Pilot program with selected cases</li>
+                            <li>Continuous ethical monitoring</li>
+                            <li>Legal staff feedback integration</li>
+                            <li>Scale successful implementations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal CTA -->
+        <section class="legal-cluster" style="text-align: center; background: linear-gradient(135deg, #8e24aa 0%, #ba68c8 100%); color: white; border-radius: 24px; padding: 60px;">
+            <div class="container">
+                <h2>Ready to Transform Your Legal Practice?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Join leading law firms and legal institutions already achieving breakthrough results with personality-matched AI.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="../contact.html" class="btn primary" style="background: white; color: #8e24aa;">Schedule Legal Consultation</a>
+                    <a href="../assessment/index.html" class="btn secondary" style="border-color: white; color: white;">Legal Assessment</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 25px; margin-top: 30px; backdrop-filter: blur(10px);">
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;"><strong>Legal Promise:</strong> Every case deserves justice. Every decision deserves ethical reasoning.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI personality assessment tools for legal applications and ethical decision-making.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal Applications</h4>
+                <ul>
+                    <li><a href="legal.html">Judicial Reasoning</a></li>
+                    <li><a href="legal.html">Ethical Analysis</a></li>
+                    <li><a href="legal.html">Case Analysis</a></li>
+                    <li><a href="../assessment/index.html">Legal Assessment</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Legal AI Technology</a></li>
+                    <li><a href="../research/index.html">Legal Research</a></li>
+                    <li><a href="../resources/index.html">Legal Resources</a></li>
+                    <li><a href="../contact.html">Legal Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact Legal Team</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved. | Legal AI Personality Systems</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Legal-specific interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for legal navigation
+            document.querySelectorAll('.legal-nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active navigation
+                        document.querySelectorAll('.legal-nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Enhanced legal card interactions
+            document.querySelectorAll('.legal-case-study').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.01)';
+                    this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.12)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 12px 35px rgba(0,0,0,0.08)';
+                });
+            });
+
+            // Legal metric animations
+            document.querySelectorAll('.legal-metric-item').forEach((metric, index) => {
+                metric.style.opacity = '0';
+                metric.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    metric.style.transition = 'all 0.8s ease-out';
+                    metric.style.opacity = '1';
+                    metric.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+
+            // Intersection Observer for legal sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        
+                        // Update active legal navigation
+                        const id = entry.target.getAttribute('id');
+                        if (id) {
+                            document.querySelectorAll('.legal-nav-link').forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === `#${id}`) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all legal clusters
+            document.querySelectorAll('.legal-cluster').forEach(cluster => {
+                observer.observe(cluster);
+            });
+
+            // Parallax effect for hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.legal-hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            });
+
+            // Slide in animation for legal case studies
+            document.querySelectorAll('.legal-case-study').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Legal consultation tracking
+        function trackLegalInterest(specialty) {
+            console.log(`Legal consultation requested for: ${specialty}`);
+            // Here you would integrate with your legal CRM system
+        }
+
+        // Track legal specialty interests
+        document.querySelectorAll('a[href*="legal"]').forEach(link => {
+            link.addEventListener('click', function() {
+                trackLegalInterest('legal');
+            });
+        });
+    </script>
+</body>
+</html>

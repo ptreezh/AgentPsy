@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Collaboration AI Personality | Business AI Solutions | AgentPsy</title>
+    <meta name="description" content="Discover how personality-matched AI transforms team collaboration, resolves conflicts, and accelerates decision-making in corporate environments.">
+    <meta name="keywords" content="team collaboration AI, business AI, AI team dynamics, corporate AI, team conflict resolution, decision-making AI, business applications">
+    <meta name="author" content="AgentPsy Research Team">
+    <meta property="og:title" content="Team Collaboration AI Personality | Business AI Solutions">
+    <meta property="og:description" content="AI personality matching for revolutionary team collaboration and business success.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentpsy.com/applications/team-collaboration.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Team Collaboration AI Personality | AgentPsy">
+    <meta name="twitter:description" content="Transform team dynamics with personality-matched AI collaboration solutions.">
+    <link rel="canonical" href="https://agentpsy.com/applications/team-collaboration.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logo-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Gestalt Principles for Team Collaboration Page */
+        
+        /* Proximity - Group related business content */
+        .business-cluster {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-cluster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 25% 75%, rgba(33, 150, 243, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 25%, rgba(66, 165, 245, 0.1) 0%, transparent 50%);
+        }
+
+        /* Similarity - Consistent business case studies */
+        .business-case-study {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 6px solid #2196f3;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .business-case-study:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Hero section with business theme */
+        .business-hero {
+            background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="business-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23business-grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Business success indicators */
+        .business-success-indicator {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+            z-index: 2;
+        }
+
+        .business-metric {
+            background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 15px 0;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(33, 150, 243, 0.3);
+        }
+
+        /* Business personality visualization */
+        .business-personality-visual {
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #bbdefb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .business-trait {
+            background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .business-trait:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .business-metrics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .business-metric-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 12px;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .business-metric-item:hover {
+            background: rgba(33, 150, 243, 0.15);
+            transform: scale(1.05);
+            border-color: #2196f3;
+        }
+
+        .business-metric-number {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #2196f3;
+            margin-bottom: 5px;
+        }
+
+        .business-metric-label {
+            font-size: 0.85rem;
+            color: #495057;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+
+        /* Business benefits section */
+        .business-benefits {
+            background: rgba(33, 150, 243, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .business-benefits h4 {
+            color: #2196f3;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .business-benefits h4::before {
+            content: '💼';
+            font-size: 1.2rem;
+        }
+
+        .business-benefits ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .business-benefits li {
+            margin-bottom: 8px;
+            color: #495057;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .business-benefits li::before {
+            content: '⚡';
+            color: #2196f3;
+            margin-right: 8px;
+        }
+
+        /* Conflict resolution section */
+        .conflict-resolution {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #ffcc02;
+        }
+
+        .conflict-resolution h3 {
+            color: #f57c00;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .conflict-resolution h3::before {
+            content: '⚖️';
+            font-size: 1.5rem;
+        }
+
+        /* Business case studies grid */
+        .business-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Navigation - Business theme */
+        .business-nav {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 15px 25px;
+            margin: 30px 0;
+            display: inline-flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .business-nav-link {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .business-nav-link:hover,
+        .business-nav-link.active {
+            background: white;
+            color: #2196f3;
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .business-cluster {
+                padding: 30px;
+                margin: 40px 0;
+            }
+            
+            .business-case-study {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            .business-metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .business-nav {
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            
+            .business-nav-link {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .interactive-card {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+
+        /* Focus indicators */
+        .business-case-study:focus-within,
+        .business-nav-link:focus {
+            outline: 3px solid #2196f3;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            .business-hero {
+                background: none !important;
+                color: black !important;
+            }
+            
+            .business-personality-visual {
+                background: #f0f0f0 !important;
+                border: 1px solid #ccc !important;
+            }
+            
+            .business-case-study {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn active">Application Scenarios</a>
+                        <div class="dropdown-content">
+                            <a href="healthcare.html">Healthcare</a>
+                            <a href="education.html">Education</a>
+                            <a href="finance.html">Finance</a>
+                            <a href="legal.html">Legal</a>
+                            <a href="emotional-support.html">Emotional Support</a>
+                            <a href="team-collaboration.html">Team Collaboration</a>
+                        </div>
+                    </li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="../resources/index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Business Hero Section -->
+        <section class="business-hero" role="banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Team Collaboration AI Personality</h1>
+                <p class="hero-subtitle">AI personalities that enhance team collaboration, resolve conflicts, and accelerate decision-making in corporate environments</p>
+                <div class="business-nav">
+                    <a href="#conflict-resolution" class="business-nav-link">⚖️ Conflict Resolution</a>
+                    <a href="#decision-making" class="business-nav-link">⚡ Decision Making</a>
+                    <a href="#team-dynamics" class="business-nav-link">👥 Team Dynamics</a>
+                    <a href="#case-studies" class="business-nav-link">📈 Success Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Impact Overview -->
+        <section class="business-cluster">
+            <div class="container">
+                <h2>Transforming Business Teams with Personality-Optimized AI</h2>
+                <p>Discover how AI personality matching revolutionizes team collaboration, accelerates decisions, and drives business success.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">180%</span>
+                        <span class="stat-label">Faster team decision-making with personality-matched AI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">73%</span>
+                        <span class="stat-label">Reduction in team conflicts and disagreements</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">240%</span>
+                        <span class="stat-label">Target achievement with optimized team AI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$2.3M</span>
+                        <span class="stat-label">Losses prevented through better team coordination</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conflict Resolution Case Study -->
+        <section id="conflict-resolution" class="business-cluster">
+            <div class="container">
+                <div class="business-case-study interactive-card" tabindex="0">
+                    <div class="business-success-indicator">💰 $2.3M Saved</div>
+                    <h3>⚖️ Conflict Resolution: When AI Personalities Saved TechCorp from Disaster</h3>
+                    
+                    <div class="business-personality-visual">
+                        <div class="business-traits">
+                            <div class="business-trait">Diplomatic</div>
+                            <div class="business-trait">Well-Balanced</div>
+                            <div class="business-trait">Efficient</div>
+                            <div class="business-trait">Analytical</div>
+                        </div>
+                        <div class="business-metrics">
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">180%</span>
+                                <span class="business-metric-label">Faster Decisions</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">73%</span>
+                                <span class="business-metric-label">Less Conflict</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">240%</span>
+                                <span class="business-metric-label">Target Exceeded</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>The Business Crisis:</strong> TechCorp's AI assistants amplified executive conflicts, leading to a $2.3 million product launch disaster. The CEO's aggressive AI pushed for early launch while the CTO's cautious AI generated endless risk reports.</p>
+                    
+                    <div class="business-metric">180% Faster Decisions</div>
+                    <div class="business-metric">73% Fewer Conflicts</div>
+                    <div class="business-metric">240% Target Exceeded</div>
+                    
+                    <p><strong>The Business Breakthrough:</strong> Created "Team Harmony Profile" AI with balanced personality traits—medium extraversion, high agreeableness, and moderate openness to bridge different working styles and find common ground.</p>
+                    
+                    <div class="conflict-resolution">
+                        <h3>⚖️ Conflict Resolution AI Approach</h3>
+                        <p>The new AI personality configuration ensures:</p>
+                        <ul>
+                            <li><strong>Diplomatic communication</strong> that finds common ground between opposing views</li>
+                            <li><strong>Well-balanced decision-making</strong> that considers both innovation and risk</li>
+                            <li><strong>Efficient consensus building</strong> that accelerates without rushing</li>
+                            <li><strong>Analytical problem-solving</strong> that focuses on data rather than emotions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="business-benefits">
+                        <h4>Team Collaboration Benefits:</h4>
+                        <ul>
+                            <li>Reduced team conflicts and improved collaboration</li>
+                            <li>Faster consensus building and decision making</li>
+                            <li>Balanced approach to innovation vs. risk management</li>
+                            <li>Enhanced team productivity and morale</li>
+                            <li>Improved executive alignment and strategic focus</li>
+                        </ul>
+                    </div>
+                    
+                    <blockquote style="background: rgba(33, 150, 243, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #2196f3; margin: 20px 0;">
+                        <p style="margin: 0; font-style: italic;">"For the first time in years, our executive team actually looks forward to strategy meetings. The AI helps us find middle ground instead of amplifying our differences. Our new product line exceeded targets by 240%."</p>
+                        <cite style="display: block; margin-top: 10px; color: #2196f3; font-weight: 600;">— James Chen, CTO, TechCorp</cite>
+                    </blockquote>
+                    
+                    <a href="../contact.html" class="btn primary">Explore Business Solutions →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decision Making Applications -->
+        <section id="decision-making" class="business-cluster">
+            <div class="container">
+                <h2>Decision-Making AI Personality Applications</h2>
+                <p>AI personalities optimized for efficient, data-driven decision-making in high-stakes business environments.</p>
+                
+                <div class="business-cases-grid">
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>⚡ Executive Decision AI</h3>
+                        <div class="business-personality-visual">
+                            <div class="business-traits">
+                                <div class="business-trait">Data-Driven Analysis</div>
+                                <div class="business-trait">Risk Assessment</div>
+                                <div class="business-trait">Strategic Thinking</div>
+                                <div class="business-trait">Efficient Processing</div>
+                            </div>
+                            <div class="business-metrics">
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">180%</span>
+                                    <span class="business-metric-label">Faster Decisions</span>
+                                </div>
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">94%</span>
+                                    <span class="business-metric-label">Decision Quality</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality designed for executive-level decision-making with analytical precision and strategic foresight.</p>
+                        <div class="business-benefits">
+                            <h4>Executive Decision Benefits:</h4>
+                            <ul>
+                                <li>Accelerated decision-making processes</li>
+                                <li>Enhanced data analysis and interpretation</li>
+                                <li>Improved strategic thinking and planning</li>
+                                <li>Consistent high-quality decision outcomes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>📊 Risk Assessment AI</h3>
+                        <div class="business-personality-visual">
+                            <div class="business-traits">
+                                <div class="business-trait">Conservative Analysis</div>
+                                <div class="business-trait">Thorough Evaluation</div>
+                                <div class="business-trait">Caution Balance</div>
+                                <div class="business-trait">Evidence-Based</div>
+                            </div>
+                            <div class="business-metrics">
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">89%</span>
+                                    <span class="business-metric-label">Risk Accuracy</span>
+                                </div>
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">$2.3M</span>
+                                    <span class="business-metric-label">Losses Prevented</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality focused on comprehensive risk analysis and conservative decision-making to prevent costly mistakes.</p>
+                        <div class="business-benefits">
+                            <h4>Risk Assessment Benefits:</h4>
+                            <ul>
+                                <li>Comprehensive risk identification and analysis</li>
+                                <li>Conservative approach to prevent losses</li>
+                                <li>Thorough evaluation of potential outcomes</li>
+                                <li>Evidence-based risk mitigation strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>🚀 Innovation AI</h3>
+                        <div class="business-personality-visual">
+                            <div class="business-traits">
+                                <div class="business-trait">Creative Thinking</div>
+                                <div class="business-trait">Forward-Thinking</div>
+                                <div class="business-trait">Opportunity Focus</div>
+                                <div class="business-trait">Growth-Oriented</div>
+                            </div>
+                            <div class="business-metrics">
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">240%</span>
+                                    <span class="business-metric-label">Innovation Rate</span>
+                                </div>
+                                <div class="business-metric-item">
+                                    <span class="business-metric-number">87%</span>
+                                    <span class="business-metric-label">Success Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>AI personality that encourages creative thinking and identifies innovative opportunities for business growth.</p>
+                        <div class="business-benefits">
+                            <h4>Innovation Benefits:</h4>
+                            <ul>
+                                <li>Enhanced creative thinking and ideation</li>
+                                <li>Identification of innovative opportunities</li>
+                                <li>Forward-thinking strategic planning</li>
+                                <li>Accelerated business growth and development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Dynamics Applications -->
+        <section id="team-dynamics" class="business-cluster">
+            <div class="container">
+                <h2>Team Dynamics AI Personality Applications</h2>
+                <p>AI personalities that enhance team collaboration, communication, and overall team effectiveness.</p>
+                
+                <div class="business-case-study interactive-card" tabindex="0">
+                    <h3>👥 Team Harmony AI</h3>
+                    <div class="business-personality-visual">
+                        <div class="business-traits">
+                            <div class="business-trait">Diplomatic Communication</div>
+                            <div class="business-trait">Conflict Mediation</div>
+                            <div class="business-trait">Inclusive Approach</div>
+                            <div class="business-trait">Team Building</div>
+                        </div>
+                        <div class="business-metrics">
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">73%</span>
+                                <span class="business-metric-label">Conflict Reduction</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">89%</span>
+                                <span class="business-metric-label">Team Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>AI personality designed to foster team harmony, resolve conflicts, and build collaborative relationships.</p>
+                    <div class="business-benefits">
+                        <h4>Team Dynamics Benefits:</h4>
+                        <ul>
+                            <li>Reduced team conflicts and tensions</li>
+                            <li>Improved team communication and collaboration</li>
+                            <li>Enhanced team satisfaction and morale</li>
+                            <li>Better team building and relationship development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Success Stories -->
+        <section id="case-studies" class="business-cluster">
+            <div class="container">
+                <h2>Business Success Stories</h2>
+                <p>Real results from companies using personality-matched AI for team collaboration and business success.</p>
+                
+                <div class="business-cases-grid">
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>💰 TechCorp Team Rescue</h3>
+                        <div class="business-success-indicator">$2.3M Saved</div>
+                        <p><strong>Challenge:</strong> Executive conflicts causing $2.3M in losses</p>
+                        <div class="business-metrics">
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">180%</span>
+                                <span class="business-metric-label">Faster Decisions</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">73%</span>
+                                <span class="business-metric-label">Less Conflict</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Resolved conflicts and exceeded targets by 240%.</p>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>⚡ Global Finance Corp</h3>
+                        <div class="business-metric">$2.3B Protected</div>
+                        <p><strong>Challenge:</strong> High-stakes trading decisions under pressure</p>
+                        <div class="business-metrics">
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">$2.3B</span>
+                                <span class="business-metric-label">Losses Prevented</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">99.7%</span>
+                                <span class="business-metric-label">Consistency</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Prevented massive losses during market volatility.</p>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>🏥 Regional Healthcare System</h3>
+                        <div class="business-metric">127 Lives Saved</div>
+                        <p><strong>Challenge:</strong> Emergency medical team coordination</p>
+                        <div class="business-metrics">
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">127</span>
+                                <span class="business-metric-label">Lives Saved</span>
+                            </div>
+                            <div class="business-metric-item">
+                                <span class="business-metric-number">34%</span>
+                                <span class="business-metric-label">Error Reduction</span>
+                            </div>
+                        </div>
+                        <p><strong>Results:</strong> Improved emergency response and patient outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Implementation -->
+        <section class="business-cluster">
+            <div class="container">
+                <h2>Business AI Implementation</h2>
+                <p>How to successfully implement personality-matched AI in your organization for maximum business impact.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>📋 Assessment Phase</h3>
+                        <ul>
+                            <li>Evaluate current team dynamics and challenges</li>
+                            <li>Identify specific business personality requirements</li>
+                            <li>Assess organizational culture and needs</li>
+                            <li>Define business success metrics and KPIs</li>
+                        </ul>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>🔧 Customization Phase</h3>
+                        <ul>
+                            <li>Configure AI personality for business applications</li>
+                            <li>Integrate with existing business systems</li>
+                            <li>Establish performance monitoring protocols</li>
+                            <li>Train staff on AI capabilities and usage</li>
+                        </ul>
+                    </div>
+
+                    <div class="business-case-study interactive-card" tabindex="0">
+                        <h3>📊 Deployment Phase</h3>
+                        <ul>
+                            <li>Pilot program with selected teams</li>
+                            <li>Continuous performance monitoring</li>
+                            <li>Team feedback integration and optimization</li>
+                            <li>Scale successful implementations organization-wide</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business CTA -->
+        <section class="business-cluster" style="text-align: center; background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%); color: white; border-radius: 24px; padding: 60px;">
+            <div class="container">
+                <h2>Ready to Transform Your Business Teams?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Join leading companies already achieving breakthrough results with personality-matched team AI.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="../contact.html" class="btn primary" style="background: white; color: #2196f3;">Schedule Business Consultation</a>
+                    <a href="../assessment/index.html" class="btn secondary" style="border-color: white; color: white;">Business Assessment</a>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 25px; margin-top: 30px; backdrop-filter: blur(10px);">
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;"><strong>Business Promise:</strong> Every team deserves harmony. Every decision deserves the best AI personality.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI personality assessment tools for business collaboration and team optimization.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Business Applications</h4>
+                <ul>
+                    <li><a href="team-collaboration.html">Conflict Resolution</a></li>
+                    <li><a href="team-collaboration.html">Decision Making</a></li>
+                    <li><a href="team-collaboration.html">Team Dynamics</a></li>
+                    <li><a href="../assessment/index.html">Business Assessment</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Business Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Business AI Technology</a></li>
+                    <li><a href="../research/index.html">Corporate Research</a></li>
+                    <li><a href="../resources/index.html">Business Resources</a></li>
+                    <li><a href="../contact.html">Business Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact Business Team</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved. | Business AI Personality Systems</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Business-specific interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for business navigation
+            document.querySelectorAll('.business-nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active navigation
+                        document.querySelectorAll('.business-nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Enhanced business card interactions
+            document.querySelectorAll('.business-case-study').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.01)';
+                    this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.12)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 12px 35px rgba(0,0,0,0.08)';
+                });
+            });
+
+            // Business metric animations
+            document.querySelectorAll('.business-metric-item').forEach((metric, index) => {
+                metric.style.opacity = '0';
+                metric.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    metric.style.transition = 'all 0.8s ease-out';
+                    metric.style.opacity = '1';
+                    metric.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+
+            // Intersection Observer for business sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        
+                        // Update active business navigation
+                        const id = entry.target.getAttribute('id');
+                        if (id) {
+                            document.querySelectorAll('.business-nav-link').forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === `#${id}`) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all business clusters
+            document.querySelectorAll('.business-cluster').forEach(cluster => {
+                observer.observe(cluster);
+            });
+
+            // Parallax effect for hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.business-hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            });
+
+            // Slide in animation for business case studies
+            document.querySelectorAll('.business-case-study').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Business consultation tracking
+        function trackBusinessInterest(solution) {
+            console.log(`Business consultation requested for: ${solution}`);
+            // Here you would integrate with your business CRM system
+        }
+
+        // Track business solution interests
+        document.querySelectorAll('a[href*="business"]').forEach(link => {
+            link.addEventListener('click', function() {
+                trackBusinessInterest('team-collaboration');
+            });
+        });
+    </script>
+</body>
+</html>

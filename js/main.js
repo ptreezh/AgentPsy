@@ -58,25 +58,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Dropdown menu functionality
+    // Dropdown菜单功能 - 简化版本，只添加视觉提示，不干扰CSS hover效果
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
         const dropbtn = dropdown.querySelector('.dropbtn');
         const dropdownContent = dropdown.querySelector('.dropdown-content');
         
         if (dropbtn && dropdownContent) {
-            // Toggle dropdown on click
-            dropbtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdownContent.classList.toggle('show');
-            });
+            // 只在有下拉菜单项的dropdown上添加视觉提示
+            const menuLinks = dropdownContent.querySelectorAll('a');
+            const hasValidMenuItems = menuLinks.length > 0;
             
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!dropdown.contains(event.target)) {
-                    dropdownContent.classList.remove('show');
+            if (hasValidMenuItems) {
+                // 添加下拉箭头指示器
+                if (!dropbtn.querySelector('.dropdown-arrow')) {
+                    const arrow = document.createElement('span');
+                    arrow.className = 'dropdown-arrow';
+                    arrow.innerHTML = ' ▼';
+                    arrow.style.fontSize = '0.8em';
+                    arrow.style.marginLeft = '4px';
+                    dropbtn.appendChild(arrow);
                 }
-            });
+            }
+            // 完全依赖CSS的:hover规则，不添加任何JavaScript事件处理
         }
     });
     

@@ -1,8 +1,8 @@
 {
   "summary": {
     "total_files": 37,
-    "total_internal_links": 1268,
-    "total_external_links": 63,
+    "total_internal_links": 1270,
+    "total_external_links": 61,
     "total_anchor_links": 67,
     "total_email_links": 7,
     "total_tel_links": 5,
@@ -54,14 +54,6 @@
     {
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8937156164745!2d120.01775507611084!3d30.30169747350729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344b65a6c313a3e9%3A0x1e1f1f1f1f1f1f1f!2z5aSn5a2m5a2m5Lmg5aSn5a2j5Y2a5aSn5a2m6Zmi5aSn5a2m5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1sen!2scn!4v1700000000000!5m2!1sen!2scn",
       "source_file": "contact.html",
-      "type": "external",
-      "status": "unknown",
-      "target_path": null,
-      "issues": []
-    },
-    {
-      "url": "https://kit.fontawesome.com/your-fontawesome-kit.js",
-      "source_file": "industries.html",
       "type": "external",
       "status": "unknown",
       "target_path": null,
@@ -422,14 +414,6 @@
     {
       "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap",
       "source_file": "assessment\\index.html",
-      "type": "external",
-      "status": "unknown",
-      "target_path": null,
-      "issues": []
-    },
-    {
-      "url": "https://kit.fontawesome.com/your-fontawesome-kit.js",
-      "source_file": "industries\\index.html",
       "type": "external",
       "status": "unknown",
       "target_path": null,
@@ -2651,6 +2635,14 @@
       "type": "internal",
       "status": "valid",
       "target_path": "js\\main.js",
+      "issues": []
+    },
+    {
+      "url": "js/debug.js",
+      "source_file": "index.html",
+      "type": "internal",
+      "status": "valid",
+      "target_path": "js\\debug.js",
       "issues": []
     },
     {
@@ -7398,6 +7390,14 @@
       "issues": []
     },
     {
+      "url": "../js/debug.js",
+      "source_file": "applications\\index.html",
+      "type": "internal",
+      "status": "valid",
+      "target_path": "js\\debug.js",
+      "issues": []
+    },
+    {
       "url": "../css/style.css",
       "source_file": "applications\\legal.html",
       "type": "internal",
@@ -11462,6 +11462,14 @@
       "issues": []
     },
     {
+      "url": "js/debug.js",
+      "source_file": "index.html",
+      "type": "internal",
+      "status": "valid",
+      "target_path": "js\\debug.js",
+      "issues": []
+    },
+    {
       "url": "../assets/images/logo.png",
       "source_file": "industries.html",
       "type": "internal",
@@ -11483,14 +11491,6 @@
       "type": "internal",
       "status": "valid",
       "target_path": "industries\\industries.js",
-      "issues": []
-    },
-    {
-      "url": "https://kit.fontawesome.com/your-fontawesome-kit.js",
-      "source_file": "industries.html",
-      "type": "external",
-      "status": "unknown",
-      "target_path": null,
       "issues": []
     },
     {
@@ -11782,6 +11782,14 @@
       "issues": []
     },
     {
+      "url": "../js/debug.js",
+      "source_file": "applications\\index.html",
+      "type": "internal",
+      "status": "valid",
+      "target_path": "js\\debug.js",
+      "issues": []
+    },
+    {
       "url": "../assets/images/logo.png",
       "source_file": "applications\\legal.html",
       "type": "internal",
@@ -11891,14 +11899,6 @@
       "type": "internal",
       "status": "valid",
       "target_path": "industries\\industries.js",
-      "issues": []
-    },
-    {
-      "url": "https://kit.fontawesome.com/your-fontawesome-kit.js",
-      "source_file": "industries\\index.html",
-      "type": "external",
-      "status": "unknown",
-      "target_path": null,
       "issues": []
     },
     {
@@ -12328,7 +12328,8 @@
       ],
       "srcs": [
         "assets/images/logo.png",
-        "js/main.js"
+        "js/main.js",
+        "js/debug.js"
       ],
       "actions": [],
       "file_path": "index.html"
@@ -12380,8 +12381,7 @@
       "srcs": [
         "../assets/images/logo.png",
         "../js/main.js",
-        "industries/industries.js",
-        "https://kit.fontawesome.com/your-fontawesome-kit.js"
+        "industries/industries.js"
       ],
       "actions": [],
       "file_path": "industries.html"
@@ -13146,7 +13146,8 @@
       ],
       "srcs": [
         "../assets/images/logo.png",
-        "../js/main.js"
+        "../js/main.js",
+        "../js/debug.js"
       ],
       "actions": [],
       "file_path": "applications\\index.html"
@@ -13467,8 +13468,7 @@
       "srcs": [
         "../assets/images/logo.png",
         "../js/main.js",
-        "industries.js",
-        "https://kit.fontawesome.com/your-fontawesome-kit.js"
+        "industries.js"
       ],
       "actions": [],
       "file_path": "industries\\index.html"

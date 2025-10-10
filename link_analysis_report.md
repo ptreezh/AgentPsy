@@ -5,8 +5,8 @@
 
 - **Total HTML Files Analyzed**: 37
 - **Total Links Found**: 1410
-  - Internal Links: 1268
-  - External Links: 63
+  - Internal Links: 1270
+  - External Links: 61
   - Anchor Links: 67
   - Email Links: 7
   - Telephone Links: 5
@@ -20,7 +20,7 @@ No broken internal links found!
 
 ## External Links Analysis
 
-Found 63 external links:
+Found 61 external links:
 
 ### agentpsy.com (8 links)
 - https://agentpsy.com/applications/education.html (from applications\education.html)
@@ -63,10 +63,6 @@ Found 63 external links:
 - https://hai.stanford.edu/research/personality-ai (from temp_resources_index.html)
 - https://hai.stanford.edu/research/personality-ai (from resources\index.html)
 
-### kit.fontawesome.com (2 links)
-- https://kit.fontawesome.com/your-fontawesome-kit.js (from industries.html)
-- https://kit.fontawesome.com/your-fontawesome-kit.js (from industries\index.html)
-
 ### maps.google.com (3 links)
 - https://maps.google.com/?q=杭州师范大学仓前校区恕园1号楼 (from about.html)
 - https://maps.google.com/?q=杭州师范大学仓前校区恕园1号楼 (from contact.html)
@@ -102,13 +98,13 @@ Found 63 external links:
 
 ## Internal Links Analysis
 
-Found 1268 internal links:
+Found 1270 internal links:
 
-### Directory: . (621 links, 621 valid)
+### Directory: . (622 links, 622 valid)
 - ✓ ../css/style.css -> css\style.css (from about.html)
 - ✓ ../css/logo-enhancements.css -> css\logo-enhancements.css (from about.html)
 - ✓ ../index.html -> index.html (from about.html)
-- ... and 618 more links
+- ... and 619 more links
 
 ### Directory: about (32 links, 32 valid)
 - ✓ ../css/style.css -> css\style.css (from about\index.html)
@@ -116,11 +112,11 @@ Found 1268 internal links:
 - ✓ ../index.html -> index.html (from about\index.html)
 - ... and 29 more links
 
-### Directory: applications (285 links, 285 valid)
+### Directory: applications (286 links, 286 valid)
 - ✓ ../css/style.css -> css\style.css (from applications\education.html)
 - ✓ ../css/logo-enhancements.css -> css\logo-enhancements.css (from applications\education.html)
 - ✓ ../index.html -> index.html (from applications\education.html)
-- ... and 282 more links
+- ... and 283 more links
 
 ### Directory: assessment (114 links, 114 valid)
 - ✓ ../css/style.css -> css\style.css (from assessment\big-five.html)
@@ -168,8 +164,8 @@ Found 1268 internal links:
 
 ## Files with Most Links
 
-- applications\index.html: 55 links
-- index.html: 52 links
+- applications\index.html: 56 links
+- index.html: 53 links
 - about.html: 49 links
 - applications\education.html: 47 links
 - applications\emotional-support.html: 47 links

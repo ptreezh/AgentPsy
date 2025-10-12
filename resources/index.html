@@ -59,37 +59,105 @@
                 <div class="resource-categories">
                     <div class="category">
                         <h3>Documentation</h3>
-                        <p>Comprehensive guides and references for using AgentPsy's assessment tools effectively.</p>
-                        <div class="coming-soon">
-                            <span class="badge">🚧 Under Construction</span>
-                            <p>Detailed documentation resources are being compiled and will be available soon...</p>
+                        <p>A portable, multi-evaluator psychological assessment agent system supporting local Ollama models and various cloud-based LLMs.</p>
+                        <div class="resource-links">
+                            <a href="quick-start-guide.html" class="resource-link">Quick Start</a>
+                            <a href="documentation.html" class="resource-link">Usage Guide</a>
+                            <a href="documentation.html" class="resource-link">Configuration</a>
+                        </div>
+                        <div id="quick-start" class="doc-section">
+                            <h4>Overview</h4>
+                            <p>AgentPsy is a tool designed for multi-dimensional personality assessment (Big Five), supporting a wide range of evaluators from OpenAI, Google, and Anthropic to local Ollama instances. It is configuration-driven, generates detailed analysis reports, and features a powerful batch analysis capability for large datasets.</p>
+                            <p><strong>Source Code:</strong> <a href="https://github.com/shurenzhang631-lab/AgentPsy.git" target="_blank">https://github.com/shurenzhang631-lab/AgentPsy.git</a></p>
+                            <p><span class="badge badge-warning">Warning:</span> This project does not currently have a LICENSE file. Please consult the repository owner for terms of use.</p>
                         </div>
                     </div>
                     
                     <div class="category">
                         <h3>API & Developer Tools</h3>
-                        <p>Resources for developers looking to integrate AgentPsy's assessment tools into their applications.</p>
-                        <div class="coming-soon">
-                            <span class="badge">🚧 Under Construction</span>
-                            <p>Developer tools and API documentation are currently in development...</p>
+                        <p>Leverage a suite of command-line tools for batch analysis, progress monitoring, and data processing. The primary tool is <code>ultimate_batch_analysis.py</code>.</p>
+                        <div class="resource-links">
+                            <a href="api-reference.html" class="resource-link">CLI Usage</a>
+                            <a href="api-reference.html" class="resource-link">Output Files</a>
+                        </div>
+                        <div id="cli-usage" class="doc-section">
+                            <h4>Batch Analysis CLI</h4>
+                            <p>The batch analysis script offers flexible control:</p>
+                            <pre><code># 1. Get file statistics
+python ultimate_batch_analysis.py --stats
+
+# 2. Run a quick test (5 files)
+python ultimate_batch_analysis.py --quick
+
+# 3. Analyze a specific model series
+python ultimate_batch_analysis.py --filter deepseek
+
+# 4. Analyze 10 files from a series with a specific evaluator
+python ultimate_batch_analysis.py --filter deepseek --sample 10 --evaluators ollama_llama3</code></pre>
+                        </div>
+                        <div id="output-files" class="doc-section">
+                            <h4>Output Structure</h4>
+                            <p>Results are saved in <code>batch_analysis_results/</code>, containing summaries and detailed reports for each batch.</p>
                         </div>
                     </div>
                     
                     <div class="category">
-                        <h3>Academic Papers</h3>
-                        <p>Foundational research papers that inform AgentPsy's assessment methodologies and approaches.</p>
-                        <div class="coming-soon">
-                            <span class="badge">🚧 Under Construction</span>
-                            <p>Academic resource library is being enhanced...</p>
+                        <h3>TechBlogs</h3>
+                        <p>Explore our team's technical articles and insights on AI-driven psychological assessment and agent evaluation methodologies.</p>
+                        <div class="resource-links">
+                            <a href="tech-blogs.html" class="resource-link">Visit AgentPsy Blogs</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h3>Scientific Principles</h3>
+                        <p>Deep dive into the scientific methodology behind AI personality assessment, requiring thousands of tests with multiple parameters to establish stable personality characteristics.</p>
+                        <div class="resource-links">
+                            <a href="ai-personality-science.html" class="resource-link">Scientific Whitepaper</a>
+                            <a href="academic-papers.html" class="resource-link">Research Papers</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h3>Technical Whitepapers</h3>
+                        <p>Comprehensive technical documentation on AI personality assessment methodology, questionnaire design, and industry applications.</p>
+                        <div class="resource-links">
+                            <a href="tech_whitepaper_cn.html" class="resource-link">Chinese Version</a>
+                            <a href="tech_whitepaper_en.html" class="resource-link">English Version</a>
                         </div>
                     </div>
                     
                     <div class="category">
                         <h3>Training & Tutorials</h3>
-                        <p>Educational materials to help you master AgentPsy's assessment tools.</p>
-                        <div class="coming-soon">
-                            <span class="badge">🚧 Under Construction</span>
-                            <p>Training materials and tutorials are being created...</p>
+                        <p>Follow this step-by-step guide to get your local AgentPsy environment up and running for analysis.</p>
+                        <div class="resource-links">
+                            <a href="quick-start-guide.html" class="resource-link">Quick Start Tutorial</a>
+                            <a href="documentation.html" class="resource-link">Complete Guide</a>
+                        </div>
+                        <div class="doc-section">
+                            <h4>Step 1: Clone the Repository</h4>
+                            <pre><code>git clone https://github.com/shurenzhang631-lab/AgentPsy.git
+cd AgentPsy</code></pre>
+                            <h4>Step 2: Install Dependencies</h4>
+                            <p>Core dependencies are listed in <code>requirements.txt</code>. Optional providers require separate installation.</p>
+                            <pre><code># Install core dependencies
+pip install -r requirements.txt
+
+# Optional: Install other providers
+pip install google-generativeai anthropic dashscope</code></pre>
+                            <h4>Step 3: Configure Environment</h4>
+                            <p>Copy <code>.env.example</code> to <code>.env</code> and fill in your API keys. For local analysis, ensure Ollama is running.</p>
+                            <pre><code># .env file content
+PROVIDER=local # or 'cloud'
+LOCAL_API_BASE=http://localhost:11434/v1
+LOCAL_MODEL_ID=llama3
+
+# Cloud Keys (if needed)
+GEMINI_API_KEY=your_gemini_key
+...</code></pre>
+                            <h4>Step 4: Run an Analysis</h4>
+                            <p>Use the batch analysis script to start.</p>
+                            <pre><code>python ultimate_batch_analysis.py --quick</code></pre>
                         </div>
                     </div>
                 </div>
@@ -112,22 +180,58 @@
                             <h4>AgentPsy Assessment Framework Whitepaper</h4>
                             <p>Comprehensive overview of our theoretical foundations and methodological approaches.</p>
                             <span class="resource-type">Whitepaper</span>
-                            <a href="#" class="resource-link">Download</a>
+                            <a href="whitepapers.html" class="resource-link">Download</a>
                         </div>
                         
                         <div class="resource-item">
                             <h4>API Integration Quick Start Guide</h4>
                             <p>Fast-track guide to integrating AgentPsy assessments into your applications.</p>
                             <span class="resource-type">Documentation</span>
-                            <a href="#" class="resource-link">View</a>
+                            <a href="quick-start-guide.html" class="resource-link">View</a>
                         </div>
                         
                         <div class="resource-item">
                             <h4>Ethical AI Assessment Guidelines</h4>
                             <p>Framework for conducting responsible AI assessments with consideration for ethical implications.</p>
                             <span class="resource-type">Guidelines</span>
-                            <a href="#" class="resource-link">Download</a>
+                            <a href="whitepapers.html" class="resource-link">Download</a>
                         </div>
+                        
+                        <div class="resource-item">
+                            <h4>Scientific Principles of AI Personality Assessment</h4>
+                            <p>Deep dive into the methodology and scientific approaches used in assessing AI personalities.</p>
+                            <span class="resource-type">Technical Paper</span>
+                            <a href="academic-papers.html" class="resource-link">Read</a>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <h4>Advanced Testing Protocols for AI Models</h4>
+                            <p>Comprehensive guide to testing AI models with multiple parameters, stress tests, and cognitive trap evaluations.</p>
+                            <span class="resource-type">Technical Guide</span>
+                            <a href="documentation.html" class="resource-link">Read</a>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <h4>AI Personality Assessment: Scientific Methodology</h4>
+                            <p>Technical whitepaper on the rigorous scientific approach with thousands of tests to establish stable personality characteristics.</p>
+                            <span class="resource-type">Whitepaper</span>
+                            <a href="ai-personality-science.html" class="resource-link">Download</a>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <h4>Portable PsyAgent Technical Whitepaper (Chinese)</h4>
+                            <p>Comprehensive technical documentation on AI personality assessment methodology, questionnaire design, and industry applications.</p>
+                            <span class="resource-type">Technical Whitepaper</span>
+                            <a href="download_whitepaper.html" class="resource-link">Download</a>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <h4>Portable PsyAgent Technical Whitepaper (English)</h4>
+                            <p>Comprehensive technical documentation on AI personality assessment methodology, questionnaire design, and industry applications.</p>
+                            <span class="resource-type">Technical Whitepaper</span>
+                            <a href="download_whitepaper_en.html" class="resource-link">Download</a>
+                        </div>
+                    </div>
                     </div>
                     
                     <div class="external-resources">
@@ -167,6 +271,45 @@
                             <p>Comprehensive resources on AI research including psychology and safety aspects.</p>
                             <span class="resource-type">Research Hub</span>
                             <a href="https://ai.google/research" target="_blank" class="resource-link">Visit Site</a>
+                        </div>
+                    </div>
+                    
+                    <div class="support-resources">
+                        <h3>Site Navigation</h3>
+                        <p>Use our site map to find all available resources and pages:</p>
+                        
+                        <div class="support-options">
+                            <div class="support-option">
+                                <h4>Full Site Map</h4>
+                                <p>Complete overview of all pages and resources available on our site.</p>
+                                <a href="sitemap.html" class="cta-button">View Site Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="internal-resources">
+                        <h3>Internal Research Resources</h3>
+                        <p>Access our internal research papers, technical reports, and academic publications:</p>
+                        
+                        <div class="external-resource">
+                            <h4>Academic Papers</h4>
+                            <p>Peer-reviewed research papers published by our team in academic journals.</p>
+                            <span class="resource-type">Academic Papers</span>
+                            <a href="academic-papers.html" class="resource-link">View Papers</a>
+                        </div>
+                        
+                        <div class="external-resource">
+                            <h4>Technical Reports</h4>
+                            <p>Detailed technical reports and methodology documentation.</p>
+                            <span class="resource-type">Technical Reports</span>
+                            <a href="documentation.html" class="resource-link">View Reports</a>
+                        </div>
+                        
+                        <div class="external-resource">
+                            <h4>Assessment Framework</h4>
+                            <p>Complete documentation of our assessment methodology and validation.</p>
+                            <span class="resource-type">Framework</span>
+                            <a href="whitepapers.html" class="resource-link">View Documentation</a>
                         </div>
                     </div>
                 </div>
@@ -225,6 +368,7 @@
                     <li><a href="../applications/index.html">Application Scenarios</a></li>
                     <li><a href="../research/index.html">Academic Research</a></li>
                     <li><a href="index.html">Resource Center</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
                 </ul>
             </div>
             <div class="footer-section">

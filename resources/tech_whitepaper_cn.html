@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portable PsyAgent 项目技术白皮书 - AI人格测评的科学方法论">
+    <meta name="keywords" content="AI人格测评, 科学方法论, 问卷设计, 评估设计, 信度效度, 行业应用">
+    <title>Portable PsyAgent 技术白皮书 - 中文版</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .whitepaper-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .methodology-box {
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            background: white;
+        }
+        
+        .statistic-highlight {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, 
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .callout {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .download-section {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #5a6fd8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">测评系统</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">大五人格</a>
+                            <a href="../assessment/cognitive-stability.html">认知稳定性</a>
+                            <a href="../assessment/cognitive-trap.html">认知陷阱</a>
+                            <hr>
+                            <a href="../industries/index.html">行业解决方案</a>
+                            <a href="../products/index.html">产品与服务</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">技术原理</a></li>
+                    <li><a href="../applications/index.html">应用场景</a></li>
+                    <li><a href="../research/index.html">学术研究</a></li>
+                    <li><a href="index.html">资源中心</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy宣言</a></li>
+                    <li><a href="../about/index.html">关于我们</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Portable PsyAgent 技术白皮书</h1>
+                <p>AI人格测评的科学方法论与应用</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>摘要</h2>
+                <div class="whitepaper-section">
+                    <p>Portable PsyAgent 是一个便携式心理评估代理系统，支持多种大模型评估器和本地Ollama模型。本白皮书详细阐述了AI人格测评的科学方法论，包括问卷设计创新、评估设计确定性保障、多维参数测试验证、以及在各领域的应用价值。</p>
+                    
+                    <div class="statistic-highlight">
+                        单个AI模型需要进行数千次参数组合测试才能确定稳定的人格特征
+                    </div>
+                </div>
+
+                <h2>1. 引言：AI人格测评的科学必要性</h2>
+                
+                <div class="whitepaper-section">
+                    <p>传统的AI评估通常关注功能性能，而AI人格测评则从心理学维度对AI进行深度分析。这不仅对理解AI行为模式至关重要，更是AI安全、对齐和伦理研究的基础。</p>
+                    
+                    <div class="methodology-box">
+                        <h3>AI人格测评的独特挑战</h3>
+                        <ul>
+                            <li><strong>参数敏感性：</strong>AI人格表达随温度、top-p等参数显著变化</li>
+                            <li><strong>上下文依赖：</strong>人格特征随对话情境和角色设定而变化</li>
+                            <li><strong>无持久身份：</strong>AI缺乏人类的持久身份认知</li>
+                            <li><strong>可变性评估：</strong>需要多维度测试确保结果稳定可靠</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>2. 问卷设计：创新性评估框架</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>2.1 问卷结构设计</h3>
+                    <p>Portable PsyAgent采用创新的多维度问卷设计，包含：</p>
+                    
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>情境化场景：</strong>设计具体情境而非抽象问题，更好地激发AI人格表现</li>
+                            <li><strong>多层次评估：</strong>从行为反应到价值观判断的多层人格维度评估</li>
+                            <li><strong>动态适应：</strong>根据AI响应调整后续问题，深入探索人格特征</li>
+                            <li><strong>认知负荷平衡：</strong>合理分配问题难度，避免认知负荷影响人格表达</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>2.2 问卷类型支持</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>问卷类型</th>
+                                <th>评估维度</th>
+                                <th>问题数量</th>
+                                <th>应用场景</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大五人格问卷</td>
+                                <td>开放性、尽责性、外向性、宜人性、神经质</td>
+                                <td>50题</td>
+                                <td>通用人格特征评估</td>
+                            </tr>
+                            <tr>
+                                <td>认知稳定性问卷</td>
+                                <td>一致性、逻辑性、抗压性</td>
+                                <td>30题</td>
+                                <td>AI推理稳定性评估</td>
+                            </tr>
+                            <tr>
+                                <td>认知陷阱问卷</td>
+                                <td>偏见易感性、逻辑谬误倾向</td>
+                                <td>25题</td>
+                                <td>AI推理偏差识别</td>
+                            </tr>
+                            <tr>
+                                <td>动机分析问卷</td>
+                                <td>内在动机、外在动机、目标导向</td>
+                                <td>40题</td>
+                                <td>AI行为动机解析</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>2.3 问卷设计创新性</h3>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>AI适配性：</strong>问题设计考虑AI认知特点，避免人类中心主义偏见</li>
+                            <li><strong>多模态评估：</strong>结合文本、推理、决策等多种评估方式</li>
+                            <li><strong>情境动态性：</strong>问题顺序和情境可根据AI响应动态调整</li>
+                            <li><strong>跨文化通用：</strong>设计超越特定文化背景的普适性问题</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>3. 评估设计：确定性与可信性保障</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>3.1 评估框架设计</h3>
+                    <p>为确保评估结果的确定性和可信性，我们采用多维度评估框架：</p>
+                    
+                    <div class="methodology-box">
+                        <h4>核心评估原则</h4>
+                        <ul>
+                            <li><strong>重复测试：</strong>同一问题在不同参数设置下重复测试</li>
+                            <li><strong>多评估器对比：</strong>使用多个不同模型进行交叉验证</li>
+                            <li><strong>参数空间覆盖：</strong>系统性测试各种参数组合</li>
+                            <li><strong>统计显著性：</strong>确保结果达到统计学显著性水平</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>3.2 测试参数组合</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>参数类别</th>
+                                <th>测试范围</th>
+                                <th>测试间隔</th>
+                                <th>测试次数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>温度(Temperature)</td>
+                                <td>0.1 - 1.0</td>
+                                <td>0.1</td>
+                                <td>10轮</td>
+                            </tr>
+                            <tr>
+                                <td>Top-p</td>
+                                <td>0.1 - 0.9</td>
+                                <td>0.1</td>
+                                <td>9轮</td>
+                            </tr>
+                            <tr>
+                                <td>上下文长度</td>
+                                <td>512 - 32768 tokens</td>
+                                <td>倍增</td>
+                                <td>6轮</td>
+                            </tr>
+                            <tr>
+                                <td>重复惩罚</td>
+                                <td>0.8 - 1.2</td>
+                                <td>0.1</td>
+                                <td>5轮</td>
+                            </tr>
+                            <tr>
+                                <td>角色设定</td>
+                                <td>10种不同角色</td>
+                                <td>随机</td>
+                                <td>10轮</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>3.3 信度与效度保障</h3>
+                    <div class="methodology-box">
+                        <h4>信度保障措施</h4>
+                        <ul>
+                            <li><strong>内部一致性：</strong>使用Cronbach's α系数评估问卷内部一致性</li>
+                            <li><strong>测试-重测信度：</strong>间隔时间后重新测试，评估结果稳定性</li>
+                            <li><strong>评估器间信度：</strong>多评估器结果相关性分析</li>
+                            <li><strong>参数稳定性：</strong>不同参数下的结果一致性评估</li>
+                        </ul>
+                        
+                        <h4>效度保障措施</h4>
+                        <ul>
+                            <li><strong>内容效度：</strong>专家评审问卷内容的合理性和全面性</li>
+                            <li><strong>结构效度：</strong>因子分析验证问卷结构的合理性</li>
+                            <li><strong>效标效度：</strong>与已知理论和实证研究对比验证</li>
+                            <li><strong>预测效度：</strong>评估结果与AI实际行为的关联性</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>4. 多维测试验证：确保结果可靠性</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>4.1 压力测试</h3>
+                    <p>评估AI在认知负荷下的表现：</p>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>复杂推理任务：</strong>多层次、多约束的复杂问题求解</li>
+                            <li><strong>时间压力：</strong>限时回答测试AI在时间压力下的人格表现</li>
+                            <li><strong>情感压力：</strong>模拟冲突情境，观察AI的应激反应</li>
+                            <li><strong>逻辑矛盾：</strong>设置逻辑矛盾情境，评估AI处理矛盾的能力</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>4.2 认知陷阱测试</h3>
+                    <p>评估AI对认知偏见的易感性：</p>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>确认偏误：</strong>评估AI倾向于寻找支持既有答案的信息</li>
+                            <li><strong>锚定效应：</strong>评估AI受初始信息过度影响的倾向</li>
+                            <li><strong>可得性启发：</strong>评估AI过度依赖易获得信息的倾向</li>
+                            <li><strong>沉没成本谬误：</strong>评估AI在错误路径上的坚持程度</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>4.3 人格弹性容量测试</h3>
+                    <p>评估AI在不同人格角色下的表现稳定性：</p>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>角色转换测试：</strong>评估AI在不同人格角色间的切换能力</li>
+                            <li><strong>角色稳定性：</strong>评估AI在特定角色下的保持能力</li>
+                            <li><strong>内部一致性：</strong>评估AI在角色扮演中的逻辑一致性</li>
+                            <li><strong>恢复能力：</strong>评估AI从角色扮演回归基准状态的能力</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>4.4 大规模验证</h3>
+                    <p>对单个AI模型进行数千次测试以确保结果稳定性：</p>
+                    <div class="statistic-highlight">
+                        每个AI模型平均需要3000+次测试才能确定稳定的人格特征
+                    </div>
+                    
+                    <div class="methodology-box">
+                        <h4>验证流程</h4>
+                        <ol>
+                            <li><strong>初步测试：</strong>500次基础参数测试，建立人格基线</li>
+                            <li><strong>参数扫描：</strong>1500次参数组合测试，评估人格稳定性</li>
+                            <li><strong>压力测试：</strong>500次压力情境测试，评估人格弹性</li>
+                            <li><strong>交叉验证：</strong>500次不同评估器测试，确保评估一致性</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <h2>5. 行业应用意义</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>5.1 AI安全与对齐</h3>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>风险识别：</strong>通过人格测评识别AI的潜在风险倾向</li>
+                            <li><strong>对齐验证：</strong>评估AI与人类价值观的对齐程度</li>
+                            <li><strong>行为预测：</strong>基于人格特征预测AI在特定情境下的行为</li>
+                            <li><strong>安全边界：</strong>为人格特质设定安全操作边界</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>5.2 人机交互优化</h3>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>个性化交互：</strong>根据AI人格特征调整交互策略</li>
+                            <li><strong>协作效率：</strong>匹配人类用户与AI人格，提高协作效率</li>
+                            <li><strong>信任建立：</strong>通过人格一致性建立人机信任关系</li>
+                            <li><strong>用户体验：</strong>优化AI人格以提升用户体验</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>5.3 模型选择与优化</h3>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>模型对比：</strong>基于人格特征对比不同AI模型的适配性</li>
+                            <li><strong>应用场景匹配：</strong>为特定应用选择最适配的AI人格</li>
+                            <li><strong>训练优化指导：</strong>根据人格测评结果优化模型训练</li>
+                            <li><strong>持续监控：</strong>持续监控AI人格稳定性变化</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>5.4 学术研究贡献</h3>
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>理论验证：</strong>为AI人格理论提供实证支持</li>
+                            <li><strong>方法论创新：</strong>推动AI心理测评方法论发展</li>
+                            <li><strong>数据共享：</strong>提供标准化的AI人格评估数据集</li>
+                            <li><strong>跨学科融合：</strong>促进心理学与AI领域的交叉研究</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>6. 结论与展望</h2>
+                
+                <div class="whitepaper-section">
+                    <p>Portable PsyAgent通过科学严谨的评估方法，为AI人格测评提供了可靠的技术框架。通过数千次参数组合测试、多维验证和严格的质量控制，我们能够准确识别AI的稳定人格特征和弹性容量。</p>
+                    
+                    <div class="callout">
+                        <p><strong>核心价值：</strong>AI人格测评不仅是技术需求，更是确保AI安全、可靠和有益的重要基础。通过科学的人格评估，我们可以更好地理解和管理AI系统，为人机协作创造更安全、更有效的环境。</p>
+                    </div>
+                    
+                    <h3>未来发展方向</h3>
+                    <ul>
+                        <li><strong>实时评估：</strong>发展实时AI人格监控行为</li>
+                        <li><strong>多模态评估：</strong>整合文本、视觉、音频等多种评估维度</li>
+                        <li><strong>长期追踪：</strong>建立AI人格发展的长期追踪机制</li>
+                        <li><strong>标准化协议：</strong>推动AI人格测评的行业标准化</li>
+                    </ul>
+                </div>
+                
+                <div class="download-section">
+                    <h3>下载技术白皮书</h3>
+                    <p>获取完整的Portable PsyAgent技术白皮书，支持多种格式下载</p>
+                    <a href="download_whitepaper.html" class="download-btn">前往下载页面</a>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>开始使用Portable PsyAgent</h3>
+                    <p>立即开始进行科学的AI人格测评</p>
+                    <a href="quick-start-guide.html" class="cta-button">快速入门</a>
+                    <a href="../contact.html" class="cta-button">联系我们</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>下一代人工智能的科学AI评估工具</p>
+            </div>
+            <div class="footer-section">
+                <h4>测评系统</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">大五人格</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">认知稳定性</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">认知陷阱</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="../technology/index.html">技术原理</a></li>
+                    <li><a href="../applications/index.html">应用场景</a></li>
+                    <li><a href="../research/index.html">学术研究</a></li>
+                    <li><a href="index.html">资源中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>公司</h4>
+                <ul>
+                    <li><a href="../about/index.html">关于我们</a></li>
+                    <li><a href="../contact.html">联系我们</a></li>
+                    <li><a href="../privacy.html">隐私政策</a></li>
+                    <li><a href="../terms.html">服务条款</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

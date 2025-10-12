@@ -45,28 +45,131 @@
 
         <section class="content-section">
             <div class="container">
-                <div class="coming-soon-page">
-                    <div class="construction-icon">🚧</div>
-                    <h2>Documentation - Under Construction</h2>
-                    <p>Our comprehensive documentation is currently being developed and will be available soon.</p>
+                <h2>Scientific Principles of AI Personality Assessment</h2>
+                
+                <div class="documentation-section">
+                    <h3>The Science Behind AI Personality Measurement</h3>
+                    <p>AI personality assessment is a complex scientific process that differs significantly from traditional human personality evaluation. Our AgentPsy framework employs multiple methodologies to ensure reliable and consistent results. Each model must undergo thousands of tests with various parameter combinations to establish stable personality traits.</p>
                     
-                    <div class="coming-soon-features">
-                        <h3>Coming Soon:</h3>
-                        <ul>
-                            <li>Getting Started Guides</li>
-                            <li>API Reference Documentation</li>
-                            <li>Assessment Framework Details</li>
-                            <li>Integration Guides</li>
-                            <li>Best Practices</li>
-                            <li>Troubleshooting</li>
-                        </ul>
-                    </div>
+                    <h3>Methodological Approach</h3>
+                    <p>Unlike human personality assessment which relies on self-reporting and behavioral observation, AI personality assessment requires:</p>
+                    <ul>
+                        <li><strong>Objective observation methods:</strong> Through text analysis, pattern recognition, and output consistency measurement</li>
+                        <li><strong>Multi-parameter testing:</strong> Across thousands of variations in temperature, top-p, repetition penalties, and context length</li>
+                        <li><strong>Stress testing:</strong> Under cognitive load, adversarial conditions, and emotional provocation scenarios</li>
+                        <li><strong>Cognitive trap evaluations:</strong> To assess reasoning patterns and identify susceptibility to biases</li>
+                        <li><strong>Multiple context scenarios:</strong> To identify stable personality traits vs. context-dependent responses</li>
+                        <li><strong>Personality role settings:</strong> To assess the range and stability of personality expressions</li>
+                        <li><strong>Repeated testing:</strong> Thousands of iterations to establish statistical significance</li>
+                    </ul>
                     
-                    <div class="contact-cta">
-                        <h3>Need Immediate Assistance?</h3>
-                        <p>Contact our team for support and information about our assessment tools.</p>
-                        <a href="../contact.html" class="cta-button">Contact Us</a>
-                    </div>
+                    <h3>Comprehensive Testing Protocol</h3>
+                    <p>Each AI model undergoes rigorous evaluation through thousands of test iterations:</p>
+                    <ol>
+                        <li><strong>Parameter Variation:</strong> Testing with 50+ different parameter combinations including temperature (0.0-1.5), top-p (0.1-0.9), repetition penalties (0.8-1.2), and context lengths (512-32768 tokens)</li>
+                        <li><strong>Thousand-Scale Testing:</strong> Running 1000+ evaluations for statistical significance and reliable trait identification</li>
+                        <li><strong>Stress Testing:</strong> Evaluating performance under cognitive load, time pressure, and adversarial conditions</li>
+                        <li><strong>Cognitive Trap Tests:</strong> Identifying susceptibility to 12+ different reasoning biases and cognitive fallacies</li>
+                        <li><strong>Personality Role Simulation:</strong> Assessing capacity to adopt different personality expressions while maintaining internal consistency</li>
+                        <li><strong>Contextual Consistency:</strong> Testing personality traits across dozens of different scenarios and contexts</li>
+                    </ol>
+                    
+                    <h3>Personality Stability and Elasticity</h3>
+                    <p>Our system measures two critical aspects that require extensive testing:</p>
+                    <ul>
+                        <li><strong>Personality Stability:</strong> The consistency of personality traits across multiple evaluations under varying conditions (thousands of tests required)</li>
+                        <li><strong>Personality Elasticity:</strong> The capacity of an AI model to maintain stable personality characteristics while adapting to different contexts and roles</li>
+                        <li><strong>Personality Range:</strong> The spectrum of personalities an AI can stably express without losing internal consistency</li>
+                    </ul>
+                    
+                    <h3>Differences from Human Personality Assessment</h3>
+                    <p>AI personality assessment involves unique challenges that require extensive testing:</p>
+                    <ul>
+                        <li><strong>Temporal Consistency:</strong> AI models may lack persistent personality across sessions, requiring longitudinal testing</li>
+                        <li><strong>Context Sensitivity:</strong> Responses may vary significantly with slight prompt changes, necessitating robust parameter testing</li>
+                        <li><strong>Training Influence:</strong> Personality traits are shaped by training data and fine-tuning, requiring baseline comparisons</li>
+                        <li><strong>Architectural Factors:</strong> Model architecture affects personality expression, requiring architecture-specific testing protocols</li>
+                        <li><strong>Temperature Dependency:</strong> AI personality expressions can vary dramatically with temperature settings</li>
+                        <li><strong>Cognitive Load Effects:</strong> Personality traits may shift under different cognitive demands</li>
+                    </ul>
+                    
+                    <h3>Quality Assurance</h3>
+                    <p>To ensure reliable assessments, we implement extensive validation procedures:</p>
+                    <ul>
+                        <li>Baseline comparisons across multiple model versions</li>
+                        <li>Counterfactual evaluations to test robustness</li>
+                        <li>Cross-validation with different evaluation frameworks</li>
+                        <li>Statistical significance testing (thousands of iterations)</li>
+                        <li>Reproducibility verification across different test sessions</li>
+                        <li>Consistency checks under varying technical parameters</li>
+                    </ul>
+                </div>
+
+                <div class="documentation-section" style="margin-top: 40px;">
+                    <h3>Technical Implementation Guide</h3>
+                    
+                    <h4>Required Dependencies</h4>
+                    <pre><code>pip install agentpsy-client
+pip install numpy pandas scikit-learn
+pip install transformers torch
+pip install python-dotenv</code></pre>
+
+                    <h4>Basic Usage</h4>
+                    <pre><code># Initialize the assessment framework
+from agentpsy import AssessmentFramework
+
+framework = AssessmentFramework(
+    model="gpt-4", 
+    evaluation_methods=["big_five", "cognitive_stability", "cognitive_trap"]
+)
+
+# Run comprehensive assessment
+results = framework.assess_personality(
+    text=sample_text,
+    parameters={
+        "temperature_range": [0.1, 0.5, 0.9],
+        "context_variations": 10,
+        "test_iterations": 1000
+    }
+)</code></pre>
+
+                    <h4>Advanced Configuration</h4>
+                    <p>For scientific accuracy, configure extensive testing parameters:</p>
+                    <pre><code>config = {
+    # Parameter combinations for comprehensive testing
+    "param_combinations": {
+        "temperature": [0.1, 0.2, 0.5, 0.7, 0.9],
+        "top_p": [0.1, 0.5, 0.9],
+        "presence_penalty": [0.0, 0.5, 1.0],
+        "frequency_penalty": [0.0, 0.5, 1.0]
+    },
+    
+    # Stress testing scenarios
+    "stress_tests": [
+        "adversarial_prompts",
+        "contradiction_scenarios", 
+        "high_complexity_reasoning",
+        "emotional_contexts"
+    ],
+    
+    # Cognitive trap assessments
+    "cognitive_trap_tests": {
+        "bias_identification": True,
+        "reasoning_fallacies": True,
+        "inconsistency_detection": True
+    },
+    
+    # Statistical requirements
+    "min_iterations": 1000,
+    "confidence_threshold": 0.85,
+    "significance_level": 0.05
+}</code></pre>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>Ready to Start Testing?</h3>
+                    <p>Access the full AgentPsy platform for comprehensive AI personality assessment.</p>
+                    <a href="../contact.html" class="cta-button">Get Access</a>
                 </div>
             </div>
         </section>

@@ -1,0 +1,20 @@
+如何生成PDF和Word格式的技术白皮书
+
+我们提供了Markdown格式的技术白皮书，您可以使用以下方法将其转换为PDF或Word格式：
+
+1. PDF格式转换:
+   - 使用Pandoc: pandoc -f markdown -t pdf -o output.pdf input.md
+   - 使用LaTeX: 通过LaTeX模板将Markdown转换为PDF
+   - 在线工具: 使用GitHub, GitLab等的PDF导出功能
+
+2. Word格式转换:
+   - 使用Pandoc: pandoc -f markdown -t docx -o output.docx input.md
+   - 使用Microsoft Word: 直接打开Markdown文件或粘贴内容进行格式化
+   - Google Docs: 将内容粘贴到Google Docs中，然后下载为Word格式
+
+3. 也可以使用在线转换工具如:
+   - https://www.markdowntopdf.com/
+   - https://wordtohtml.net/markdown-to-word/
+   - https://cloudconvert.com/md-to-pdf
+
+本目录中提供的 .txt 和 .md 文件包含了完整的技术白皮书内容，可用于转换为所需的格式。

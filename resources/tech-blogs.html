@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read our latest technical blogs on AI personality assessment, methodology, and industry insights.">
+    <meta name="keywords" content="AI blogs, technical articles, personality assessment, AI research">
+    <title>Technical Blog | AgentPsy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .blog-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 180px;
+            background: #667eea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Technical Blog</h1>
+                <p>Read our latest technical articles on AI personality assessment, methodology, and industry insights.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image">📝</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Methodology</div>
+                            <h3>Improving Reliability in AI Personality Assessment</h3>
+                            <div class="blog-meta">
+                                <span>Oct 5, 2024</span>
+                                <span>12 min read</span>
+                            </div>
+                            <p>Recent research has shown that AI personality assessments can vary significantly with small changes in input. This article explores techniques to improve reliability and consistency in AI personality evaluation.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Reliability</span>
+                                <span class="blog-tag">Methodology</span>
+                                <span class="blog-tag">Big Five</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">🤖</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Research</div>
+                            <h3>Comparing Personality Traits Across Different LLM Architectures</h3>
+                            <div class="blog-meta">
+                                <span>Sep 28, 2024</span>
+                                <span>15 min read</span>
+                            </div>
+                            <p>An in-depth analysis of how architectural differences in large language models affect their personality assessments, including comparisons between transformer architectures, attention mechanisms, and parameter scaling effects.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">LLM</span>
+                                <span class="blog-tag">Architecture</span>
+                                <span class="blog-tag">Comparative Study</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">🔬</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Technical</div>
+                            <h3>Advanced Cognitive Stability Metrics for AI Systems</h3>
+                            <div class="blog-meta">
+                                <span>Sep 20, 2024</span>
+                                <span>18 min read</span>
+                            </div>
+                            <p>Introduction of novel metrics for evaluating cognitive stability in AI systems, including temporal consistency, logical coherence, and response variation under similar inputs.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Cognitive Stability</span>
+                                <span class="blog-tag">Metrics</span>
+                                <span class="blog-tag">Evaluation</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">🛡️</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Ethics</div>
+                            <h3>Ethical Considerations in AI Personality Assessment</h3>
+                            <div class="blog-meta">
+                                <span>Sep 12, 2024</span>
+                                <span>14 min read</span>
+                            </div>
+                            <p>Discussion of ethical frameworks for AI personality assessment, including privacy concerns, potential for bias, and responsible deployment of personality-reading systems.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Ethics</span>
+                                <span class="blog-tag">Responsible AI</span>
+                                <span class="blog-tag">Privacy</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">📈</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Industry</div>
+                            <h3>Applications of Personality Assessment in AI Safety</h3>
+                            <div class="blog-meta">
+                                <span>Aug 30, 2024</span>
+                                <span>16 min read</span>
+                            </div>
+                            <p>Exploring how personality assessment frameworks can enhance AI safety protocols, including identifying potentially risky behavioral patterns and improving human-AI interaction.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">AI Safety</span>
+                                <span class="blog-tag">Applications</span>
+                                <span class="blog-tag">Human-AI</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">🔍</div>
+                        <div class="blog-content">
+                            <div class="blog-category">Research</div>
+                            <h3>Identifying Cognitive Traps in Large Language Models</h3>
+                            <div class="blog-meta">
+                                <span>Aug 15, 2024</span>
+                                <span>20 min read</span>
+                            </div>
+                            <p>Analysis of common cognitive biases and reasoning errors in LLMs, with specific focus on identifying and mitigating susceptibility to cognitive traps.</p>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Cognitive Trap</span>
+                                <span class="blog-tag">Bias</span>
+                                <span class="blog-tag">Reasoning</span>
+                            </div>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h2>Want More Insights?</h2>
+                    <p>Subscribe to our technical blog newsletter to receive the latest articles and research findings directly in your inbox.</p>
+                    <a href="../contact.html" class="cta-button">Subscribe to Newsletter</a>
+                </div>
+
+                <div class="related-resources" style="margin-top: 40px;">
+                    <h2>Related Resources</h2>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <a href="whitepapers.html" class="resource-link" style="flex: 1; min-width: 250px; display: block; background: #f8f9fa; padding: 20px; border-radius: 8px; text-decoration: none; color: #667eea;">Research Whitepapers</a>
+                        <a href="documentation.html" class="resource-link" style="flex: 1; min-width: 250px; display: block; background: #f8f9fa; padding: 20px; border-radius: 8px; text-decoration: none; color: #667eea;">Technical Documentation</a>
+                        <a href="api-reference.html" class="resource-link" style="flex: 1; min-width: 250px; display: block; background: #f8f9fa; padding: 20px; border-radius: 8px; text-decoration: none; color: #667eea;">API Reference</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI assessment tools for the next generation of artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Assessment Systems</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">Big Five Personality</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">Cognitive Stability</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

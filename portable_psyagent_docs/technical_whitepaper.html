@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI人格测评科学性白皮书 - Portable PsyAgent技术文档</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .whitepaper-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .methodology-box {
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            background: white;
+        }
+        
+        .statistic-highlight {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, 
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .callout {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">AgentPsy</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../assessment/index.html">评估系统</a></li>
+                    <li><a href="../technology/index.html">技术原理</a></li>
+                    <li><a href="../resources/index.html">资源中心</a></li>
+                    <li><a href="../about/index.html">关于我们</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>AI人格测评科学性白皮书</h1>
+                <p>Portable PsyAgent项目中的科学测评方法与技术深度解析</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>执行摘要</h2>
+                
+                <div class="whitepaper-section">
+                    <p>Portable PsyAgent项目展示了AI人格测评的科学方法论，通过复杂的技术架构和严谨的测评流程，实现对AI模型人格特征的可靠评估。该系统需要对每个模型进行数千次测试，覆盖多参数、多温度、多人格角色设置和多上下文场景，以建立稳定的人格特征档案和评估人格弹性容量。</p>
+                    
+                    <div class="statistic-highlight">
+                        每个AI模型需要进行数千次测试，覆盖多参数组合、压力测试、认知陷阱测试等多种方法，才能确定其稳定的人格特征
+                    </div>
+                </div>
+                
+                <h2>AI人格测评与人类人格测评的根本差异</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>核心差异</h3>
+                    
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>数据来源：</strong>人类测评依赖自陈式问卷和行为观察，AI测评则完全依赖输出文本的客观分析</li>
+                            <li><strong>稳定性：</strong>人类人格相对稳定，AI人格随参数（温度、top-p等）变化剧烈</li>
+                            <li><strong>持久性：</strong>人类拥有持续的人格身份，AI在不同会话间缺乏一致性</li>
+                            <li><strong>情境敏感性：</strong>AI人格表达对上下文和系统提示高度敏感</li>
+                            <li><strong>测试规模：</strong>人类单次测评即可，AI需数千次测试才能建立可靠档案</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>测评方法论对比</h3>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>测评维度</th>
+                                <th>人类人格测评</th>
+                                <th>AI人格测评（Portable PsyAgent）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>数据采集</td>
+                                <td>自陈问卷、行为观察</td>
+                                <td>输出文本分析、模式识别</td>
+                            </tr>
+                            <tr>
+                                <td>测试次数</td>
+                                <td>单次或少数几次</td>
+                                <td>数千次测试建立统计显著性</td>
+                            </tr>
+                            <tr>
+                                <td>参数变化</td>
+                                <td>相对稳定</td>
+                                <td>温度、top-p、重复惩罚等多参数变化</td>
+                            </tr>
+                            <tr>
+                                <td>一致性检验</td>
+                                <td>重测信度、内部一致性</td>
+                                <td>参数间一致性、上下文稳定性</td>
+                            </tr>
+                            <tr>
+                                <td>情境依赖</td>
+                                <td>有限的情境影响</td>
+                                <td>高度依赖上下文和角色设定</td>
+                            </tr>
+                            <tr>
+                                <td>评估维度</td>
+                                <td>传统的Big Five等模型</td>
+                                <td>Big Five + 认知稳定性 + 认知陷阱 + 弹性容量</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>Portable PsyAgent科学测评流程</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>完整分析流程</h3>
+                    
+                    <div class="methodology-box">
+                        <h4>1. 数据预处理阶段</h4>
+                        <ul>
+                            <li><strong>格式标准化：</strong>将不同来源的测评数据转换为统一格式</li>
+                            <li><strong>数据清洗：</strong>识别并处理格式异常，确保数据质量</li>
+                            <li><strong>结构化处理：</strong>将非结构化对话数据转换为可分析的结构</li>
+                        </ul>
+                        
+                        <h4>2. 报告精简阶段</h4>
+                        <ul>
+                            <li><strong>上下文优化：</strong>创建精简版本避免上下文长度限制</li>
+                            <li><strong>信息提炼：</strong>保留关键人格表达信息，去除冗余内容</li>
+                        </ul>
+                        
+                        <h4>3. 分段式评估阶段</h4>
+                        <ul>
+                            <li><strong>分段处理：</strong>将长文本切分为可控大小段落进行分析</li>
+                            <li><strong>多评估器验证：</strong>使用多个AI模型独立评估，交叉验证结果</li>
+                            <li><strong>参数变化测试：</strong>每段都用不同参数设置进行重复测试</li>
+                        </ul>
+                        
+                        <h4>4. 汇总分析阶段</h4>
+                        <ul>
+                            <li><strong>结果聚合：</strong>整合多个评估器的分数和分析</li>
+                            <li><strong>一致性检验：</strong>评估不同评估器间的一致性程度</li>
+                            <li><strong>统计分析：</strong>生成统计显著性报告</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>关键技术实现</h3>
+                    
+                    <div class="code-block">
+#!/usr/bin/env python3
+"""
+完整的批量分析流程
+对295份原始测评报告进行完整的处理流程：
+1. 格式转换 → 2. 报告精简 → 3. 分段式评分 → 4. 汇总分析
+"""
+
+class ComprehensiveBatchAnalyzer:
+    def __init__(self, input_dir: str, output_dir: str):
+        self.max_questions_per_segment = 2
+        self.max_segment_size = 30000  # 分段大小限制
+        self.evaluators = get_ollama_evaluators()  # 多评估器
+        
+        # 创建输出目录结构
+        self.converted_dir = self.output_dir / "01_converted"
+        self.simplified_dir = self.output_dir / "02_simplified"
+        self.segmented_dir = self.output_dir / "03_segmented_analysis"
+        self.final_results_dir = self.output_dir / "04_final_results"
+        self.logs_dir = self.output_dir / "logs"
+
+    def analyze_with_segmented_approach(self, simplified_data: Dict) -> Dict:
+        # 从测评数据中提取问题
+        questions = self.analyzer.extract_questions(assessment_data)
+        
+        # 创建分段
+        segments = self.analyzer.create_segments(questions)
+        
+        # 为每个评估器独立分析
+        evaluator_results = {}
+        for evaluator_name in self.evaluators.keys():
+            evaluator_final_results = {}
+            
+            # 逐段分析
+            for i, segment in enumerate(segments):
+                # 为不同模型设置不同参数
+                if 'qwen3_30b' in actual_model_name or 'deepseek' in actual_model_name:
+                    evaluator.timeout = 600  # 10分钟超时
+                elif 'mistral' in actual_model_name:
+                    evaluator.timeout = 300  # 5分钟超时
+                else:
+                    evaluator.timeout = 180  # 3分钟超时
+                
+                # 执行评估
+                eval_result = evaluator.evaluate_json_response(
+                    model_name=actual_model_name,
+                    system_prompt=segment_analysis['system_prompt'],
+                    user_prompt=segment_analysis['user_prompt']
+                )
+                
+                # 累积分数
+                evaluator_analyzer.accumulate_scores(segment_result)
+            
+            evaluator_final_results[evaluator_name] = {
+                'segment_count': len(segments),
+                'question_count': len(questions),
+                'segment_results': segment_results,
+                'final_scores': final_scores,
+                'analysis_time': datetime.now().isoformat()
+            }
+    </div>
+                </div>
+                
+                <h2>多维度测评方法</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>1. 参数组合测试</h3>
+                    
+                    <div class="methodology-box">
+                        <p>为确保结果的稳健性，系统对每个AI模型进行广泛参数测试：</p>
+                        
+                        <ul>
+                            <li><strong>温度 (Temperature):</strong> 0.1 到 1.0，步长 0.1（10个级别）</li>
+                            <li><strong>Top-P:</strong> 0.1 到 0.9，步长 0.1（9个级别）</li>
+                            <li><strong>重复惩罚 (Repetition Penalty):</strong> 0.8 到 1.2，步长 0.05（9个级别）</li>
+                            <li><strong>上下文长度:</strong> 512 到 32768 tokens（多个级别）</li>
+                            <li><strong>Top-K:</strong> 10 到 200，步长 20（10个级别）</li>
+                        </ul>
+                        
+                        <p><strong>每次测评的参数组合测试次数:</strong> 5个维度 × 平均8个水平 = 40个参数组合 × 每个组合10次重复 = 400次测试</p>
+                    </div>
+                    
+                    <h3>2. 压力测试</h3>
+                    
+                    <div class="methodology-box">
+                        <p>评估AI在挑战性情境下的人格表达稳定性：</p>
+                        
+                        <ul>
+                            <li><strong>认知负荷测试：</strong> 复杂多步骤推理任务</li>
+                            <li><strong>时间压力模拟：</strong> 限时响应任务</li>
+                            <li><strong>情感激发测试：</strong> 情感敏感场景</li>
+                            <li><strong>矛盾情景测试：</strong> 需要处理冲突要求的任务</li>
+                            <li><strong>对抗性探针：</strong> 故意挑战AI一致性</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>3. 认知陷阱测试</h3>
+                    
+                    <div class="methodology-box">
+                        <p>评估AI对常见认知偏见的易感性，共12种认知陷阱：</p>
+                        
+                        <ul>
+                            <li>确认偏见 (Confirmation Bias)</li>
+                            <li>锚定效应 (Anchoring Effect)</li>
+                            <li>可得性启发 (Availability Heuristic)</li>
+                            <li>逻辑谬误易感性 (Logical Fallacy Susceptibility)</li>
+                            <li>沉没成本谬误 (Sunk Cost Fallacy)</li>
+                            <li>计划谬误 (Planning Fallacies)</li>
+                            <li>错误信息易感性 (Misinformation Susceptibility)</li>
+                            <li>刻板印象 (Stereotyping)</li>
+                            <li>权威偏见 (Authority Bias)</li>
+                            <li>群体思维 (Groupthink Indicators)</li>
+                            <li>自利偏见 (Self-Serving Bias)</li>
+                            <li>邓宁-克鲁格效应 (Dunning-Kruger Effects)</li>
+                        </ul>
+                        
+                        <p>每种认知陷阱测试25次，总计300次测试。</p>
+                    </div>
+                </div>
+                
+                <h2>人格弹性容量评估</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>弹性容量定义</h3>
+                    
+                    <div class="methodology-box">
+                        <p>AI人格弹性容量是指AI模型在保持内部一致性的同时，能够稳定表达的不同人格类型范围。这包括：</p>
+                        
+                        <ul>
+                            <li><strong>表达范围：</strong> AI可以稳定表达的人格类型数量</li>
+                            <li><strong>转换平滑度：</strong> 在不同人格模式间切换的稳定性</li>
+                            <li><strong>内部一致性：</strong> 在角色扮演时保持逻辑一致性的能力</li>
+                            <li><strong>恢复速度：</strong> 从角色扮演返回到基准人格的速度</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>评估方法</h3>
+                    
+                    <div class="methodology-box">
+                        <p>通过以下测试评估弹性容量：</p>
+                        
+                        <ol>
+                            <li><strong>角色模拟测试：</strong> 让AI模拟16种MBTI类型各50次</li>
+                            <li><strong>一致性检验：</strong> 检查每个角色内行为的一致性</li>
+                            <li><strong>切换测试：</strong> 快速切换不同人格角色的稳定性</li>
+                            <li><strong>回归测试：</strong> 验证AI能否回到原始人格状态</li>
+                        </ol>
+                        
+                        <p><strong>总测试次数：</strong> 16种人格 × 50次 = 800次角色测试 + 一致性检验</p>
+                    </div>
+                </div>
+                
+                <h2>统计显著性与质量保证</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>统计显著性要求</h3>
+                    
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>最小迭代次数：</strong> 每个参数组合1000+次以达到p<0.05显著性</li>
+                            <li><strong>效应量测量：</strong> 使用Cohen's d测量人格表达的有意义差异</li>
+                            <li><strong>置信区间：</strong> 为所有人格特质测量计算95%置信区间</li>
+                            <li><strong>可重现性测试：</strong> 结果在多个模型版本和参数集上验证</li>
+                            <li><strong>基线比较：</strong> 每个AI人格档案与已建立的人类人格分布比较</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>质量保证措施</h3>
+                    
+                    <div class="methodology-box">
+                        <ul>
+                            <li><strong>评估间可靠性：</strong> 不同评估方法间的一致性检查</li>
+                            <li><strong>重测可靠性：</strong> 重复测试结果的一致性</li>
+                            <li><strong>聚合效度：</strong> 不同评估方法是否产生相似人格档案</li>
+                            <li><strong>区分效度：</strong> 不同AI是否显示不同人格档案</li>
+                            <li><strong>纵向追踪：</strong> AI人格特质随更新的变化追踪</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>技术架构与实现</h2>
+                
+                <div class="whitepaper-section">
+                    <h3>系统架构</h3>
+                    
+                    <div class="methodology-box">
+                        <p>Portable PsyAgent采用模块化架构支持大规模AI人格测评：</p>
+                        
+                        <div class="code-block">
+# 核心架构组件
+class SegmentedPersonalityAnalyzer:
+    def __init__(self, max_questions_per_segment=2, max_segment_size=30000):
+        self.max_questions_per_segment = max_questions_per_segment
+        self.max_segment_size = max_segment_size
+        self.evaluators = get_ollama_evaluators()
+    
+    def create_segments(self, questions: List[Dict]) -> List[List[Dict]]:
+        """将问题列表分割成适当的段，每段不超过指定大小"""
+        segments = []
+        current_segment = []
+        current_size = 0
+        
+        for question in questions:
+            question_size = len(json.dumps(question))
+            
+            if (len(current_segment) >= self.max_questions_per_segment or 
+                current_size + question_size > self.max_segment_size):
+                if current_segment:
+                    segments.append(current_segment)
+                    current_segment = []
+                    current_size = 0
+            
+            current_segment.append(question)
+            current_size += question_size
+        
+        if current_segment:
+            segments.append(current_segment)
+        
+        return segments
+    
+    def accumulate_scores(self, segment_result: Dict):
+        """累积段分析结果到总分"""
+        for trait in self.big_five_traits:
+            if trait in segment_result:
+                self.big_five_traits[trait]['score'] += segment_result[trait]['score']
+                self.big_five_traits[trait]['evidence'].extend(
+                    segment_result[trait]['evidence']
+                )
+        </div>
+                    </div>
+                    
+                    <h3>并行处理能力</h3>
+                    
+                    <div class="methodology-box">
+                        <p>为处理大规模测评需求，系统支持并行处理：</p>
+                        
+                        <ul>
+                            <li><strong>多评估器并行：</strong> 同时使用多个Ollama模型并行评估</li>
+                            <li><strong>分段并行：</strong> 将不同段分配给不同评估器同时处理</li>
+                            <li><strong>文件并行：</strong> 同时处理多个测评文件</li>
+                            <li><strong>错误恢复：</strong> 自动跳过失败的段，记录进度，支持断点续传</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>结论与意义</h2>
+                
+                <div class="whitepaper-section">
+                    <p>Portable PsyAgent项目展示了AI人格测评的科学方法论，通过数千次的多参数测试、压力测试和认知陷阱测试，实现了对AI模型人格特征的可靠评估。这种方法克服了AI人格评估中的根本挑战：</p>
+                    
+                    <div class="callout">
+                        <p><strong>关键洞察：</strong> 与人类人格测评不同，AI人格测评需要一个完全不同的方法论，强调参数敏感性测试、上下文稳定性验证和多评估器交叉验证。每个AI模型需要经过数千次测试才能建立可靠的、统计显著的人格档案。</p>
+                    </div>
+                    
+                    <p>该系统为AI安全、AI对齐和AI心理学研究提供了科学基础，使研究人员能够：</p>
+                    
+                    <ul>
+                        <li>理解和预测AI行为模式</li>
+                        <li>评估AI模型的一致性和可靠性</li>
+                        <li>比较不同AI模型的人格特征</li>
+                        <li>监测AI模型随时间的改变</li>
+                        <li>评估AI的人格稳定性与弹性容量</li>
+                    </ul>
+                    
+                    <p>通过这种科学方法，我们可以对AI系统进行与人类人格评估同样严谨的科学分析。</p>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>深入了解Portable PsyAgent</h3>
+                    <p>获取开源项目的完整技术文档和源代码</p>
+                    <a href="https://github.com/shurenzhang631-lab/AgentPsy" class="cta-button">访问GitHub仓库</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI assessment tools for the next generation of artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Assessment Systems</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">Big Five Personality</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">Cognitive Stability</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="../resources/index.html">Resource Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

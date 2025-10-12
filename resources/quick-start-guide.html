@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with Portable PsyAgent - A portable psychological assessment agent system supporting local Ollama models and cloud-based LLMs.">
+    <meta name="keywords" content="AI assessment, psychological evaluation, personality testing, Ollama, LLM">
+    <title>Quick Start Guide - Portable PsyAgent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .step-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Portable PsyAgent Quick Start Guide</h1>
+                <p>Get up and running with the portable psychological assessment agent system supporting local Ollama models and cloud-based LLMs.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Introduction</h2>
+                <p>Portable PsyAgent is a portable psychological assessment agent system that supports both local Ollama models and various cloud-based LLMs. It provides multi-dimensional personality assessment (Big Five), supports multiple evaluators, and features batch analysis capabilities for large datasets.</p>
+                
+                <div class="info-box">
+                    <p><strong>Key Features:</strong> Multi-dimensional personality assessment, Big Five model, Ollama integration, batch analysis, and detailed reporting.</p>
+                </div>
+
+                <h2>Prerequisites</h2>
+                
+                <div class="step-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Install Ollama</h3>
+                            <p>Download and install Ollama from <a href="https://ollama.ai/download" target="_blank">https://ollama.ai/download</a></p>
+                            <div class="code-block">
+# Start Ollama service<br>
+ollama serve
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Pull Required Models</h3>
+                            <p>Install the recommended models:</p>
+                            <div class="code-block">
+ollama pull mistral:instruct<br>
+ollama pull phi3:mini<br>
+ollama pull qwen3:4b
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Install Python Dependencies</h3>
+                            <p>Install required Python packages:</p>
+                            <div class="code-block">
+pip install requests openai anthropic dashscope python-dotenv
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Basic Setup</h2>
+                
+                <div class="step-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Clone the Repository</h3>
+                            <div class="code-block">
+git clone https://github.com/your-repo/portable_psyagent.git<br>
+cd portable_psyagent
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Configure Environment</h3>
+                            <p>Copy .env.example to .env and fill in your API keys:</p>
+                            <div class="code-block">
+cp .env.example .env<br>
+# Edit .env file to add your API keys
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Verify Ollama Connection</h3>
+                            <div class="code-block">
+# Check available models<br>
+ollama list
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Running Assessments</h2>
+                
+                <div class="step-container">
+                    <h3>Single File Analysis</h3>
+                    <p>Analyze a single assessment file:</p>
+                    <div class="code-block">
+python shared_analysis/analyze_results.py path/to/your/data.json
+                    </div>
+                    
+                    <h3>Using Specific Evaluators</h3>
+                    <p>Run with specific evaluators:</p>
+                    <div class="code-block">
+python shared_analysis/analyze_results.py data.json --evaluators phi3_mini qwen3_4b
+                    </div>
+                    
+                    <h3>Batch Analysis</h3>
+                    <p>Run batch analysis on multiple files:</p>
+                    <div class="code-block">
+# View file statistics<br>
+python ultimate_batch_analysis.py --stats<br><br>
+
+# Run quick test (5 files)<br>
+python ultimate_batch_analysis.py --quick<br><br>
+
+# Analyze specific model series<br>
+python ultimate_batch_analysis.py --filter deepseek --sample 10
+                    </div>
+                </div>
+
+                <h2>Understanding the Workflow</h2>
+                
+                <div class="step-container">
+                    <h3>Analysis Process</h3>
+                    <p>The system follows a comprehensive workflow:</p>
+                    
+                    <ol>
+                        <li><strong>Format Conversion</strong>: Convert raw assessment data to standard format</li>
+                        <li><strong>Report Simplification</strong>: Create simplified versions to avoid context limits</li>
+                        <li><strong>Segmented Analysis</strong>: Break data into segments for detailed assessment</li>
+                        <li><strong>Multi-Evaluator Processing</strong>: Use multiple evaluators for reliability</li>
+                        <li><strong>Aggregation</strong>: Combine results from multiple evaluators</li>
+                        <li><strong>Reporting</strong>: Generate detailed analysis reports</li>
+                    </ol>
+                    
+                    <h3>Batch Analysis Workflow</h3>
+                    <p>For large datasets, the system processes data through:</p>
+                    <ul>
+                        <li><strong>Automatic Format Conversion</strong>: Handles multiple input formats</li>
+                        <li><strong>Intelligent Batching</strong>: Processes files in optimal batch sizes</li>
+                        <li><strong>Progress Tracking</strong>: Monitors analysis progress and estimated time</li>
+                        <li><strong>Error Recovery</strong>: Continues processing interrupted analyses</li>
+                    </ul>
+                </div>
+
+                <h2>Configuration Options</h2>
+                
+                <div class="step-container">
+                    <h3>Default Configuration</h3>
+                    <p>The system is configured in <code>config/ollama_config.json</code>:</p>
+                    <div class="code-block">
+{<br>
+  "ollama": {<br>
+    "base_url": "http://localhost:11434",<br>
+    "timeout": 300,<br>
+    "models": {<br>
+      "mistral": {<br>
+        "name": "mistral:instruct",<br>
+        "temperature": 0.1,<br>
+        "max_tokens": 1024,<br>
+        "description": "Mistral Instruct - 稳定推理模型"<br>
+      },<br>
+      "phi3_mini": {<br>
+        "name": "phi3:mini",<br>
+        "temperature": 0.1,<br>
+        "max_tokens": 1024,<br>
+        "description": "Phi3 Mini - 快速轻量模型"<br>
+      },<br>
+      "qwen3_4b": {<br>
+        "name": "qwen3:4b",<br>
+        "temperature": 0.1,<br>
+        "max_tokens": 1024,<br>
+        "description": "Qwen3 4B - 轻量级模型"<br>
+      }<br>
+    }<br>
+  },<br>
+  "evaluators": {<br>
+    "ollama_mistral": {<br>
+      "provider": "ollama",<br>
+      "model": "mistral",<br>
+      "description": "Mistral Instruct 本地评估器 (主评估器)"<br>
+    },<br>
+    "phi3_mini": {<br>
+      "provider": "ollama",<br>
+      "model": "phi3_mini",<br>
+      "description": "Phi3 Mini 本地评估器 (快速)"<br>
+    },<br>
+    "qwen3_4b": {<br>
+      "provider": "ollama",<br>
+      "model": "qwen3_4b",<br>
+      "description": "Qwen3 4B 本地评估器 (轻量)"<br>
+    }<br>
+  },<br>
+  "default_evaluators": [<br>
+    "phi3_mini",<br>
+    "qwen3_4b"<br>
+  ]<br>
+}
+                    </div>
+                </div>
+
+                <h2>Output and Results</h2>
+                
+                <div class="step-container">
+                    <h3>Analysis Output</h3>
+                    <p>The system generates comprehensive results:</p>
+                    <ul>
+                        <li><strong>JSON Results</strong>: Structured analysis results in JSON format</li>
+                        <li><strong>Markdown Reports</strong>: Human-readable analysis reports</li>
+                        <li><strong>HTML Reports</strong>: Formatted reports for easy viewing</li>
+                        <li><strong>Evaluation Summaries</strong>: Concise summaries of key findings</li>
+                        <li><strong>Debug Logs</strong>: Detailed logs for troubleshooting</li>
+                    </ul>
+                    
+                    <h3>Batch Analysis Output</h3>
+                    <div class="code-block">
+batch_analysis_results/<br>
+├── batch_analysis_summary.json    # JSON summary of results<br>
+├── batch_analysis_summary.md      # Markdown summary<br>
+└── [batch_name]/                  # Individual batch results<br>
+    ├── analysis_results.json       # Raw analysis results<br>
+    ├── analysis_report.md         # Human-readable report<br>
+    └── analysis_report.html       # HTML formatted report
+                    </div>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>Ready to Start Assessing?</h3>
+                    <p>Begin your AI personality assessment journey with Portable PsyAgent.</p>
+                    <a href="../contact.html" class="cta-button">Get Started</a>
+                    <a href="download_whitepaper_en.html" class="cta-button">Download Documentation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI assessment tools for the next generation of artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Assessment Systems</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">Big Five Personality</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">Cognitive Stability</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

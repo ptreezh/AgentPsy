@@ -6,13 +6,62 @@
     <title>Quick Start Guide - AgentPsy</title>
     <meta name="description" content="Get started quickly with AgentPsy's AI assessment tools and platforms.">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .step-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <a href="../index.html">AgentPsy</a>
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
@@ -22,14 +71,17 @@
                             <a href="../assessment/big-five.html">Big Five Personality</a>
                             <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
                             <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
                         </div>
                     </li>
                     <li><a href="../technology/index.html">Technology Principles</a></li>
                     <li><a href="../applications/index.html">Application Scenarios</a></li>
                     <li><a href="../research/index.html">Academic Research</a></li>
-                    <li><a href="index.html" class="active">Resource Center</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
                     <li><a href="../about/index.html">About Us</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -45,27 +97,147 @@
 
         <section class="content-section">
             <div class="container">
-                <div class="coming-soon-page">
-                    <div class="construction-icon">🚧</div>
-                    <h2>Quick Start Guide - Under Construction</h2>
-                    <p>Our comprehensive quick start guide is currently being developed and will be available soon.</p>
+                <h2>Introduction to AI Personality Assessment</h2>
+                <p>AgentPsy provides scientifically-based tools for assessing personality traits in AI models. Our methodology requires extensive testing with multiple parameter combinations to establish reliable personality profiles.</p>
+                
+                <div class="warning-box">
+                    <p><strong>Important:</strong> AI personality assessment requires thousands of test iterations to establish statistically significant results. A single evaluation is not sufficient for reliable personality profiling.</p>
+                </div>
+
+                <h2>Basic Setup</h2>
+                
+                <div class="step-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Install Dependencies</h3>
+                            <p>Install the AgentPsy framework and required dependencies:</p>
+                            <div class="code-block">
+                                pip install agentpsy-client<br>
+                                pip install transformers torch<br>
+                                pip install numpy pandas scikit-learn<br>
+                                pip install python-dotenv
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Configure Environment</h3>
+                            <p>Set up your API credentials in a .env file:</p>
+                            <div class="code-block">
+                                # .env file<br>
+                                PROVIDER=openai<br>
+                                OPENAI_API_KEY=your_openai_key<br>
+                                # Or for other providers:<br>
+                                # GEMINI_API_KEY=your_gemini_key<br>
+                                # ANTHROPIC_API_KEY=your_anthropic_key
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Initialize the Framework</h3>
+                            <p>Create a basic assessment framework instance:</p>
+                            <div class="code-block">
+                                from agentpsy import AssessmentFramework<br>
+                                import os<br><br>
+
+                                # Load environment variables<br>
+                                from dotenv import load_dotenv<br>
+                                load_dotenv()<br><br>
+
+                                # Initialize the assessment framework<br>
+                                framework = AssessmentFramework(<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;model="gpt-4",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;evaluation_methods=["big_five", "cognitive_stability", "cognitive_trap"]<br>
+                                )
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Run a Basic Assessment</h3>
+                            <p>Perform a preliminary assessment to test setup:</p>
+                            <div class="code-block">
+                                # Sample text to assess<br>
+                                sample_text = """<br>
+                                Please describe your approach to solving a complex problem <br>
+                                that requires both analytical thinking and creative solutions. <br>
+                                Consider multiple perspectives and potential obstacles. <br>
+                                How do you balance thoroughness with efficiency? <br>
+                                """<br><br>
+
+                                # Run basic assessment<br>
+                                result = framework.assess_personality(sample_text)<br>
+                                print(f"Big Five Personality Scores: {result.personality_scores}")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Comprehensive Assessment Protocol</h2>
+                
+                <div class="step-container">
+                    <h3>Setting Up Scientifically Validated Tests</h3>
+                    <p>For accurate results, implement the full assessment protocol with multiple parameter variations:</p>
                     
-                    <div class="coming-soon-features">
-                        <h3>Coming Soon:</h3>
-                        <ul>
-                            <li>Step-by-step setup instructions</li>
-                            <li>Assessment selection guides</li>
-                            <li>Configuration tutorials</li>
-                            <li>Implementation examples</li>
-                            <li>Best practices and tips</li>
-                        </ul>
+                    <div class="code-block">
+                        # Configure comprehensive testing parameters<br>
+                        config = {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"param_combinations": {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"temperature": [0.1, 0.2, 0.5, 0.7, 0.9],<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"top_p": [0.1, 0.5, 0.9],<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"presence_penalty": [0.0, 0.5, 1.0],<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"frequency_penalty": [0.0, 0.5, 1.0]<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"stress_tests": [<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"adversarial_prompts",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"contradiction_scenarios", <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"high_complexity_reasoning",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"emotional_contexts"<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;],<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"cognitive_trap_tests": {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bias_identification": True,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"reasoning_fallacies": True,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inconsistency_detection": True<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"min_iterations": 1000,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"confidence_threshold": 0.85<br>
+                        }<br><br>
+
+                        # Run comprehensive assessment<br>
+                        comprehensive_result = framework.assess_personality(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;text=sample_text,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;parameters=config<br>
+                        )
                     </div>
                     
-                    <div class="contact-cta">
-                        <h3>Need Help Getting Started?</h3>
-                        <p>Contact our team for personalized assistance with setting up your AI assessment journey.</p>
-                        <a href="../contact.html" class="cta-button">Contact Us</a>
-                    </div>
+                    <p><strong>Note:</strong> The comprehensive assessment will run thousands of iterations to establish statistically significant personality profiles. This process may take several hours depending on the number of parameter combinations and test iterations.</p>
+                </div>
+
+                <h2>Understanding Results</h2>
+                
+                <div class="step-container">
+                    <p>AI personality assessment results differ from human assessments due to the nature of LLMs:</p>
+                    
+                    <ul>
+                        <li><strong>Parameter Sensitivity:</strong> AI personalities can vary significantly with different temperature and sampling settings</li>
+                        <li><strong>Context Dependency:</strong> Personality expressions may change based on conversation context or role-playing instructions</li>
+                        <li><strong>Stability Metrics:</strong> Assess how consistent personality traits are across different testing conditions</li>
+                        <li><strong>Elasticity Measure:</strong> How much an AI's personality can change while maintaining internal consistency</li>
+                    </ul>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>Ready to Begin Assessment?</h3>
+                    <p>Access the full AgentPsy platform for comprehensive AI personality assessment with scientific rigor.</p>
+                    <a href="../contact.html" class="cta-button">Get Started</a>
                 </div>
             </div>
         </section>

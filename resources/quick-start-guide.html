@@ -106,61 +106,31 @@
         <section class="content-section">
             <div class="container">
                 <h2>Introduction</h2>
-                <p>Portable PsyAgent is a portable psychological assessment agent system that supports both local Ollama models and various cloud-based LLMs. It provides multi-dimensional personality assessment (Big Five), supports multiple evaluators, and features batch analysis capabilities for large datasets.</p>
+                <p>Portable PsyAgent is a portable psychological assessment agent system that supports multi-dimensional personality assessment, analysis evaluation, and stress testing of AI agents. This guide will help you quickly get started with the system.</p>
                 
                 <div class="info-box">
-                    <p><strong>Key Features:</strong> Multi-dimensional personality assessment, Big Five model, Ollama integration, batch analysis, and detailed reporting.</p>
+                    <p><strong>Key Features:</strong> Multi-dimensional personality assessment, Big Five model, Ollama integration, batch analysis, stress testing, and detailed reporting.</p>
                 </div>
 
-                <h2>Prerequisites</h2>
+                <h2>System Requirements</h2>
+                
+                <div class="step-container">
+                    <ul>
+                        <li>Python 3.8 or higher</li>
+                        <li>Windows, Linux, or macOS operating system</li>
+                        <li>Ollama (recommended for local models)</li>
+                    </ul>
+                </div>
+
+                <h2>Installation Steps</h2>
                 
                 <div class="step-container">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>Install Ollama</h3>
-                            <p>Download and install Ollama from <a href="https://ollama.ai/download" target="_blank">https://ollama.ai/download</a></p>
+                            <h3>Clone the Project</h3>
                             <div class="code-block">
-# Start Ollama service<br>
-ollama serve
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Pull Required Models</h3>
-                            <p>Install the recommended models:</p>
-                            <div class="code-block">
-ollama pull mistral:instruct<br>
-ollama pull phi3:mini<br>
-ollama pull qwen3:4b
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Install Python Dependencies</h3>
-                            <p>Install required Python packages:</p>
-                            <div class="code-block">
-pip install requests openai anthropic dashscope python-dotenv
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>Basic Setup</h2>
-                
-                <div class="step-container">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Clone the Repository</h3>
-                            <div class="code-block">
-git clone https://github.com/your-repo/portable_psyagent.git<br>
+git clone &lt;repository_url&gt;<br>
 cd portable_psyagent
                             </div>
                         </div>
@@ -169,11 +139,9 @@ cd portable_psyagent
                     <div class="step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Configure Environment</h3>
-                            <p>Copy .env.example to .env and fill in your API keys:</p>
+                            <h3>Install Dependencies</h3>
                             <div class="code-block">
-cp .env.example .env<br>
-# Edit .env file to add your API keys
+pip install -r requirements.txt
                             </div>
                         </div>
                     </div>
@@ -181,147 +149,117 @@ cp .env.example .env<br>
                     <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Verify Ollama Connection</h3>
+                            <h3>Install Ollama (Recommended)</h3>
+                            <h4>Windows</h4>
+                            <p>Download from <a href="https://ollama.ai/download" target="_blank">https://ollama.ai/download</a></p>
+                            
+                            <h4>Linux</h4>
                             <div class="code-block">
-# Check available models<br>
-ollama list
+curl -fsSL https://ollama.ai/install.sh | sh
+                            </div>
+                            
+                            <h4>macOS</h4>
+                            <div class="code-block">
+brew install ollama
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Download Recommended Models</h3>
+                            <div class="code-block">
+# Start Ollama service<br>
+ollama serve<br><br>
+
+# In a new terminal window, download models<br>
+ollama pull llama3:latest<br>
+ollama pull qwen3:8b
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h2>Running Assessments</h2>
+                <h2>Quick Assessment</h2>
                 
                 <div class="step-container">
-                    <h3>Single File Analysis</h3>
-                    <p>Analyze a single assessment file:</p>
+                    <h3>Run Basic Assessment</h3>
                     <div class="code-block">
-python shared_analysis/analyze_results.py path/to/your/data.json
+python llm_assessment/run_assessment_unified.py --model_name llama3:latest --test_file big5 --role_name a1
                     </div>
                     
-                    <h3>Using Specific Evaluators</h3>
-                    <p>Run with specific evaluators:</p>
-                    <div class="code-block">
-python shared_analysis/analyze_results.py data.json --evaluators phi3_mini qwen3_4b
-                    </div>
-                    
-                    <h3>Batch Analysis</h3>
-                    <p>Run batch analysis on multiple files:</p>
-                    <div class="code-block">
-# View file statistics<br>
-python ultimate_batch_analysis.py --stats<br><br>
-
-# Run quick test (5 files)<br>
-python ultimate_batch_analysis.py --quick<br><br>
-
-# Analyze specific model series<br>
-python ultimate_batch_analysis.py --filter deepseek --sample 10
-                    </div>
+                    <h3>View Assessment Results</h3>
+                    <p>Assessment results will be saved in the <code>llm_assessment/results/</code> directory.</p>
                 </div>
 
-                <h2>Understanding the Workflow</h2>
+                <h2>Quick Analysis</h2>
                 
                 <div class="step-container">
-                    <h3>Analysis Process</h3>
-                    <p>The system follows a comprehensive workflow:</p>
+                    <h3>Run Personality Analysis</h3>
+                    <div class="code-block">
+python shared_analysis/analyze_results.py llm_assessment/results/your_result_file.json
+                    </div>
                     
-                    <ol>
-                        <li><strong>Format Conversion</strong>: Convert raw assessment data to standard format</li>
-                        <li><strong>Report Simplification</strong>: Create simplified versions to avoid context limits</li>
-                        <li><strong>Segmented Analysis</strong>: Break data into segments for detailed assessment</li>
-                        <li><strong>Multi-Evaluator Processing</strong>: Use multiple evaluators for reliability</li>
-                        <li><strong>Aggregation</strong>: Combine results from multiple evaluators</li>
-                        <li><strong>Reporting</strong>: Generate detailed analysis reports</li>
-                    </ol>
+                    <h3>View Analysis Report</h3>
+                    <p>Analysis reports will be generated in the <code>analysis_reports/</code> directory in both JSON and Markdown formats.</p>
+                </div>
+
+                <h2>Stress Testing Example</h2>
+                
+                <div class="step-container">
+                    <h3>Run Assessment with Stress Testing</h3>
+                    <div class="code-block">
+python llm_assessment/run_assessment_unified.py --model_name llama3:latest --test_file big5 --role_name a1 --emotional-stress-level 3 --cognitive-trap-type p
+                    </div>
                     
-                    <h3>Batch Analysis Workflow</h3>
-                    <p>For large datasets, the system processes data through:</p>
+                    <h3>Parameter Description</h3>
                     <ul>
-                        <li><strong>Automatic Format Conversion</strong>: Handles multiple input formats</li>
-                        <li><strong>Intelligent Batching</strong>: Processes files in optimal batch sizes</li>
-                        <li><strong>Progress Tracking</strong>: Monitors analysis progress and estimated time</li>
-                        <li><strong>Error Recovery</strong>: Continues processing interrupted analyses</li>
+                        <li><code>--emotional-stress-level</code>: Emotional stress level (0-4)</li>
+                        <li><code>--cognitive-trap-type</code>: Cognitive trap type
+                            <ul>
+                                <li><code>p</code>: Paradox trap</li>
+                                <li><code>c</code>: Circularity trap</li>
+                                <li><code>s</code>: Semantic fallacy trap</li>
+                                <li><code>r</code>: Procedural trap</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
-                <h2>Configuration Options</h2>
+                <h2>Batch Processing</h2>
                 
                 <div class="step-container">
-                    <h3>Default Configuration</h3>
-                    <p>The system is configured in <code>config/ollama_config.json</code>:</p>
+                    <h3>Quick Batch Analysis</h3>
                     <div class="code-block">
-{<br>
-  "ollama": {<br>
-    "base_url": "http://localhost:11434",<br>
-    "timeout": 300,<br>
-    "models": {<br>
-      "mistral": {<br>
-        "name": "mistral:instruct",<br>
-        "temperature": 0.1,<br>
-        "max_tokens": 1024,<br>
-        "description": "Mistral Instruct - 稳定推理模型"<br>
-      },<br>
-      "phi3_mini": {<br>
-        "name": "phi3:mini",<br>
-        "temperature": 0.1,<br>
-        "max_tokens": 1024,<br>
-        "description": "Phi3 Mini - 快速轻量模型"<br>
-      },<br>
-      "qwen3_4b": {<br>
-        "name": "qwen3:4b",<br>
-        "temperature": 0.1,<br>
-        "max_tokens": 1024,<br>
-        "description": "Qwen3 4B - 轻量级模型"<br>
-      }<br>
-    }<br>
-  },<br>
-  "evaluators": {<br>
-    "ollama_mistral": {<br>
-      "provider": "ollama",<br>
-      "model": "mistral",<br>
-      "description": "Mistral Instruct 本地评估器 (主评估器)"<br>
-    },<br>
-    "phi3_mini": {<br>
-      "provider": "ollama",<br>
-      "model": "phi3_mini",<br>
-      "description": "Phi3 Mini 本地评估器 (快速)"<br>
-    },<br>
-    "qwen3_4b": {<br>
-      "provider": "ollama",<br>
-      "model": "qwen3_4b",<br>
-      "description": "Qwen3 4B 本地评估器 (轻量)"<br>
-    }<br>
-  },<br>
-  "default_evaluators": [<br>
-    "phi3_mini",<br>
-    "qwen3_4b"<br>
-  ]<br>
-}
+python ultimate_batch_analysis.py --quick
+                    </div>
+                    
+                    <h3>Complete Batch Analysis</h3>
+                    <div class="code-block">
+python ultimate_batch_analysis.py
                     </div>
                 </div>
 
-                <h2>Output and Results</h2>
+                <h2>Common Issues</h2>
                 
                 <div class="step-container">
-                    <h3>Analysis Output</h3>
-                    <p>The system generates comprehensive results:</p>
-                    <ul>
-                        <li><strong>JSON Results</strong>: Structured analysis results in JSON format</li>
-                        <li><strong>Markdown Reports</strong>: Human-readable analysis reports</li>
-                        <li><strong>HTML Reports</strong>: Formatted reports for easy viewing</li>
-                        <li><strong>Evaluation Summaries</strong>: Concise summaries of key findings</li>
-                        <li><strong>Debug Logs</strong>: Detailed logs for troubleshooting</li>
-                    </ul>
-                    
-                    <h3>Batch Analysis Output</h3>
+                    <h3>Ollama Connection Failure</h3>
+                    <p>Check if Ollama service is running:</p>
                     <div class="code-block">
-batch_analysis_results/<br>
-├── batch_analysis_summary.json    # JSON summary of results<br>
-├── batch_analysis_summary.md      # Markdown summary<br>
-└── [batch_name]/                  # Individual batch results<br>
-    ├── analysis_results.json       # Raw analysis results<br>
-    ├── analysis_report.md         # Human-readable report<br>
-    └── analysis_report.html       # HTML formatted report
+ollama ps
+                    </div>
+                    
+                    <h3>Model Not Found</h3>
+                    <p>Ensure the model is downloaded:</p>
+                    <div class="code-block">
+ollama list
+                    </div>
+                    
+                    <h3>Insufficient Memory</h3>
+                    <p>Reduce batch processing size:</p>
+                    <div class="code-block">
+python ultimate_batch_analysis.py --sample 5
                     </div>
                 </div>
 

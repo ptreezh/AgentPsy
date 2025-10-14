@@ -15,6 +15,15 @@ def check_pandoc():
     except (subprocess.CalledProcessError, FileNotFoundError):
         return False
 
+def check_xelatex():
+    """检查是否安装了 xelatex"""
+    try:
+        subprocess.run(['xelatex', '--version'], 
+                      capture_output=True, check=True)
+        return True
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return False
+
 def convert_md_to_docx(md_file, docx_file):
     """将 Markdown 文件转换为 DOCX 格式"""
     try:
@@ -43,6 +52,12 @@ def convert_md_to_docx(md_file, docx_file):
 
 def convert_md_to_pdf(md_file, pdf_file):
     """将 Markdown 文件转换为 PDF 格式"""
+    # 检查 xelatex 是否安装
+    if not check_xelatex():
+        print(f"错误: 未安装 xelatex，无法转换 {md_file} 为 PDF")
+        print("请安装 TeX Live 或 MiKTeX 以获得 xelatex 支持")
+        return False
+    
     try:
         # 使用 pandoc 转换
         cmd = [

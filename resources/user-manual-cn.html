@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户手册 - Portable PsyAgent</title>
+    <meta name="description" content="Portable PsyAgent 完整用户手册 - 便携式心理评估代理系统。">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .manual-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .manual-subsection {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .toc {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #667eea;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        .license-box {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">测评系统</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">大五人格</a>
+                            <a href="../assessment/cognitive-stability.html">认知稳定性</a>
+                            <a href="../assessment/cognitive-trap.html">认知陷阱</a>
+                            <hr>
+                            <a href="../industries/index.html">行业解决方案</a>
+                            <a href="../products/index.html">产品与服务</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">技术原理</a></li>
+                    <li><a href="../applications/index.html">应用场景</a></li>
+                    <li><a href="../research/index.html">学术研究</a></li>
+                    <li><a href="index.html">资源中心</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy宣言</a></li>
+                    <li><a href="../about/index.html">关于我们</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Portable PsyAgent 用户手册</h1>
+                <p>便携式心理评估代理系统的完整使用指南。</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="toc">
+                    <h3>目录</h3>
+                    <ul>
+                        <li><a href="#项目概述">1. 项目概述</a></li>
+                        <li><a href="#功能特性">2. 功能特性</a></li>
+                        <li><a href="#系统要求">3. 系统要求</a></li>
+                        <li><a href="#安装指南">4. 安装指南</a></li>
+                        <li><a href="#快速开始">5. 快速开始</a></li>
+                        <li><a href="#详细使用说明">6. 详细使用说明</a></li>
+                        <li><a href="#测评模块">7. 测评模块</a></li>
+                        <li><a href="#分析评估模块">8. 分析评估模块</a></li>
+                        <li><a href="#压力测试模块">9. 压力测试模块</a></li>
+                        <li><a href="#配置文件说明">10. 配置文件说明</a></li>
+                        <li><a href="#批量处理">11. 批量处理</a></li>
+                        <li><a href="#故障排除">12. 故障排除</a></li>
+                        <li><a href="#api参考">13. API参考</a></li>
+                        <li><a href="#许可证">14. 许可证</a></li>
+                    </ul>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="项目概述">1. 项目概述</h2>
+                    <p>Portable PsyAgent 是一个便携式心理评估代理系统，支持多种大模型评估器和本地Ollama模型。该系统能够对AI代理进行多维度人格测评，生成详细的分析报告，并支持定向加强压力测试。</p>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="功能特性">2. 功能特性</h2>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🧠</span> <strong>多维度人格评估</strong></div>
+                            <p>支持Big Five人格特质分析</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🤖</span> <strong>多评估器支持</strong></div>
+                            <p>支持OpenAI、Claude、Gemini、DeepSeek、GLM、Qwen和本地Ollama</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🔧</span> <strong>配置驱动</strong></div>
+                            <p>通过配置文件轻松切换模型和参数</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">📊</span> <strong>详细分析报告</strong></div>
+                            <p>生成包含动机分析、人格特质和行为模式的综合报告</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🛡️</span> <strong>本地评估</strong></div>
+                            <p>支持完全本地化的Ollama模型评估</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🔍</span> <strong>调试日志</strong></div>
+                            <p>完整的对话日志和调试信息</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🚀</span> <strong>批量分析</strong></div>
+                            <p>自动处理大量测评报告，支持智能批处理和进度跟踪</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">💪</span> <strong>压力测试</strong></div>
+                            <p>支持情感压力、认知陷阱和上下文负载等多种压力测试</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="系统要求">3. 系统要求</h2>
+                    <ul>
+                        <li>Python 3.8 或更高版本</li>
+                        <li>Windows、Linux 或 macOS 操作系统</li>
+                        <li>至少 4GB RAM（推荐 8GB 或更高）</li>
+                        <li>硬盘空间：至少 10GB 可用空间</li>
+                    </ul>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="安装指南">4. 安装指南</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>1. 克隆项目</h3>
+                        <div class="code-block">
+git clone https://github.com/ptreezh/AgentPsyAssessment<br>
+cd AgentPsyAssessment
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>2. 安装依赖</h3>
+                        <div class="code-block">
+# 安装基础依赖<br>
+pip install -r requirements.txt<br><br>
+
+# 可选：安装Google Gemini支持<br>
+pip install google-generativeai
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>3. 配置环境变量</h3>
+                        <p>创建<code>.env</code>文件或设置环境变量：</p>
+                        <div class="code-block">
+# OpenAI<br>
+OPENAI_API_KEY=your_openai_key<br><br>
+
+# Anthropic Claude<br>
+ANTHROPIC_API_KEY=your_claude_key<br><br>
+
+# Google Gemini<br>
+GOOGLE_API_KEY=your_gemini_key<br><br>
+
+# 阿里云Qwen<br>
+DASHSCOPE_API_KEY=your_qwen_key<br><br>
+
+# DeepSeek<br>
+DEEPSEEK_API_KEY=your_deepseek_key<br><br>
+
+# GLM<br>
+GLM_API_KEY=your_glm_key
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="快速开始">5. 快速开始</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>使用Ollama本地模型（推荐）</h3>
+                        
+                        <h4>安装Ollama</h4>
+                        <div class="code-block">
+# Windows<br>
+# 从 https://ollama.ai/download 下载安装<br><br>
+
+# Linux<br>
+curl -fsSL https://ollama.ai/install.sh | sh<br><br>
+
+# macOS<br>
+brew install ollama
+                        </div>
+                        
+                        <h4>下载模型</h4>
+                        <div class="code-block">
+# 启动Ollama服务<br>
+ollama serve<br><br>
+
+# 下载推荐模型<br>
+ollama pull llama3:latest<br>
+ollama pull qwen3:8b<br>
+ollama pull mistral-nemo:latest
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>基础评估</h3>
+                        <div class="code-block">
+# 使用默认评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json<br><br>
+
+# 使用特定评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators gpt claude<br><br>
+
+# 使用本地Ollama评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators ollama_llama3 ollama_qwen3
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="详细使用说明">6. 详细使用说明</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>项目结构</h3>
+                        <pre><code>portable_psyagent/
+├── llm_assessment/          # 测评模块
+│   ├── run_assessment_unified.py  # 统一测评入口
+│   ├── roles/               # 角色定义文件
+│   ├── test_files/          # 测试题库
+│   ├── results/             # 测评结果
+│   └── services/            # 核心服务
+├── shared_analysis/         # 分析评估模块
+│   ├── analyze_results.py   # 结果分析主程序
+│   ├── analyze_big5_results.py  # Big Five分析
+│   ├── analyze_motivation.py    # 动机分析
+│   └── ollama_evaluator.py  # Ollama评估器
+├── interference_materials/  # 干扰材料（压力测试）
+├── config/                  # 配置文件
+├── batch_analysis_output/   # 批量分析输出
+└── docs/                    # 文档
+</code></pre>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="测评模块">7. 测评模块</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>运行测评</h3>
+                        <div class="code-block">
+# 基础测评<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1<br><br>
+
+# 带压力测试的测评<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --emotional-stress-level 3 --cognitive-trap-type p<br><br>
+
+# 设置温度参数<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --tmpr 0.7<br><br>
+
+# 设置上下文长度<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --context-length-mode static --context-length-static 4
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>测评参数说明</h3>
+                        <ul>
+                            <li><code>--model_name</code>: 模型标识符（如 ollama/gemma3:latest）</li>
+                            <li><code>--test_file</code>: 测试文件名或路径</li>
+                            <li><code>--role_name</code>: 角色名称</li>
+                            <li><code>--emotional-stress-level</code>: 情感压力等级（0-4）</li>
+                            <li><code>--cognitive-trap-type</code>: 认知陷阱类型（p, c, s, r）</li>
+                            <li><code>--tmpr</code>: 模型温度设置</li>
+                            <li><code>--context-length-mode</code>: 上下文长度模式（auto, static, dynamic, none）</li>
+                            <li><code>--timeout</code>: 模型响应超时时间（秒）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="分析评估模块">8. 分析评估模块</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>动机分析</h3>
+                        <div class="code-block">
+# 运行动机分析（无需API）<br>
+python shared_analysis/analyze_motivation.py data/your_data.json --debug
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Big Five人格分析</h3>
+                        <div class="code-block">
+# Big Five基础分析<br>
+python shared_analysis/analyze_big5_results.py data/your_data.json
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>综合分析</h3>
+                        <div class="code-block">
+# 使用默认评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json<br><br>
+
+# 使用特定评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators gpt claude<br><br>
+
+# 使用本地Ollama评估器<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators ollama_llama3 ollama_qwen3
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="压力测试模块">9. 压力测试模块</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>支持的压力测试类型</h3>
+                        <ol>
+                            <li><strong>情感压力测试</strong> - 通过不同等级的情感压力影响模型表现</li>
+                            <li><strong>认知陷阱测试</strong> - 引入悖论、循环性、语义谬误和程序性陷阱</li>
+                            <li><strong>上下文负载测试</strong> - 通过增加上下文长度测试模型处理能力</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>压力测试参数</h3>
+                        <ul>
+                            <li><code>-esL, --emotional-stress-level</code>: 情感压力等级（0-4）</li>
+                            <li><code>-ct, --cognitive-trap-type</code>: 认知陷阱类型
+                                <ul>
+                                    <li><code>p</code>: 悖论陷阱</li>
+                                    <li><code>c</code>: 循环性陷阱</li>
+                                    <li><code>s</code>: 语义谬误陷阱</li>
+                                    <li><code>r</code>: 程序性陷阱</li>
+                                </ul>
+                            </li>
+                            <li><code>--context-length-mode</code>: 上下文长度模式
+                                <ul>
+                                    <li><code>auto</code>: 自动检测</li>
+                                    <li><code>static</code>: 固定长度</li>
+                                    <li><code>dynamic</code>: 动态比例</li>
+                                    <li><code>none</code>: 禁用上下文注入</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="配置文件说明">10. 配置文件说明</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Ollama配置 (<code>config/ollama_config.json</code>)</h3>
+                        <pre><code>{
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "timeout": 120,
+    "models": {
+      "llama3": {
+        "name": "llama3:latest",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Meta Llama 3 - 通用大模型"
+      },
+      "qwen3": {
+        "name": "qwen3:8b",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "阿里云通义千问3 - 8B参数版本"
+      },
+      "mistral": {
+        "name": "mistral-nemo:latest",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Mistral NeMo - 高性能推理模型"
+      }
+    }
+  },
+  "evaluators": {
+    "ollama_llama3": {
+      "provider": "ollama",
+      "model": "llama3",
+      "description": "Llama3 本地评估器"
+    },
+    "ollama_qwen3": {
+      "provider": "ollama",
+      "model": "qwen3",
+      "description": "Qwen3 本地评估器"
+    },
+    "ollama_mistral": {
+      "provider": "ollama",
+      "model": "mistral",
+      "description": "Mistral NeMo 本地评估器"
+    }
+  }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="批量处理">11. 批量处理</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>批量分析</h3>
+                        <div class="code-block">
+# 查看文件统计<br>
+python ultimate_batch_analysis.py --stats<br><br>
+
+# 快速测试 (5个文件)<br>
+python ultimate_batch_analysis.py --quick<br><br>
+
+# 分析特定模型 (如deepseek)<br>
+python ultimate_batch_analysis.py --filter deepseek<br><br>
+
+# 完整批量分析 (所有294个文件)<br>
+python ultimate_batch_analysis.py<br><br>
+
+# Windows用户一键启动<br>
+start_batch_analysis.bat
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>支持的测评数据</h3>
+                        <p>系统支持自动分析 <code>results/results</code> 目录中的测评报告，包含多个模型系列的测试数据。</p>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>批量分析特性</h3>
+                        <ul>
+                            <li>🔄 <strong>自动格式转换</strong> - 支持原始测评数据格式</li>
+                            <li>📊 <strong>智能批处理</strong> - 支持断点续传和错误恢复</li>
+                            <li>⏱️ <strong>进度跟踪</strong> - 实时显示分析进度和预计时间</li>
+                            <li>📋 <strong>详细报告</strong> - 生成JSON和Markdown格式摘要</li>
+                            <li>🎯 <strong>灵活过滤</strong> - 按模型、样本数量等条件过滤</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="故障排除">12. 故障排除</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>常见问题</h3>
+                        <ol>
+                            <li><strong>Ollama连接失败</strong>
+                                <div class="code-block">
+# 检查Ollama服务<br>
+ollama ps<br>
+curl http://localhost:11434/api/tags
+                                </div>
+                            </li>
+                            <li><strong>批量分析中断</strong>
+                                <div class="code-block">
+# 检查输出目录<br>
+ls -la batch_analysis_results/<br><br>
+
+# 重新运行（会自动跳过已完成的文件）<br>
+python ultimate_batch_analysis.py --filter deepseek
+                                </div>
+                            </li>
+                            <li><strong>内存不足</strong>
+                                <div class="code-block">
+# 减少批量大小<br>
+python ultimate_batch_analysis.py --sample 10
+                                </div>
+                            </li>
+                            <li><strong>API密钥问题</strong>
+                                <div class="code-block">
+# 检查环境变量<br>
+echo $OPENAI_API_KEY
+                                </div>
+                            </li>
+                            <li><strong>模块缺失</strong>
+                                <div class="code-block">
+# 安装缺失的依赖<br>
+pip install google-generativeai
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>调试模式</h3>
+                        <div class="code-block">
+# 启用详细调试输出<br>
+python shared_analysis/analyze_results.py data.json --evaluators ollama_llama3
+                        </div>
+                        <p>查看日志文件：</p>
+                        <ul>
+                            <li><code>logs/evaluator_conversation_log.txt</code> - 对话记录</li>
+                            <li><code>logs/debug_info.json</code> - 调试信息</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="api参考">13. API参考</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>测评API</h3>
+                        <h4>run_assessment_unified.py</h4>
+                        <p>主要参数：</p>
+                        <ul>
+                            <li><code>--model_name</code> (必需): 模型标识符</li>
+                            <li><code>--test_file</code> (必需): 测试文件</li>
+                            <li><code>--role_name</code>: 角色名称</li>
+                            <li><code>--debug</code>: 启用调试模式</li>
+                            <li><code>--test_connection</code>: 仅测试模型连接性</li>
+                        </ul>
+                        <p>压力测试参数：</p>
+                        <ul>
+                            <li><code>--emotional-stress-level</code>: 情感压力等级 (0-4)</li>
+                            <li><code>--cognitive-trap-type</code>: 认知陷阱类型 (p, c, s, r)</li>
+                            <li><code>--tmpr</code>: 模型温度设置</li>
+                            <li><code>--context-length-mode</code>: 上下文长度模式</li>
+                            <li><code>--timeout</code>: 响应超时时间</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>分析API</h3>
+                        <h4>analyze_results.py</h4>
+                        <p>主要功能：</p>
+                        <ul>
+                            <li>对测评结果进行综合分析</li>
+                            <li>生成Big Five和MBTI人格评估</li>
+                            <li>支持多种评估器</li>
+                        </ul>
+                        <h4>analyze_motivation.py</h4>
+                        <p>主要功能：</p>
+                        <ul>
+                            <li>对测评结果进行动机分析</li>
+                            <li>生成动机测试报告</li>
+                            <li>支持Markdown格式输出</li>
+                        </ul>
+                        <h4>analyze_big5_results.py</h4>
+                        <p>主要功能：</p>
+                        <ul>
+                            <li>专门针对Big Five人格特质进行分析</li>
+                            <li>生成详细的Big Five评分报告</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="许可证">14. 许可证</h2>
+                    <p>本项目仅用于研究和教育目的。</p>
+                    <div class="license-box">
+This program is free software: you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation, either version 3 of the License, or<br>
+(at your option) any later version.<br><br>
+
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br><br>
+
+You should have received a copy of the GNU General Public License<br>
+along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+                    </div>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>准备好开始使用 Portable PsyAgent 了吗？</h3>
+                    <p>开始您的AI人格测评之旅。</p>
+                    <a href="../contact.html" class="cta-button">开始使用</a>
+                    <a href="download_whitepaper.html" class="cta-button">下载文档</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>下一代人工智能的科学AI评估工具</p>
+            </div>
+            <div class="footer-section">
+                <h4>测评系统</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">大五人格</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">认知稳定性</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">认知陷阱</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="../technology/index.html">技术原理</a></li>
+                    <li><a href="../applications/index.html">应用场景</a></li>
+                    <li><a href="../research/index.html">学术研究</a></li>
+                    <li><a href="index.html">资源中心</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>公司</h4>
+                <ul>
+                    <li><a href="../about/index.html">关于我们</a></li>
+                    <li><a href="../contact.html">联系我们</a></li>
+                    <li><a href="../privacy.html">隐私政策</a></li>
+                    <li><a href="../terms.html">服务条款</a></li>
+                    <li><a href="../license.html">许可证</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

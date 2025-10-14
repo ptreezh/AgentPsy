@@ -15,8 +15,8 @@ Portable PsyAgent is a portable psychological assessment agent system that suppo
 ### 3.1 Clone the Project
 
 ```bash
-git clone <repository_url>
-cd portable_psyagent
+git clone https://github.com/ptreezh/AgentPsyAssessment
+cd AgentPsyAssessment
 ```
 
 ### 3.2 Install Dependencies

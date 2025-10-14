@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manual - Portable PsyAgent</title>
+    <meta name="description" content="Complete user manual for Portable PsyAgent - A portable psychological assessment agent system.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .manual-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .manual-subsection {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .toc {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #667eea;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        .license-box {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="AgentPsy Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../assessment/index.html" class="dropbtn">Assessment Systems</a>
+                        <div class="dropdown-content">
+                            <a href="../assessment/big-five.html">Big Five Personality</a>
+                            <a href="../assessment/cognitive-stability.html">Cognitive Stability</a>
+                            <a href="../assessment/cognitive-trap.html">Cognitive Trap</a>
+                            <hr>
+                            <a href="../industries/index.html">Industry Solutions</a>
+                            <a href="../products/index.html">Products & Services</a>
+                        </div>
+                    </li>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                    <li><a href="../silicon_wisdom_manifesto_en.html">AgentPsy Manifesto</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Portable PsyAgent User Manual</h1>
+                <p>Complete guide for using the portable psychological assessment agent system.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#project-overview">1. Project Overview</a></li>
+                        <li><a href="#features">2. Features</a></li>
+                        <li><a href="#system-requirements">3. System Requirements</a></li>
+                        <li><a href="#installation-guide">4. Installation Guide</a></li>
+                        <li><a href="#quick-start">5. Quick Start</a></li>
+                        <li><a href="#detailed-usage">6. Detailed Usage</a></li>
+                        <li><a href="#assessment-module">7. Assessment Module</a></li>
+                        <li><a href="#analysis-module">8. Analysis Module</a></li>
+                        <li><a href="#stress-testing-module">9. Stress Testing Module</a></li>
+                        <li><a href="#configuration-files">10. Configuration Files</a></li>
+                        <li><a href="#batch-processing">11. Batch Processing</a></li>
+                        <li><a href="#troubleshooting">12. Troubleshooting</a></li>
+                        <li><a href="#api-reference">13. API Reference</a></li>
+                        <li><a href="#license">14. License</a></li>
+                    </ul>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="project-overview">1. Project Overview</h2>
+                    <p>Portable PsyAgent is a portable psychological assessment agent system that supports multiple large model evaluators and local Ollama models. The system can perform multi-dimensional personality assessments on AI agents, generate detailed analysis reports, and support targeted enhanced stress testing.</p>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="features">2. Features</h2>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🧠</span> <strong>Multi-dimensional Personality Assessment</strong></div>
+                            <p>Supports Big Five personality trait analysis</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🤖</span> <strong>Multi-evaluator Support</strong></div>
+                            <p>Supports OpenAI, Claude, Gemini, DeepSeek, GLM, Qwen, and local Ollama</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🔧</span> <strong>Configuration-driven</strong></div>
+                            <p>Easily switch models and parameters through configuration files</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">📊</span> <strong>Detailed Analysis Reports</strong></div>
+                            <p>Generates comprehensive reports including motivation analysis, personality traits, and behavioral patterns</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🛡️</span> <strong>Local Assessment</strong></div>
+                            <p>Supports fully localized Ollama model evaluation</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🔍</span> <strong>Debug Logs</strong></div>
+                            <p>Complete conversation logs and debugging information</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">🚀</span> <strong>Batch Analysis</strong></div>
+                            <p>Automatically processes large numbers of assessment reports with intelligent batch processing and progress tracking</p>
+                        </div>
+                        <div class="feature-item">
+                            <div><span class="feature-icon">💪</span> <strong>Stress Testing</strong></div>
+                            <p>Supports emotional stress, cognitive traps, and context load stress testing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="system-requirements">3. System Requirements</h2>
+                    <ul>
+                        <li>Python 3.8 or higher</li>
+                        <li>Windows, Linux, or macOS operating system</li>
+                        <li>At least 4GB RAM (8GB or higher recommended)</li>
+                        <li>Disk space: At least 10GB available space</li>
+                    </ul>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="installation-guide">4. Installation Guide</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>1. Clone the Project</h3>
+                        <div class="code-block">
+git clone https://github.com/ptreezh/AgentPsyAssessment<br>
+cd AgentPsyAssessment
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>2. Install Dependencies</h3>
+                        <div class="code-block">
+# Install base dependencies<br>
+pip install -r requirements.txt<br><br>
+
+# Optional: Install Google Gemini support<br>
+pip install google-generativeai
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>3. Configure Environment Variables</h3>
+                        <p>Create a <code>.env</code> file or set environment variables:</p>
+                        <div class="code-block">
+# OpenAI<br>
+OPENAI_API_KEY=your_openai_key<br><br>
+
+# Anthropic Claude<br>
+ANTHROPIC_API_KEY=your_claude_key<br><br>
+
+# Google Gemini<br>
+GOOGLE_API_KEY=your_gemini_key<br><br>
+
+# Alibaba Cloud Qwen<br>
+DASHSCOPE_API_KEY=your_qwen_key<br><br>
+
+# DeepSeek<br>
+DEEPSEEK_API_KEY=your_deepseek_key<br><br>
+
+# GLM<br>
+GLM_API_KEY=your_glm_key
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="quick-start">5. Quick Start</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Using Ollama Local Models (Recommended)</h3>
+                        
+                        <h4>Install Ollama</h4>
+                        <div class="code-block">
+# Windows<br>
+# Download from https://ollama.ai/download<br><br>
+
+# Linux<br>
+curl -fsSL https://ollama.ai/install.sh | sh<br><br>
+
+# macOS<br>
+brew install ollama
+                        </div>
+                        
+                        <h4>Download Models</h4>
+                        <div class="code-block">
+# Start Ollama service<br>
+ollama serve<br><br>
+
+# Download recommended models<br>
+ollama pull llama3:latest<br>
+ollama pull qwen3:8b<br>
+ollama pull mistral-nemo:latest
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Basic Assessment</h3>
+                        <div class="code-block">
+# Use default evaluator<br>
+python shared_analysis/analyze_results.py data/your_data.json<br><br>
+
+# Use specific evaluators<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators gpt claude<br><br>
+
+# Use local Ollama evaluators<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators ollama_llama3 ollama_qwen3
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="detailed-usage">6. Detailed Usage</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Project Structure</h3>
+                        <pre><code>portable_psyagent/
+├── llm_assessment/          # Assessment module
+│   ├── run_assessment_unified.py  # Unified assessment entry
+│   ├── roles/               # Role definition files
+│   ├── test_files/          # Test question banks
+│   ├── results/             # Assessment results
+│   └── services/            # Core services
+├── shared_analysis/         # Analysis module
+│   ├── analyze_results.py   # Results analysis main program
+│   ├── analyze_big5_results.py  # Big Five analysis
+│   ├── analyze_motivation.py    # Motivation analysis
+│   └── ollama_evaluator.py  # Ollama evaluator
+├── interference_materials/  # Interference materials (stress testing)
+├── config/                  # Configuration files
+├── batch_analysis_output/   # Batch analysis output
+└── docs/                    # Documentation</code></pre>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="assessment-module">7. Assessment Module</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Running Assessments</h3>
+                        <div class="code-block">
+# Basic assessment<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1<br><br>
+
+# Assessment with stress testing<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --emotional-stress-level 3 --cognitive-trap-type p<br><br>
+
+# Set temperature parameter<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --tmpr 0.7<br><br>
+
+# Set context length<br>
+python llm_assessment/run_assessment_unified.py --model_name gemma3:latest --test_file big5 --role_name a1 --context-length-mode static --context-length-static 4
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Assessment Parameters</h3>
+                        <ul>
+                            <li><code>--model_name</code>: Model identifier (e.g., ollama/gemma3:latest)</li>
+                            <li><code>--test_file</code>: Test file name or path</li>
+                            <li><code>--role_name</code>: Role name</li>
+                            <li><code>--emotional-stress-level</code>: Emotional stress level (0-4)</li>
+                            <li><code>--cognitive-trap-type</code>: Cognitive trap type (p, c, s, r)</li>
+                            <li><code>--tmpr</code>: Model temperature setting</li>
+                            <li><code>--context-length-mode</code>: Context length mode (auto, static, dynamic, none)</li>
+                            <li><code>--timeout</code>: Model response timeout (seconds)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="analysis-module">8. Analysis Module</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Motivation Analysis</h3>
+                        <div class="code-block">
+# Run motivation analysis (no API required)<br>
+python shared_analysis/analyze_motivation.py data/your_data.json --debug
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Big Five Personality Analysis</h3>
+                        <div class="code-block">
+# Basic Big Five analysis<br>
+python shared_analysis/analyze_big5_results.py data/your_data.json
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Comprehensive Analysis</h3>
+                        <div class="code-block">
+# Use default evaluator<br>
+python shared_analysis/analyze_results.py data/your_data.json<br><br>
+
+# Use specific evaluators<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators gpt claude<br><br>
+
+# Use local Ollama evaluators<br>
+python shared_analysis/analyze_results.py data/your_data.json --evaluators ollama_llama3 ollama_qwen3
+                        </div>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="stress-testing-module">9. Stress Testing Module</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Supported Stress Test Types</h3>
+                        <ol>
+                            <li><strong>Emotional Stress Testing</strong> - Affects model performance through different levels of emotional stress</li>
+                            <li><strong>Cognitive Trap Testing</strong> - Introduces paradoxes, circularity, semantic fallacies, and procedural traps</li>
+                            <li><strong>Context Load Testing</strong> - Tests model processing capabilities by increasing context length</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Stress Testing Parameters</h3>
+                        <ul>
+                            <li><code>-esL, --emotional-stress-level</code>: Emotional stress level (0-4)</li>
+                            <li><code>-ct, --cognitive-trap-type</code>: Cognitive trap type
+                                <ul>
+                                    <li><code>p</code>: Paradox trap</li>
+                                    <li><code>c</code>: Circularity trap</li>
+                                    <li><code>s</code>: Semantic fallacy trap</li>
+                                    <li><code>r</code>: Procedural trap</li>
+                                </ul>
+                            </li>
+                            <li><code>--context-length-mode</code>: Context length mode
+                                <ul>
+                                    <li><code>auto</code>: Automatic detection</li>
+                                    <li><code>static</code>: Fixed length</li>
+                                    <li><code>dynamic</code>: Dynamic ratio</li>
+                                    <li><code>none</code>: Disable context injection</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="configuration-files">10. Configuration Files</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Ollama Configuration (<code>config/ollama_config.json</code>)</h3>
+                        <pre><code>{
+  "ollama": {
+    "base_url": "http://localhost:11434",
+    "timeout": 120,
+    "models": {
+      "llama3": {
+        "name": "llama3:latest",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Meta Llama 3 - General-purpose large model"
+      },
+      "qwen3": {
+        "name": "qwen3:8b",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Alibaba Cloud Qwen3 - 8B parameter version"
+      },
+      "mistral": {
+        "name": "mistral-nemo:latest",
+        "temperature": 0.1,
+        "max_tokens": 1024,
+        "description": "Mistral NeMo - High-performance reasoning model"
+      }
+    }
+  },
+  "evaluators": {
+    "ollama_llama3": {
+      "provider": "ollama",
+      "model": "llama3",
+      "description": "Llama3 local evaluator"
+    },
+    "ollama_qwen3": {
+      "provider": "ollama",
+      "model": "qwen3",
+      "description": "Qwen3 local evaluator"
+    },
+    "ollama_mistral": {
+      "provider": "ollama",
+      "model": "mistral",
+      "description": "Mistral NeMo local evaluator"
+    }
+  }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="batch-processing">11. Batch Processing</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Batch Analysis</h3>
+                        <div class="code-block">
+# View file statistics<br>
+python ultimate_batch_analysis.py --stats<br><br>
+
+# Quick test (5 files)<br>
+python ultimate_batch_analysis.py --quick<br><br>
+
+# Analyze specific model (e.g., deepseek)<br>
+python ultimate_batch_analysis.py --filter deepseek<br><br>
+
+# Complete batch analysis (all 294 files)<br>
+python ultimate_batch_analysis.py<br><br>
+
+# One-click start for Windows users<br>
+start_batch_analysis.bat
+                        </div>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Supported Assessment Data</h3>
+                        <p>The system supports automatic analysis of assessment reports in the <code>results/results</code> directory, containing test data from multiple model series.</p>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Batch Analysis Features</h3>
+                        <ul>
+                            <li>🔄 <strong>Automatic Format Conversion</strong> - Supports original assessment data formats</li>
+                            <li>📊 <strong>Intelligent Batch Processing</strong> - Supports resume and error recovery</li>
+                            <li>⏱️ <strong>Progress Tracking</strong> - Real-time display of analysis progress and estimated time</li>
+                            <li>📋 <strong>Detailed Reports</strong> - Generates JSON and Markdown format summaries</li>
+                            <li>🎯 <strong>Flexible Filtering</strong> - Filters by model, sample size, and other conditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="troubleshooting">12. Troubleshooting</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Common Issues</h3>
+                        <ol>
+                            <li><strong>Ollama Connection Failure</strong>
+                                <div class="code-block">
+# Check Ollama service<br>
+ollama ps<br>
+curl http://localhost:11434/api/tags
+                                </div>
+                            </li>
+                            <li><strong>Batch Analysis Interrupted</strong>
+                                <div class="code-block">
+# Check output directory<br>
+ls -la batch_analysis_results/<br><br>
+
+# Re-run (will automatically skip completed files)<br>
+python ultimate_batch_analysis.py --filter deepseek
+                                </div>
+                            </li>
+                            <li><strong>Insufficient Memory</strong>
+                                <div class="code-block">
+# Reduce batch size<br>
+python ultimate_batch_analysis.py --sample 10
+                                </div>
+                            </li>
+                            <li><strong>API Key Issues</strong>
+                                <div class="code-block">
+# Check environment variables<br>
+echo $OPENAI_API_KEY
+                                </div>
+                            </li>
+                            <li><strong>Missing Modules</strong>
+                                <div class="code-block">
+# Install missing dependencies<br>
+pip install google-generativeai
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Debug Mode</h3>
+                        <div class="code-block">
+# Enable detailed debug output<br>
+python shared_analysis/analyze_results.py data.json --evaluators ollama_llama3
+                        </div>
+                        <p>Check log files:</p>
+                        <ul>
+                            <li><code>logs/evaluator_conversation_log.txt</code> - Conversation logs</li>
+                            <li><code>logs/debug_info.json</code> - Debug information</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="api-reference">13. API Reference</h2>
+                    
+                    <div class="manual-subsection">
+                        <h3>Assessment API</h3>
+                        <h4>run_assessment_unified.py</h4>
+                        <p>Main parameters:</p>
+                        <ul>
+                            <li><code>--model_name</code> (required): Model identifier</li>
+                            <li><code>--test_file</code> (required): Test file</li>
+                            <li><code>--role_name</code>: Role name</li>
+                            <li><code>--debug</code>: Enable debug mode</li>
+                            <li><code>--test_connection</code>: Test model connectivity only</li>
+                        </ul>
+                        <p>Stress testing parameters:</p>
+                        <ul>
+                            <li><code>--emotional-stress-level</code>: Emotional stress level (0-4)</li>
+                            <li><code>--cognitive-trap-type</code>: Cognitive trap type (p, c, s, r)</li>
+                            <li><code>--tmpr</code>: Model temperature setting</li>
+                            <li><code>--context-length-mode</code>: Context length mode</li>
+                            <li><code>--timeout</code>: Response timeout</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="manual-subsection">
+                        <h3>Analysis API</h3>
+                        <h4>analyze_results.py</h4>
+                        <p>Main functions:</p>
+                        <ul>
+                            <li>Comprehensive analysis of assessment results</li>
+                            <li>Generates Big Five and MBTI personality assessments</li>
+                            <li>Supports multiple evaluators</li>
+                        </ul>
+                        <h4>analyze_motivation.py</h4>
+                        <p>Main functions:</p>
+                        <ul>
+                            <li>Motivation analysis of assessment results</li>
+                            <li>Generates motivation test reports</li>
+                            <li>Supports Markdown format output</li>
+                        </ul>
+                        <h4>analyze_big5_results.py</h4>
+                        <p>Main functions:</p>
+                        <ul>
+                            <li>Specialized analysis of Big Five personality traits</li>
+                            <li>Generates detailed Big Five scoring reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="manual-section">
+                    <h2 id="license">14. License</h2>
+                    <p>This project is for research and educational purposes only.</p>
+                    <div class="license-box">
+This program is free software: you can redistribute it and/or modify<br>
+it under the terms of the GNU General Public License as published by<br>
+the Free Software Foundation, either version 3 of the License, or<br>
+(at your option) any later version.<br><br>
+
+This program is distributed in the hope that it will be useful,<br>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+GNU General Public License for more details.<br><br>
+
+You should have received a copy of the GNU General Public License<br>
+along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+                    </div>
+                </div>
+
+                <div class="cta-section" style="margin-top: 50px; text-align: center;">
+                    <h3>Ready to Start Using Portable PsyAgent?</h3>
+                    <p>Begin your AI personality assessment journey with our comprehensive platform.</p>
+                    <a href="../contact.html" class="cta-button">Get Started</a>
+                    <a href="download_whitepaper_en.html" class="cta-button">Download Documentation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgentPsy</h3>
+                <p>Scientific AI assessment tools for the next generation of artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Assessment Systems</h4>
+                <ul>
+                    <li><a href="../assessment/big-five.html">Big Five Personality</a></li>
+                    <li><a href="../assessment/cognitive-stability.html">Cognitive Stability</a></li>
+                    <li><a href="../assessment/cognitive-trap.html">Cognitive Trap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../technology/index.html">Technology Principles</a></li>
+                    <li><a href="../applications/index.html">Application Scenarios</a></li>
+                    <li><a href="../research/index.html">Academic Research</a></li>
+                    <li><a href="index.html">Resource Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                    <li><a href="../license.html">License</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AgentPsy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

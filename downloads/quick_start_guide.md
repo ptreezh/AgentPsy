@@ -15,8 +15,8 @@ Portable PsyAgent 是一个便携式心理评估代理系统，支持对AI代理
 ### 3.1 克隆项目
 
 ```bash
-git clone <repository_url>
-cd portable_psyagent
+git clone https://github.com/ptreezh/AgentPsyAssessment
+cd AgentPsyAssessment
 ```
 
 ### 3.2 安装依赖

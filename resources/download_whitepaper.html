@@ -51,14 +51,64 @@
             background: #667eea;
             color: white;
             padding: 12px 24px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
+            font-weight: bold;
             transition: background 0.3s ease;
         }
         
         .download-btn:hover {
             background: #5a6fd8;
+        }
+        
+        .academic-papers {
+            margin: 40px 0;
+        }
+        
+        .paper-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .paper-item h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .paper-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .more-papers {
+            margin: 40px 0;
+        }
+        
+        .paper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .paper-link {
+            display: block;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #667eea;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .paper-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            text-decoration: underline;
         }
         
         .pdf-card { background-color: #f8f0f0; }
@@ -120,30 +170,80 @@
             <h3 style="text-align: center; margin: 30px 0;">选择下载格式</h3>
             
             <div class="download-options">
-                <div class="download-card pdf-card">
-                    <div class="download-icon">📄</div>
-                    <h3>PDF 格式</h3>
-                    <p>适合打印和专业阅读</p>
-                    <p>文件大小: ~2.1 MB</p>
-                    <a href="../downloads/tech_whitepaper_cn.pdf" class="download-btn" download>下载 PDF</a>
+                    <div class="download-card">
+                        <div class="download-icon">📄</div>
+                        <h3>PDF 版本</h3>
+                        <p>适合阅读和打印</p>
+                        <a href="../downloads/tech_whitepaper_cn.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">📝</div>
+                        <h3>Word 版本</h3>
+                        <p>适合编辑和修改</p>
+                        <a href="../downloads/tech_whitepaper_cn.docx" class="download-btn" download>下载 Word</a>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">📋</div>
+                        <h3>Markdown 版本</h3>
+                        <p>适合开发者阅读</p>
+                        <a href="../downloads/tech_whitepaper_cn.md" class="download-btn" download>下载 Markdown</a>
+                    </div>
                 </div>
                 
-                <div class="download-card word-card">
-                    <div class="download-icon">📝</div>
-                    <h3>Word 格式</h3>
-                    <p>便于编辑和引用</p>
-                    <p>文件大小: ~1.8 MB</p>
-                    <a href="../downloads/tech_whitepaper_cn.docx" class="download-btn" download>下载 Word</a>
+                <h2>学术论文资源</h2>
+                <p>以下是我们收集的与AI人格测评相关的学术论文，供参考研究：</p>
+                
+                <div class="academic-papers">
+                    <div class="paper-item">
+                        <h4>从单智能体到多智能体：改善交通</h4>
+                        <p>探讨多智能体系统在交通管理中的应用</p>
+                        <a href="../downloads/01_From_Single_Agent_to_Multi-Agent_Improving_Traffic.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>大语言模型在非英语环境中的翻译迷失</h4>
+                        <p>研究大语言模型在跨语言应用中的挑战</p>
+                        <a href="../downloads/02_Lost_in_Translation_Large_Language_Models_in_Non-E.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>手语生成作为数据增强技术</h4>
+                        <p>利用手语生成技术增强机器学习数据集</p>
+                        <a href="../downloads/03_Using_Sign_Language_Production_as_Data_Augmentatio.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>大语言模型在科学计算中的应用</h4>
+                        <p>探索大语言模型在科学研究领域的应用潜力</p>
+                        <a href="../downloads/04_Scientific_Computing_with_Large_Language_Models.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>大语言模型并非自然语言模型</h4>
+                        <p>分析大语言模型与自然语言处理之间的差异</p>
+                        <a href="../downloads/05_Large_Language_Models_are_not_Models_of_Natural_La.pdf" class="download-btn" download>下载 PDF</a>
+                    </div>
                 </div>
                 
-                <div class="download-card md-card">
-                    <div class="download-icon">⌨️</div>
-                    <h3>Markdown 格式</h3>
-                    <p>适合技术文档处理</p>
-                    <p>文件大小: ~450 KB</p>
-                    <a href="../downloads/tech_whitepaper_cn.md" class="download-btn" download>下载 Markdown</a>
+                <h2>更多学术资源</h2>
+                <p>我们提供了更多专业论文供您深入研究：</p>
+                
+                <div class="more-papers">
+                    <div class="paper-grid">
+                        <a href="../downloads/06_Dynamic_Large_Language_Models_on_Blockchains.pdf" class="paper-link" download>区块链上的动态大语言模型</a>
+                        <a href="../downloads/07_Towards_Automatic_Support_of_Software_Model_Evolut.pdf" class="paper-link" download>软件模型演进的自动支持</a>
+                        <a href="../downloads/08_Jigsaw_Large_Language_Models_meet_Program_Synthesi.pdf" class="paper-link" download>大语言模型与程序合成的结合</a>
+                        <a href="../downloads/09_Large_Language_Models_for_Judicial_Entity_Extracti.pdf" class="paper-link" download>司法实体提取中的大语言模型</a>
+                        <a href="../downloads/10_Reimagining_Retrieval_Augmented_Language_Models_fo.pdf" class="paper-link" download>检索增强语言模型的重构</a>
+                        <a href="../downloads/11_SoK_Privacy-Enhancing_Technologies_in_Artificial_I.pdf" class="paper-link" download>人工智能中的隐私增强技术</a>
+                        <a href="../downloads/12_AI-Based_Crypto_Tokens_The_Illusion_of_Decentraliz.pdf" class="paper-link" download>基于AI的加密代币：去中心化的幻觉</a>
+                        <a href="../downloads/13_AnnoSense_A_Framework_for_Physiological_Emotion_Da.pdf" class="paper-link" download>AnnoSense：生理情感数据框架</a>
+                        <a href="../downloads/14_Towards_Seamless_Management_of_AI_Models_in_High-P.pdf" class="paper-link" download>高性能环境中AI模型的无缝管理</a>
+                        <a href="../downloads/15_Synchronization_Dynamics_of_Heterogeneous_Collabor.pdf" class="paper-link" download>异构协作系统的同步动力学</a>
+                    </div>
                 </div>
-            </div>
 
             <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; margin-top: 30px;">
                 <h3>英文版本</h3>

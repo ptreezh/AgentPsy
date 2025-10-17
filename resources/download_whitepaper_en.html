@@ -51,14 +51,64 @@
             background: #667eea;
             color: white;
             padding: 12px 24px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
+            font-weight: bold;
             transition: background 0.3s ease;
         }
         
         .download-btn:hover {
             background: #5a6fd8;
+        }
+        
+        .academic-papers {
+            margin: 40px 0;
+        }
+        
+        .paper-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .paper-item h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .paper-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .more-papers {
+            margin: 40px 0;
+        }
+        
+        .paper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .paper-link {
+            display: block;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #667eea;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .paper-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            text-decoration: underline;
         }
         
         .pdf-card { background-color: #f8f0f0; }
@@ -120,30 +170,80 @@
             <h3 style="text-align: center; margin: 30px 0;">Select Download Format</h3>
             
             <div class="download-options">
-                <div class="download-card pdf-card">
-                    <div class="download-icon">📄</div>
-                    <h3>PDF Format</h3>
-                    <p>Perfect for printing and professional reading</p>
-                    <p>File size: ~2.1 MB</p>
-                    <a href="../downloads/tech_whitepaper_en.pdf" class="download-btn" download>Download PDF</a>
+                    <div class="download-card">
+                        <div class="download-icon">📄</div>
+                        <h3>PDF Version</h3>
+                        <p>Suitable for reading and printing</p>
+                        <a href="../downloads/tech_whitepaper_en.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">📝</div>
+                        <h3>Word Version</h3>
+                        <p>Suitable for editing and modification</p>
+                        <a href="../downloads/tech_whitepaper_en.docx" class="download-btn" download>Download Word</a>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">📋</div>
+                        <h3>Markdown Version</h3>
+                        <p>Suitable for developers</p>
+                        <a href="../downloads/tech_whitepaper_en.md" class="download-btn" download>Download Markdown</a>
+                    </div>
                 </div>
                 
-                <div class="download-card word-card">
-                    <div class="download-icon">📝</div>
-                    <h3>Word Format</h3>
-                    <p>Ideal for editing and citation</p>
-                    <p>File size: ~1.8 MB</p>
-                    <a href="../downloads/tech_whitepaper_en.docx" class="download-btn" download>Download Word</a>
+                <h2>Academic Paper Resources</h2>
+                <p>Here are the academic papers related to AI personality assessment for your reference:</p>
+                
+                <div class="academic-papers">
+                    <div class="paper-item">
+                        <h4>From Single Agent to Multi-Agent: Improving Traffic</h4>
+                        <p>Exploring the application of multi-agent systems in traffic management</p>
+                        <a href="../downloads/01_From_Single_Agent_to_Multi-Agent_Improving_Traffic.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>Lost in Translation: Large Language Models in Non-English Environments</h4>
+                        <p>Research on challenges of large language models in cross-language applications</p>
+                        <a href="../downloads/02_Lost_in_Translation_Large_Language_Models_in_Non-E.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>Using Sign Language Production as Data Augmentation</h4>
+                        <p>Enhancing machine learning datasets using sign language generation technology</p>
+                        <a href="../downloads/03_Using_Sign_Language_Production_as_Data_Augmentatio.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>Scientific Computing with Large Language Models</h4>
+                        <p>Exploring the potential applications of large language models in scientific research</p>
+                        <a href="../downloads/04_Scientific_Computing_with_Large_Language_Models.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <h4>Large Language Models are not Models of Natural Language</h4>
+                        <p>Analysis of differences between large language models and natural language processing</p>
+                        <a href="../downloads/05_Large_Language_Models_are_not_Models_of_Natural_La.pdf" class="download-btn" download>Download PDF</a>
+                    </div>
                 </div>
                 
-                <div class="download-card md-card">
-                    <div class="download-icon">⌨️</div>
-                    <h3>Markdown Format</h3>
-                    <p>Suitable for technical documentation processing</p>
-                    <p>File size: ~450 KB</p>
-                    <a href="../downloads/tech_whitepaper_en.md" class="download-btn" download>Download Markdown</a>
+                <h2>More Academic Resources</h2>
+                <p>We provide more professional papers for your in-depth research:</p>
+                
+                <div class="more-papers">
+                    <div class="paper-grid">
+                        <a href="../downloads/06_Dynamic_Large_Language_Models_on_Blockchains.pdf" class="paper-link" download>Dynamic Large Language Models on Blockchains</a>
+                        <a href="../downloads/07_Towards_Automatic_Support_of_Software_Model_Evolut.pdf" class="paper-link" download>Towards Automatic Support of Software Model Evolution</a>
+                        <a href="../downloads/08_Jigsaw_Large_Language_Models_meet_Program_Synthesi.pdf" class="paper-link" download>Jigsaw: Large Language Models Meet Program Synthesis</a>
+                        <a href="../downloads/09_Large_Language_Models_for_Judicial_Entity_Extracti.pdf" class="paper-link" download>Large Language Models for Judicial Entity Extraction</a>
+                        <a href="../downloads/10_Reimagining_Retrieval_Augmented_Language_Models_fo.pdf" class="paper-link" download>Reimagining Retrieval Augmented Language Models</a>
+                        <a href="../downloads/11_SoK_Privacy-Enhancing_Technologies_in_Artificial_I.pdf" class="paper-link" download>Privacy-Enhancing Technologies in Artificial Intelligence</a>
+                        <a href="../downloads/12_AI-Based_Crypto_Tokens_The_Illusion_of_Decentraliz.pdf" class="paper-link" download>AI-Based Crypto Tokens: The Illusion of Decentralization</a>
+                        <a href="../downloads/13_AnnoSense_A_Framework_for_Physiological_Emotion_Da.pdf" class="paper-link" download>AnnoSense: A Framework for Physiological Emotion Data</a>
+                        <a href="../downloads/14_Towards_Seamless_Management_of_AI_Models_in_High-P.pdf" class="paper-link" download>Towards Seamless Management of AI Models in High-Performance</a>
+                        <a href="../downloads/15_Synchronization_Dynamics_of_Heterogeneous_Collabor.pdf" class="paper-link" download>Synchronization Dynamics of Heterogeneous Collaborative Systems</a>
+                    </div>
                 </div>
-            </div>
 
             <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; margin-top: 30px;">
                 <h3>Chinese Version</h3>
